@@ -1,6 +1,12 @@
-filename, url
-radiopedia-covid-19-pneumonia-2.jpg, https://radiopaedia.org/cases/covid-19-pneumonia-2
-auntminnie-a-2020_01_28_23_51_6665_2020_01_28_Vietnam_coronavirus.jpeg, https://www.auntminnie.com/index.aspx?sec=sup&sub=xra&pag=dis&ItemID=127983
-auntminnie-b-2020_01_28_23_51_6665_2020_01_28_Vietnam_coronavirus.jpeg, https://www.auntminnie.com/index.aspx?sec=sup&sub=xra&pag=dis&ItemID=127983
-auntminnie-c-2020_01_28_23_51_6665_2020_01_28_Vietnam_coronavirus.jpeg, https://www.auntminnie.com/index.aspx?sec=sup&sub=xra&pag=dis&ItemID=127983
-auntminnie-d-2020_01_28_23_51_6665_2020_01_28_Vietnam_coronavirus.jpeg, https://www.auntminnie.com/index.aspx?sec=sup&sub=xra&pag=dis&ItemID=127983
+Patientid,offset,sex,age,finding,year, filename, url,
+1, ,,,SARS-CoV-2,2019, radiopedia-covid-19-pneumonia-2.jpg, https://radiopaedia.org/cases/covid-19-pneumonia-2,
+2,0,,,SARS-CoV-2,2020,auntminnie-a-2020_01_28_23_51_6665_2020_01_28_Vietnam_coronavirus.jpeg, https://www.auntminnie.com/index.aspx?sec=sup&sub=xra&pag=dis&ItemID=127983,
+2, ,,,SARS-CoV-2,2020,auntminnie-b-2020_01_28_23_51_6665_2020_01_28_Vietnam_coronavirus.jpeg, https://www.auntminnie.com/index.aspx?sec=sup&sub=xra&pag=dis&ItemID=127983,
+2, ,,,SARS-CoV-2,2020,auntminnie-c-2020_01_28_23_51_6665_2020_01_28_Vietnam_coronavirus.jpeg, https://www.auntminnie.com/index.aspx?sec=sup&sub=xra&pag=dis&ItemID=127983,
+2, ,,,SARS-CoV-2,2020,auntminnie-d-2020_01_28_23_51_6665_2020_01_28_Vietnam_coronavirus.jpeg, https://www.auntminnie.com/index.aspx?sec=sup&sub=xra&pag=dis&ItemID=127983,
+3,4,M,74,SARS,2004,SARS-10.1148rg.242035193-g04mr34g0-Fig8a.jpeg, https://pubs.rsna.org/doi/10.1148/rg.242035193, SARS in a 74-year-old man who developed symptoms 4 days after exposure. 
+3,9,M,74,SARS,2004,SARS-10.1148rg.242035193-g04mr34g0-Fig8b.jpeg, https://pubs.rsna.org/doi/10.1148/rg.242035193, SARS in a 74-year-old man who developed symptoms 4 days after exposure. 
+3,10,M,74,SARS,2004,SARS-10.1148rg.242035193-g04mr34g0-Fig8c-day10.jpeg, https://pubs.rsna.org/doi/10.1148/rg.242035193, SARS in a 74-year-old man who developed symptoms 4 days after exposure. 
+4,0,F,,SARS-CoV-2,2020,nejmc2001573_f1a.jpeg, https://www.nejm.org/doi/full/10.1056/NEJMc2001573,
+4,5,F,,SARS-CoV-2,2020,nejmc2001573_f1b.jpeg, https://www.nejm.org/doi/full/10.1056/NEJMc2001573,
+5,,,,ARDS,2017,ARDSSevere.png,https://en.wikipedia.org/wiki/File:ARDSSevere.png,Severe ARDS. Person is intubated with an OG in place.
