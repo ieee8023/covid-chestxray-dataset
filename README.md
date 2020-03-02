@@ -10,7 +10,7 @@ Currently we are building the database with images from publications as they are
 
 ## Contribute
 
-Submit a pull request or contact us to discuss ways to contribute.
+Submit a pull request or contact us to discuss ways to send us data.
 
 For chest X-ray dcm, jpg, or png are preferred. For CT nifti (in gzip format) is preferred but also dcms. Please contact with any questions.
 
