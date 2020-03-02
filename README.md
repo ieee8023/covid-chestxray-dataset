@@ -4,9 +4,10 @@
 
 We are building a database of COVID-19 cases with chest X-ray or CT images. We are looking for COVID-19 cases as well as [MERS](https://en.wikipedia.org/wiki/Middle_East_respiratory_syndrome), [SARS](https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome), and [ARDS](https://en.wikipedia.org/wiki/Acute_respiratory_distress_syndrome). 
 
-All images and data will be released publicly in this GitHub repo. 
+All images and data will be released publicly in this GitHub repo. Currently we are building the database with images from publications as they are images that are already available. 
 
-Currently we are building the database with images from publications as they are images that are already available. 
+## View current [images](images) and [metadata](metadata.csv)
+
 
 ## Contribute
 
