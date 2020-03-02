@@ -2,9 +2,12 @@
 
 # COVID-19 image data collection
 
-We are building a database of COVID-19 cases with chest X-ray or CT images. Our goal is to use these to develop AI based approaches to predict and understand the infection. All images and data will be released publicly.
+We are building a database of COVID-19 cases with chest X-ray or CT images. We are looking for COVID-19 cases as well as [MERS](https://en.wikipedia.org/wiki/Middle_East_respiratory_syndrome), [SARS](https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome), and [ARDS](https://en.wikipedia.org/wiki/Acute_respiratory_distress_syndrome). 
 
+All images and data will be released publicly in this GitHub repo. You can contribute with pull requests. For chest X-ray dcm, jpg, or png are preferred. For CT nifti (in gzip format) is preferred but also dcms. Please contact with any questions.
 
-Study contact: [Joseph Paul Cohen. Postdoctoral Fellow, Mila, Univeristy of Montreal.](https://josephpcohen.com/) 
+Currently we are building the database with images from publications as they are images that are already available.
 
-Data license: [Creative Commons Attribution-ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/)
+Our goal is to use these images to develop AI based approaches to predict and understand the infection. Our group will work to release these models using the open source [Chester AI Radiology Assistant platform](https://mlmed.org/tools/xray/).
+
+Study contact: [Joseph Paul Cohen. Postdoctoral Fellow, Mila, Univeristy of Montreal](https://josephpcohen.com/) 
