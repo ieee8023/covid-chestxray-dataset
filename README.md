@@ -11,11 +11,11 @@ All images and data will be released publicly in this GitHub repo. Currently we 
 
 ## Contribute
 
-First clear all ethics and consent requirements at your institution in order to make the data public. Then submit a pull request or contact us to discuss ways to send the data.
+ - We can extract images from publications. Help identify publications which are not already included using a GitHub issue (DOIs we have are listed in the metadata file).
 
-Alternatively, create a GitHub issue with a link to a publication that we are missing and we will add it to the dataset.
+ - Submit your own cases (we are still working out the ethics protocol for this). First clear all ethics and consent requirements at your institution in order to make the data public and contact us.
 
-For chest X-ray dcm, jpg, or png are preferred. For CT nifti (in gzip format) is preferred but also dcms. Please contact with any questions.
+*Formats:* For chest X-ray dcm, jpg, or png are preferred. For CT nifti (in gzip format) is preferred but also dcms. Please contact with any questions.
 
 
 ## Motivation
