@@ -14,6 +14,8 @@ All images and data will be released publicly in this GitHub repo. Currently we 
 Only images which are publicly available already are accepted at this time.
 
  - We can extract images from publications. Help identify publications which are not already included using a GitHub issue (DOIs we have are listed in the metadata file).
+ 
+ - Submit data to https://radiopedia.org/
 
  - Submit your own cases (we are still working out the ethics protocol for this). First clear all ethics and consent requirements at your institution in order to make the data public and contact us.
 
