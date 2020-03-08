@@ -15,8 +15,6 @@ Only images which are publicly available already are accepted at this time.
  
  - Submit data to https://radiopedia.org/
 
- - Submit your own cases (we are still working out the ethics protocol for this). First clear all ethics and consent requirements at your institution in order to make the data public and contact us.
-
 *Formats:* For chest X-ray dcm, jpg, or png are preferred. For CT nifti (in gzip format) is preferred but also dcms. Please contact with any questions.
 
 
