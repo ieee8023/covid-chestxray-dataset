@@ -27,3 +27,7 @@ Our goal is to use these images to develop AI based approaches to predict and un
 
 ## Contact
 Contact: [Joseph Paul Cohen. Postdoctoral Fellow, Mila, Univeristy of Montreal](https://josephpcohen.com/) 
+
+## Initial results
+
+![](docs/covid-xray-umap.png)
