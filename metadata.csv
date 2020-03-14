@@ -1,5 +1,4 @@
 Patientid,offset,sex,age,finding,survival,view,date,location,filename,doi, url,license,notes
-1, ,,,COVID-19,,PA,2019,,radiopedia-covid-19-pneumonia-2.jpg,,https://radiopaedia.org/cases/covid-19-pneumonia-2,,
 2,0,M,65,COVID-19,Y,PA,2020,,auntminnie-a-2020_01_28_23_51_6665_2020_01_28_Vietnam_coronavirus.jpeg,10.1056/nejmc2001272,https://www.nejm.org/doi/full/10.1056/NEJMc2001272,,
 2,3,M,65,COVID-19,Y,PA,2020,,auntminnie-b-2020_01_28_23_51_6665_2020_01_28_Vietnam_coronavirus.jpeg,10.1056/nejmc2001272,https://www.nejm.org/doi/full/10.1056/NEJMc2001272,,
 2,5,M,65,COVID-19,Y,PA,2020,,auntminnie-c-2020_01_28_23_51_6665_2020_01_28_Vietnam_coronavirus.jpeg,10.1056/nejmc2001272,https://www.nejm.org/doi/full/10.1056/NEJMc2001272,,
