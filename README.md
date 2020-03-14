@@ -9,11 +9,11 @@ All images and data will be released publicly in this GitHub repo. Currently we 
 
 ## Contribute
 
-Only images which are publicly available already are accepted at this time.
-
  - We can extract images from publications. Help identify publications which are not already included using a GitHub issue (DOIs we have are listed in the metadata file).
  
- - Submit data to https://radiopedia.org/
+ - Submit data to https://radiopedia.org/ (we can scrape the data from them)
+ 
+ - Provide bounding box/masks for the detection of problematic regions in images already collected.
 
 *Formats:* For chest X-ray dcm, jpg, or png are preferred. For CT nifti (in gzip format) is preferred but also dcms. Please contact with any questions.
 
