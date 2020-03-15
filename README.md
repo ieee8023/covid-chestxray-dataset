@@ -8,22 +8,22 @@ All images and data will be released publicly in this GitHub repo. Currently we 
 
 Current stats. Labels 0=No or 1=Yes. Data loader is [here](https://github.com/mlmed/torchxrayvision/blob/master/torchxrayvision/datasets.py#L814)
 ``` 
-{'ARDS': {0.0: 54, 1.0: 4},
- 'Bacterial Pneumonia': {0.0: 52, 1.0: 6},
- 'COVID-19': {0.0: 23, 1.0: 35},
- 'MERS': {0.0: 58},
- 'No Finding': {0.0: 57, 1.0: 1},
- 'Pneumonia': {0.0: 2, 1.0: 56},
- 'SARS': {0.0: 47, 1.0: 11},
- 'Streptococcus': {0.0: 52, 1.0: 6},
- 'Viral Pneumonia': {0.0: 12, 1.0: 46}}
+{'ARDS': {0.0: 67, 1.0: 4},
+ 'Bacterial Pneumonia': {0.0: 65, 1.0: 6},
+ 'COVID-19': {0.0: 23, 1.0: 48},
+ 'MERS': {0.0: 71},
+ 'No Finding': {0.0: 70, 1.0: 1},
+ 'Pneumonia': {0.0: 2, 1.0: 69},
+ 'SARS': {0.0: 60, 1.0: 11},
+ 'Streptococcus': {0.0: 65, 1.0: 6},
+ 'Viral Pneumonia': {0.0: 12, 1.0: 59}}
  ```
 
 ## Contribute
 
  - We can extract images from publications. Help identify publications which are not already included using a GitHub issue (DOIs we have are listed in the metadata file).
  
- - Submit data to https://radiopedia.org/ (we can scrape the data from them)
+ - Submit data to https://radiopedia.org/ or https://www.sirm.org/category/senza-categoria/covid-19/ (we can scrape the data from them)
  
  - Provide bounding box/masks for the detection of problematic regions in images already collected.
 
