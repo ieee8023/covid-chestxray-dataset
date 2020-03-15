@@ -38,7 +38,7 @@ COVID is possibly better diagnosed using radiological imaging [Fang, 2020](https
 Our goal is to use these images to develop AI based approaches to predict and understand the infection. Our group will work to release these models using the open source [Chester AI Radiology Assistant platform](https://mlmed.org/tools/xray/).
 
 ## Contact
-Contact: [Joseph Paul Cohen. Postdoctoral Fellow, Mila, Univeristy of Montreal](https://josephpcohen.com/) 
+Contact: [Joseph Paul Cohen. Postdoctoral Fellow, Mila, University of Montreal](https://josephpcohen.com/) 
 
 ## Initial results
 
