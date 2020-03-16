@@ -8,15 +8,15 @@ All images and data will be released publicly in this GitHub repo. Currently we 
 
 Current stats. Labels 0=No or 1=Yes. Data loader is [here](https://github.com/mlmed/torchxrayvision/blob/master/torchxrayvision/datasets.py#L814)
 ``` 
-{'ARDS': {0.0: 67, 1.0: 4},
- 'Bacterial Pneumonia': {0.0: 65, 1.0: 6},
- 'COVID-19': {0.0: 23, 1.0: 48},
- 'MERS': {0.0: 71},
- 'No Finding': {0.0: 70, 1.0: 1},
- 'Pneumonia': {0.0: 2, 1.0: 69},
- 'SARS': {0.0: 60, 1.0: 11},
- 'Streptococcus': {0.0: 65, 1.0: 6},
- 'Viral Pneumonia': {0.0: 12, 1.0: 59}}
+{'ARDS': {0.0: 75, 1.0: 4},
+ 'Bacterial Pneumonia': {0.0: 73, 1.0: 6},
+ 'COVID-19': {0.0: 23, 1.0: 56},
+ 'MERS': {0.0: 79},
+ 'No Finding': {0.0: 78, 1.0: 1},
+ 'Pneumonia': {0.0: 2, 1.0: 77},
+ 'SARS': {0.0: 68, 1.0: 11},
+ 'Streptococcus': {0.0: 73, 1.0: 6},
+ 'Viral Pneumonia': {0.0: 12, 1.0: 67}}
  ```
 
 ## Contribute
