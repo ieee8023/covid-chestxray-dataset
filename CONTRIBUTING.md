@@ -2,32 +2,32 @@
 
 Here is a list of each metadata field, with explanations where relevant
 
-    Patientid
+ -  Patientid
 
-    offset (Number of days since hospitalization for each image)
+ -  offset (Number of days since hospitalization for each image)
 
-    sex
+ -  sex
 
-    age
+ -  age
 
-    finding
+ -  finding
 
-    survival (Y or N)
+ -  survival (Y or N)
 
-    view
+ -  view
 
-    date
+ -  date
 
-    location (ideally hospital name)
+ -  location (ideally hospital name)
 
-    filename
+ -  filename
 
-    doi
+ -  doi
 
-    url
+ -  url
 
-    license
+ -  license
 
-    clinical notes
+ -  clinical notes
 
-    other notes (e.g. credit)
+ -  other notes (e.g. credit)
