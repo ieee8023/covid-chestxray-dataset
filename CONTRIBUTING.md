@@ -4,7 +4,7 @@ Here is a list of each metadata field, with explanations where relevant
 
  -  Patientid (internal identifier, just for this dataset)
 
- -  offset (Number of days since hospitalization for each image)
+ -  offset (number of days since the start of symptoms or hospitalization for each image, this is very imporant to have when there are multiple images for the same patient to track progression while being imaged. If a report says "after a few days" let's assume 5 days.)
 
  -  sex (M, F, or blank)
 
