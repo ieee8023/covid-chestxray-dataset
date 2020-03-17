@@ -27,6 +27,8 @@ Current stats. Labels 0=No or 1=Yes. Data loader is [here](https://github.com/ml
  
  - Provide bounding box/masks for the detection of problematic regions in images already collected.
 
+ - See [CONTRIBUTING.md](CONTRIBUTING.md) for more information on the metadata schema.
+
 *Formats:* For chest X-ray dcm, jpg, or png are preferred. For CT nifti (in gzip format) is preferred but also dcms. Please contact with any questions.
 
 ## Background 
@@ -43,8 +45,6 @@ While PCR tests offer many advantages they are physical things that require ship
 Imagine a future where we run out of tests and then the majority of radiologists get sick. AI tools can help general practitioners to triage and treat patients.
 
 Companies are developing AI tools and deploying them at hospitals [Wired 2020](https://www.wired.com/story/chinese-hospitals-deploy-ai-help-diagnose-covid-19/). We should have an open database to develop free tools that will also provide assistance.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for more information on the metadata schema.
 
 ## Goal
 
