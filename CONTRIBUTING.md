@@ -8,23 +8,23 @@ Here is a list of each metadata field, with explanations where relevant
 
  -  sex (M, F, or blank)
 
- -  age
+ -  age (age of the patient in years)
 
- -  finding
+ -  finding (which pneumonia)
 
- -  survival (Y or N)
+ -  survival (did they survive? Y or N)
 
  -  view (indicate imaging modality as well as plane)
 
- -  date
+ -  date (date the image was aquired)
 
- -  location (ideally hospital name)
+ -  location (hospital name, city, state, country) importance from right to left.
 
  -  filename
 
- -  doi
+ -  doi ([DOI](https://en.wikipedia.org/wiki/Digital_object_identifier) of the research article
 
- -  url
+ -  url (URL of the paper or website where the image came from)
 
  -  license
 
