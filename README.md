@@ -44,6 +44,8 @@ Imagine a future where we run out of tests and then the majority of radiologists
 
 Companies are developing AI tools and deploying them at hospitals [Wired 2020](https://www.wired.com/story/chinese-hospitals-deploy-ai-help-diagnose-covid-19/). We should have an open database to develop free tools that will also provide assistance.
 
+See CONTRIBUTING.md[CONTRIBUTING.md] for more information on the metadata schema.
+
 ## Goal
 
 Our goal is to use these images to develop AI based approaches to predict and understand the infection. Our group will work to release these models using our open source [Chester AI Radiology Assistant platform](https://mlmed.org/tools/xray/) which is designed to scale to a global need by performing the computation locally.
