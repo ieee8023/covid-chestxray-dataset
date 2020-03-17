@@ -2,11 +2,11 @@
 
 Here is a list of each metadata field, with explanations where relevant
 
- -  Patientid
+ -  Patientid (internal identifier, just for this dataset)
 
  -  offset (Number of days since hospitalization for each image)
 
- -  sex
+ -  sex (M, F, or blank)
 
  -  age
 
@@ -14,7 +14,7 @@ Here is a list of each metadata field, with explanations where relevant
 
  -  survival (Y or N)
 
- -  view
+ -  view (indicate imaging modality as well as plane)
 
  -  date
 
@@ -28,6 +28,6 @@ Here is a list of each metadata field, with explanations where relevant
 
  -  license
 
- -  clinical notes
+ -  clinical notes (about the radiograph in particular, not just the patient)
 
  -  other notes (e.g. credit)
