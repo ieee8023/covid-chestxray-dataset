@@ -14,7 +14,9 @@ Here is a list of each metadata field, with explanations where relevant
 
  -  survival (did they survive? Y or N)
 
- -  view (indicate imaging modality as well as plane)
+ -  view (for example, PA, AP, or L for X-rays and Axial or Coronal for CT scans)
+
+ -  modality (CT, X-ray, or something else)
 
  -  date (date the image was aquired)
 
