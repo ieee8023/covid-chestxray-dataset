@@ -27,6 +27,8 @@ Current stats. Labels 0=No or 1=Yes. Data loader is [here](https://github.com/ml
  
  - Provide bounding box/masks for the detection of problematic regions in images already collected.
 
+ - See [CONTRIBUTING.md](CONTRIBUTING.md) for more information on the metadata schema.
+
 *Formats:* For chest X-ray dcm, jpg, or png are preferred. For CT nifti (in gzip format) is preferred but also dcms. Please contact with any questions.
 
 ## Background 
