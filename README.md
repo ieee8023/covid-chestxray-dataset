@@ -21,7 +21,7 @@ Current stats. Labels 0=No or 1=Yes. Data loader is [here](https://github.com/ml
 
 ## Contribute
 
- - We can extract images from publications. Help identify publications which are not already included using a GitHub issue (DOIs we have are listed in the metadata file). There is a searchable database of COVID-19 papers [here](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/global-research-on-novel-coronavirus-2019-ncov).
+ - We can extract images from publications. Help identify publications which are not already included using a GitHub issue (DOIs we have are listed in the metadata file). There is a searchable database of COVID-19 papers [here](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/global-research-on-novel-coronavirus-2019-ncov), and a non-searchable one (requires download) [here](https://pages.semanticscholar.org/coronavirus-research).
  
  - Submit data to https://radiopedia.org/ or https://www.sirm.org/category/senza-categoria/covid-19/ (we can scrape the data from them)
  
