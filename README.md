@@ -50,9 +50,9 @@ Companies are developing AI tools and deploying them at hospitals [Wired 2020](h
 
 Our goal is to use these images to develop AI based approaches to predict and understand the infection. Our group will work to release these models using our open source [Chester AI Radiology Assistant platform](https://mlmed.org/tools/xray/) which is designed to scale to a global need by performing the computation locally.
 
-Using both X-ray or CT (preference for X-ray) as input to predict these tasks:
+The tasks are as follows using chest X-ray or CT (preference for X-ray) as input to predict these tasks:
 
-- Healthy vs Pneumonia (prototype already implemented [Chester](https://mlmed.org/tools/xray/) with ~74% AUC)
+- Healthy vs Pneumonia (prototype already implemented [Chester](https://mlmed.org/tools/xray/) with ~74% AUC, validation study [here](https://arxiv.org/abs/2002.02497))
 
 - Bacterial vs Viral vs COVID-19 Pneumonia
 
