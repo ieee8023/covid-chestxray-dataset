@@ -8,6 +8,7 @@ All images and data will be released publicly in this GitHub repo. Currently we 
 
 Current stats of PA views. Labels 0=No or 1=Yes. Data loader is [here](https://github.com/mlmed/torchxrayvision/blob/master/torchxrayvision/datasets.py#L814)
 ``` 
+COVID19_Dataset num_samples=96
 {'ARDS': {0.0: 92, 1.0: 4},
  'Bacterial Pneumonia': {0.0: 90, 1.0: 6},
  'COVID-19': {0.0: 23, 1.0: 73},
