@@ -68,3 +68,20 @@ Contact: [Joseph Paul Cohen. Postdoctoral Fellow, Mila, University of Montreal](
 ## Initial results
 
 ![](docs/covid-xray-umap.png)
+
+## Citation
+
+```
+Joseph Paul Cohen
+COVID-19 image data collection
+https://github.com/ieee8023/covid-chestxray-dataset, 2020
+```
+
+```
+@article{cohen2020covid,
+  title={COVID-19 image data collection},
+  author={Joseph Paul Cohen},
+  journal={https://github.com/ieee8023/covid-chestxray-dataset},
+  year={2020}
+}
+```
