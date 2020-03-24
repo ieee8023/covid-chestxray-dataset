@@ -8,16 +8,27 @@ All images and data will be released publicly in this GitHub repo. Currently we 
 
 Current stats of PA views. Labels 0=No or 1=Yes. Data loader is [here](https://github.com/mlmed/torchxrayvision/blob/master/torchxrayvision/datasets.py#L814)
 ``` 
-COVID19_Dataset num_samples=96
-{'ARDS': {0.0: 92, 1.0: 4},
- 'Bacterial Pneumonia': {0.0: 90, 1.0: 6},
- 'COVID-19': {0.0: 23, 1.0: 73},
- 'MERS': {0.0: 96},
- 'No Finding': {0.0: 95, 1.0: 1},
- 'Pneumonia': {0.0: 2, 1.0: 94},
- 'SARS': {0.0: 85, 1.0: 11},
- 'Streptococcus': {0.0: 90, 1.0: 6},
- 'Viral Pneumonia': {0.0: 12, 1.0: 84}}
+COVID19_Dataset num_samples=99 views=['PA']
+{'ARDS': {0.0: 95, 1.0: 4},
+ 'Bacterial Pneumonia': {0.0: 93, 1.0: 6},
+ 'COVID-19': {0.0: 23, 1.0: 76},
+ 'MERS': {0.0: 99},
+ 'No Finding': {0.0: 98, 1.0: 1},
+ 'Pneumonia': {0.0: 2, 1.0: 97},
+ 'SARS': {0.0: 88, 1.0: 11},
+ 'Streptococcus': {0.0: 93, 1.0: 6},
+ 'Viral Pneumonia': {0.0: 12, 1.0: 87}}
+ 
+ COVID19_Dataset num_samples=24 views=['AP', 'AP Supine']
+ {'ARDS': {0.0: 24},
+ 'Bacterial Pneumonia': {0.0: 24},
+ 'COVID-19': {1.0: 24},
+ 'MERS': {0.0: 24},
+ 'No Finding': {0.0: 24},
+ 'Pneumonia': {1.0: 24},
+ 'SARS': {0.0: 24},
+ 'Streptococcus': {0.0: 24},
+ 'Viral Pneumonia': {1.0: 24}}
  ```
 
 ## Contribute
