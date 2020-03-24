@@ -6,7 +6,7 @@ All images and data will be released publicly in this GitHub repo. Currently we 
 
 ## View current [images](images) and [metadata](metadata.csv)
 
-Current stats of PA views. Labels 0=No or 1=Yes. Data loader is [here](https://github.com/mlmed/torchxrayvision/blob/master/torchxrayvision/datasets.py#L814)
+Current stats of PA, AP, and AP Supine views. Labels 0=No or 1=Yes. Data loader is [here](https://github.com/mlmed/torchxrayvision/blob/master/torchxrayvision/datasets.py#L814)
 ``` 
 COVID19_Dataset num_samples=99 views=['PA']
 {'ARDS': {0.0: 95, 1.0: 4},
