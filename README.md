@@ -82,9 +82,11 @@ Contact: [Joseph Paul Cohen. Postdoctoral Fellow, Mila, University of Montreal](
 
 ## Citation
 
+Paper availabe [here](https://arxiv.org/abs/2003.11597)
+
 ```
 Joseph Paul Cohen and Paul Morrison and Lan Dao
-COVID-19 image data collection, arXiv, 2020
+COVID-19 image data collection, arXiv:2003.11597, 2020
 https://github.com/ieee8023/covid-chestxray-dataset
 ```
 
@@ -92,7 +94,7 @@ https://github.com/ieee8023/covid-chestxray-dataset
 @article{cohen2020covid,
   title={COVID-19 image data collection},
   author={Joseph Paul Cohen and Paul Morrison and Lan Dao},
-  journal={arXiv},
+  journal={arXiv 2003.11597},
   url={https://github.com/ieee8023/covid-chestxray-dataset},
   year={2020}
 }
