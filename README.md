@@ -13,36 +13,36 @@ All images and data will be released publicly in this GitHub repo. Currently we 
 Current stats of PA, AP, and AP Supine views. Labels 0=No or 1=Yes. Data loader is [here](https://github.com/mlmed/torchxrayvision/blob/master/torchxrayvision/datasets.py#L867)
 ``` 
 COVID19_Dataset num_samples=136 views=['PA']
-{'ARDS': {0.0: 131, 1.0: 5},
- 'Bacterial Pneumonia': {0.0: 119, 1.0: 17},
- 'COVID-19': {0.0: 46, 1.0: 90},
- 'Chlamydophila': {0.0: 135, 1.0: 1},
- 'Fungal Pneumonia': {0.0: 123, 1.0: 13},
- 'Klebsiella': {0.0: 135, 1.0: 1},
- 'Legionella': {0.0: 134, 1.0: 2},
- 'MERS': {0.0: 136},
- 'No Finding': {0.0: 135, 1.0: 1},
- 'Pneumocystis': {0.0: 123, 1.0: 13},
- 'Pneumonia': {0.0: 1, 1.0: 135},
- 'SARS': {0.0: 125, 1.0: 11},
- 'Streptococcus': {0.0: 123, 1.0: 13},
- 'Viral Pneumonia': {0.0: 35, 1.0: 101}}
+{'ARDS': {0.0: 140, 1.0: 5},
+ 'Bacterial Pneumonia': {0.0: 128, 1.0: 17},
+ 'COVID-19': {0.0: 46, 1.0: 99},
+ 'Chlamydophila': {0.0: 144, 1.0: 1},
+ 'Fungal Pneumonia': {0.0: 132, 1.0: 13},
+ 'Klebsiella': {0.0: 144, 1.0: 1},
+ 'Legionella': {0.0: 143, 1.0: 2},
+ 'MERS': {0.0: 145},
+ 'No Finding': {0.0: 144, 1.0: 1},
+ 'Pneumocystis': {0.0: 132, 1.0: 13},
+ 'Pneumonia': {0.0: 1, 1.0: 144},
+ 'SARS': {0.0: 134, 1.0: 11},
+ 'Streptococcus': {0.0: 132, 1.0: 13},
+ 'Viral Pneumonia': {0.0: 35, 1.0: 110}}
  
 COVID19_Dataset num_samples=28 views=['AP', 'AP Supine']
-{'ARDS': {0.0: 28},
- 'Bacterial Pneumonia': {0.0: 28},
- 'COVID-19': {0.0: 4, 1.0: 24},
- 'Chlamydophila': {0.0: 28},
- 'Fungal Pneumonia': {0.0: 28},
- 'Klebsiella': {0.0: 28},
- 'Legionella': {0.0: 28},
- 'MERS': {0.0: 28},
- 'No Finding': {0.0: 28},
- 'Pneumocystis': {0.0: 28},
- 'Pneumonia': {0.0: 4, 1.0: 24},
- 'SARS': {0.0: 28},
- 'Streptococcus': {0.0: 28},
- 'Viral Pneumonia': {0.0: 4, 1.0: 24}}
+{'ARDS': {0.0: 33, 1.0: 1},
+ 'Bacterial Pneumonia': {0.0: 34},
+ 'COVID-19': {0.0: 4, 1.0: 30},
+ 'Chlamydophila': {0.0: 34},
+ 'Fungal Pneumonia': {0.0: 34},
+ 'Klebsiella': {0.0: 34},
+ 'Legionella': {0.0: 34},
+ 'MERS': {0.0: 34},
+ 'No Finding': {0.0: 34},
+ 'Pneumocystis': {0.0: 34},
+ 'Pneumonia': {0.0: 4, 1.0: 30},
+ 'SARS': {0.0: 34},
+ 'Streptococcus': {0.0: 34},
+ 'Viral Pneumonia': {0.0: 4, 1.0: 30}}
  ```
 
 ## Contribute
