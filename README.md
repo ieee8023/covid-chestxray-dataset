@@ -49,7 +49,7 @@ COVID19_Dataset num_samples=28 views=['AP', 'AP Supine']
 
  - We can extract images from publications. Help identify publications which are not already included using a GitHub issue (DOIs we have are listed in the metadata file). There is a searchable database of COVID-19 papers [here](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/global-research-on-novel-coronavirus-2019-ncov), and a non-searchable one (requires download) [here](https://pages.semanticscholar.org/coronavirus-research).
  
- - Submit data to https://radiopedia.org/ or https://www.sirm.org/category/senza-categoria/covid-19/ (we can scrape the data from them)
+ - Submit data to https://radiopaedia.org/ or https://www.sirm.org/category/senza-categoria/covid-19/ (we can scrape the data from them)
  
  - Provide bounding box/masks for the detection of problematic regions in images already collected.
 
