@@ -53,7 +53,7 @@ COVID19_Dataset num_samples=28 views=['AP', 'AP Supine']
  
  - Provide bounding box/masks for the detection of problematic regions in images already collected.
 
- - See [CONTRIBUTING.md](CONTRIBUTING.md) for more information on the metadata schema.
+ - See [SCHEMA.md](SCHEMA.md) for more information on the metadata schema.
 
 *Formats:* For chest X-ray dcm, jpg, or png are preferred. For CT nifti (in gzip format) is preferred but also dcms. Please contact with any questions.
 
