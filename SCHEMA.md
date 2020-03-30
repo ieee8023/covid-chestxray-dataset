@@ -10,6 +10,11 @@ Here is a list of each metadata field, with explanations where relevant
 | age | Age of the patient in years |
 | finding | Type of pneumonia |
 | survival | Yes (Y) or no (N) |
+| temperature | Temperature of the patient in Celsius|
+| pO2 saturation | partial pressure of oxygen saturation in % |
+| wbc count | white blood cell count in units of 10^3/uL  |
+| neutrophil count | neutrophil cell count in units of 10^3/uL |
+| lymphocyte count | lymphocyte cell count in units of 10^3/uL |
 | view | Posteroanterior (PA), Anteroposterior (AP), AP Supine (APS), or Lateral (L) for X-rays; Axial or Coronal for CT scans |
 | modality | CT, X-ray, or something else |
 | date | Date on which the image was acquired |
