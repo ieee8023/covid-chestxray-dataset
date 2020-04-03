@@ -9,7 +9,8 @@ Here is a list of each metadata field, with explanations where relevant
 | sex | Male (M), Female (F), or blank |
 | age | Age of the patient in years |
 | finding | Type of pneumonia |
-| survival | Yes (Y) or no (N) |
+| intubated | Yes (Y) if the patient was intubated as some point during this illness or No (N) or blank if unknown |
+| survival | Yes (Y) or no (N) or blank if unknown|
 | temperature | Temperature of the patient in Celsius|
 | pO2 saturation | partial pressure of oxygen saturation in % |
 | wbc count | white blood cell count in units of 10^3/uL  |
