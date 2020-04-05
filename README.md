@@ -10,40 +10,50 @@ All images and data will be released publicly in this GitHub repo. Currently we 
 
 ## View current [images](images) and [metadata](metadata.csv)
 
-Current stats of PA, AP, and AP Supine views. Labels 0=No or 1=Yes. Data loader is [here](https://github.com/mlmed/torchxrayvision/blob/master/torchxrayvision/datasets.py#L814)
+Current stats of PA, AP, and AP Supine views. Labels 0=No or 1=Yes. Data loader is [here](https://github.com/mlmed/torchxrayvision/blob/master/torchxrayvision/datasets.py#L867)
 ``` 
-COVID19_Dataset num_samples=99 views=['PA']
-{'ARDS': {0.0: 95, 1.0: 4},
- 'Bacterial Pneumonia': {0.0: 93, 1.0: 6},
- 'COVID-19': {0.0: 23, 1.0: 76},
- 'MERS': {0.0: 99},
- 'No Finding': {0.0: 98, 1.0: 1},
- 'Pneumonia': {0.0: 2, 1.0: 97},
- 'SARS': {0.0: 88, 1.0: 11},
- 'Streptococcus': {0.0: 93, 1.0: 6},
- 'Viral Pneumonia': {0.0: 12, 1.0: 87}}
+COVID19_Dataset num_samples=149 views=['PA']
+{'ARDS': {0.0: 144, 1.0: 5},
+ 'Bacterial Pneumonia': {0.0: 132, 1.0: 17},
+ 'COVID-19': {0.0: 46, 1.0: 103},
+ 'Chlamydophila': {0.0: 148, 1.0: 1},
+ 'Fungal Pneumonia': {0.0: 136, 1.0: 13},
+ 'Klebsiella': {0.0: 148, 1.0: 1},
+ 'Legionella': {0.0: 147, 1.0: 2},
+ 'MERS': {0.0: 149},
+ 'No Finding': {0.0: 148, 1.0: 1},
+ 'Pneumocystis': {0.0: 136, 1.0: 13},
+ 'Pneumonia': {0.0: 1, 1.0: 148},
+ 'SARS': {0.0: 138, 1.0: 11},
+ 'Streptococcus': {0.0: 136, 1.0: 13},
+ 'Viral Pneumonia': {0.0: 35, 1.0: 114}}
  
- COVID19_Dataset num_samples=24 views=['AP', 'AP Supine']
- {'ARDS': {0.0: 24},
- 'Bacterial Pneumonia': {0.0: 24},
- 'COVID-19': {1.0: 24},
- 'MERS': {0.0: 24},
- 'No Finding': {0.0: 24},
- 'Pneumonia': {1.0: 24},
- 'SARS': {0.0: 24},
- 'Streptococcus': {0.0: 24},
- 'Viral Pneumonia': {1.0: 24}}
+COVID19_Dataset num_samples=50 views=['AP', 'AP Supine']
+{'ARDS': {0.0: 49, 1.0: 1},
+ 'Bacterial Pneumonia': {0.0: 50},
+ 'COVID-19': {0.0: 4, 1.0: 46},
+ 'Chlamydophila': {0.0: 50},
+ 'Fungal Pneumonia': {0.0: 50},
+ 'Klebsiella': {0.0: 50},
+ 'Legionella': {0.0: 50},
+ 'MERS': {0.0: 50},
+ 'No Finding': {0.0: 50},
+ 'Pneumocystis': {0.0: 50},
+ 'Pneumonia': {0.0: 4, 1.0: 46},
+ 'SARS': {0.0: 50},
+ 'Streptococcus': {0.0: 50},
+ 'Viral Pneumonia': {0.0: 4, 1.0: 46}}
  ```
 
 ## Contribute
 
  - We can extract images from publications. Help identify publications which are not already included using a GitHub issue (DOIs we have are listed in the metadata file). There is a searchable database of COVID-19 papers [here](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/global-research-on-novel-coronavirus-2019-ncov), and a non-searchable one (requires download) [here](https://pages.semanticscholar.org/coronavirus-research).
  
- - Submit data to https://radiopedia.org/ or https://www.sirm.org/category/senza-categoria/covid-19/ (we can scrape the data from them)
+ - Submit data to https://radiopaedia.org/ or https://www.sirm.org/category/senza-categoria/covid-19/ (we can scrape the data from them)
  
  - Provide bounding box/masks for the detection of problematic regions in images already collected.
 
- - See [CONTRIBUTING.md](CONTRIBUTING.md) for more information on the metadata schema.
+ - See [SCHEMA.md](SCHEMA.md) for more information on the metadata schema.
 
 *Formats:* For chest X-ray dcm, jpg, or png are preferred. For CT nifti (in gzip format) is preferred but also dcms. Please contact with any questions.
 
