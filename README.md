@@ -53,6 +53,7 @@ COVID19_Dataset num_samples=50 views=['AP', 'AP Supine']
     - https://radiopaedia.org/ (license CC BY-NC-SA)
     - https://www.sirm.org/category/senza-categoria/covid-19/ 
     - https://www.eurorad.org/ (license CC BY-NC-SA)
+    - https://www.bsti.org.uk/training-and-education/covid-19-bsti-imaging-database/
  
  - Provide bounding box/masks for the detection of problematic regions in images already collected.
 
