@@ -16,7 +16,10 @@ x_ray_view = "PA" # View of X-Ray
 
 metadata = "./metadata.csv" # Meta info
 imageDir = "./images" # Directory of images
-outputDir = './ouptut' # Output directory to store selected images
+outputDir = './output' # Output directory to store selected images
+
+if not os.path.exists(outputDir):
+    os.makedirs(outputDir)
 
 metadata_csv = pd.read_csv(metadata)
 
@@ -27,5 +30,7 @@ for (i, row) in metadata_csv.iterrows():
 
 	filename = row["filename"].split(os.path.sep)[-1]
 	outputPath = os.path.sep.join([outputDir, filename])
-	shutil.copy2(imageDir, outputPath)
+	inputPath = os.path.sep.join([imageDir, filename])
+	
+	shutil.copy2(inputPath, outputPath)
 
