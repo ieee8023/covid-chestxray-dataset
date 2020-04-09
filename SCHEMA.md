@@ -9,8 +9,11 @@ Here is a list of each metadata field, with explanations where relevant
 | sex | Male (M), Female (F), or blank |
 | age | Age of the patient in years |
 | finding | Type of pneumonia |
-| intubated | Yes (Y) if the patient was intubated as some point during this illness or No (N) or blank if unknown |
 | survival | Yes (Y) or no (N) or blank if unknown|
+| intubated | Yes (Y) if the patient was intubated (or ventilated) at any point during this illness or No (N) or blank if unknown. |
+| went_icu | Yes (Y) if the patient was in the ICU (intensive care unit) or CCU (critical care unit) at any point during this illness or No (N) or blank if unknown.|
+| needed_supplemental_O2 | Yes (Y) if the patient required supplemental oxygen at any point during this illness or No (N) or blank if unknown |
+| extubated | Yes (Y) if the patient was successfully extubated or No (N) or blank if unknown |
 | temperature | Temperature of the patient in Celsius|
 | pO2 saturation | partial pressure of oxygen saturation in % |
 | wbc count | white blood cell count in units of 10^3/uL  |
