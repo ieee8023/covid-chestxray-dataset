@@ -84,9 +84,9 @@ The tasks are as follows using chest X-ray or CT (preference for X-ray) as input
 
 - Healthy vs Pneumonia (prototype already implemented [Chester](https://mlmed.org/tools/xray/) with ~74% AUC, validation study [here](https://arxiv.org/abs/2002.02497))
 
-- Bacterial vs Viral vs COVID-19 Pneumonia
+- ~~Bacterial vs Viral vs COVID-19 Pneumonia~~ (not relevant enough for the clinical workflows)
 
-- Survival of patient
+- Survival/prognosis of patient
 
 
 
