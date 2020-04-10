@@ -12,44 +12,48 @@ All images and data will be released publicly in this GitHub repo. Currently we 
 
 Current stats of PA, AP, and AP Supine views. Labels 0=No or 1=Yes. Data loader is [here](https://github.com/mlmed/torchxrayvision/blob/master/torchxrayvision/datasets.py#L867)
 ``` 
-COVID19_Dataset num_samples=136 views=['PA']
-{'ARDS': {0.0: 140, 1.0: 5},
- 'Bacterial Pneumonia': {0.0: 128, 1.0: 17},
- 'COVID-19': {0.0: 46, 1.0: 99},
- 'Chlamydophila': {0.0: 144, 1.0: 1},
- 'Fungal Pneumonia': {0.0: 132, 1.0: 13},
- 'Klebsiella': {0.0: 144, 1.0: 1},
- 'Legionella': {0.0: 143, 1.0: 2},
- 'MERS': {0.0: 145},
- 'No Finding': {0.0: 144, 1.0: 1},
- 'Pneumocystis': {0.0: 132, 1.0: 13},
- 'Pneumonia': {0.0: 1, 1.0: 144},
- 'SARS': {0.0: 134, 1.0: 11},
- 'Streptococcus': {0.0: 132, 1.0: 13},
- 'Viral Pneumonia': {0.0: 35, 1.0: 110}}
- 
-COVID19_Dataset num_samples=28 views=['AP', 'AP Supine']
-{'ARDS': {0.0: 33, 1.0: 1},
- 'Bacterial Pneumonia': {0.0: 34},
- 'COVID-19': {0.0: 4, 1.0: 30},
- 'Chlamydophila': {0.0: 34},
- 'Fungal Pneumonia': {0.0: 34},
- 'Klebsiella': {0.0: 34},
- 'Legionella': {0.0: 34},
- 'MERS': {0.0: 34},
- 'No Finding': {0.0: 34},
- 'Pneumocystis': {0.0: 34},
- 'Pneumonia': {0.0: 4, 1.0: 30},
- 'SARS': {0.0: 34},
- 'Streptococcus': {0.0: 34},
- 'Viral Pneumonia': {0.0: 4, 1.0: 30}}
+COVID19_Dataset num_samples=201 views=['PA', 'AP']
+{'ARDS': {0.0: 187, 1.0: 14},
+ 'Bacterial Pneumonia': {0.0: 184, 1.0: 17},
+ 'COVID-19': {0.0: 46, 1.0: 155},
+ 'Chlamydophila': {0.0: 200, 1.0: 1},
+ 'Fungal Pneumonia': {0.0: 188, 1.0: 13},
+ 'Klebsiella': {0.0: 200, 1.0: 1},
+ 'Legionella': {0.0: 199, 1.0: 2},
+ 'MERS': {0.0: 201},
+ 'No Finding': {0.0: 200, 1.0: 1},
+ 'Pneumocystis': {0.0: 188, 1.0: 13},
+ 'Pneumonia': {0.0: 1, 1.0: 200},
+ 'SARS': {0.0: 190, 1.0: 11},
+ 'Streptococcus': {0.0: 188, 1.0: 13},
+ 'Viral Pneumonia': {0.0: 35, 1.0: 166}}
+
+COVID19_Dataset num_samples=28 views=['AP Supine']
+{'ARDS': {0.0: 27, 1.0: 1},
+ 'Bacterial Pneumonia': {0.0: 28},
+ 'COVID-19': {0.0: 4, 1.0: 24},
+ 'Chlamydophila': {0.0: 28},
+ 'Fungal Pneumonia': {0.0: 28},
+ 'Klebsiella': {0.0: 28},
+ 'Legionella': {0.0: 28},
+ 'MERS': {0.0: 28},
+ 'No Finding': {0.0: 28},
+ 'Pneumocystis': {0.0: 28},
+ 'Pneumonia': {0.0: 4, 1.0: 24},
+ 'SARS': {0.0: 28},
+ 'Streptococcus': {0.0: 28},
+ 'Viral Pneumonia': {0.0: 4, 1.0: 24}}
+
  ```
 
 ## Contribute
 
  - We can extract images from publications. Help identify publications which are not already included using a GitHub issue (DOIs we have are listed in the metadata file). There is a searchable database of COVID-19 papers [here](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/global-research-on-novel-coronavirus-2019-ncov), and a non-searchable one (requires download) [here](https://pages.semanticscholar.org/coronavirus-research).
  
- - Submit data to https://radiopaedia.org/ or https://www.sirm.org/category/senza-categoria/covid-19/ (we can scrape the data from them)
+ - Submit data to these sites (we can scrape the data from them):
+    - https://radiopaedia.org/ (license CC BY-NC-SA)
+    - https://www.sirm.org/category/senza-categoria/covid-19/ 
+    - https://www.eurorad.org/ (license CC BY-NC-SA)
  
  - Provide bounding box/masks for the detection of problematic regions in images already collected.
 
@@ -80,9 +84,9 @@ The tasks are as follows using chest X-ray or CT (preference for X-ray) as input
 
 - Healthy vs Pneumonia (prototype already implemented [Chester](https://mlmed.org/tools/xray/) with ~74% AUC, validation study [here](https://arxiv.org/abs/2002.02497))
 
-- Bacterial vs Viral vs COVID-19 Pneumonia
+- ~~Bacterial vs Viral vs COVID-19 Pneumonia~~ (not relevant enough for the clinical workflows)
 
-- Survival of patient
+- Survival/prognosis of patient
 
 
 
