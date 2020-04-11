@@ -46,6 +46,8 @@ COVID19_Dataset num_samples=28 views=['AP Supine']
 
  ```
 
+[Lung Bounding Boxes](annotations/imageannotation_ai_lung_bounding_boxes.json) contributed by Andrew Gough at [ImageAnnotation.AI, Inc.](https://www.imageannotation.ai/covid-19)
+
 ## Contribute
 
  - We can extract images from publications. Help identify publications which are not already included using a GitHub issue (DOIs we have are listed in the metadata file). There is a searchable database of COVID-19 papers [here](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/global-research-on-novel-coronavirus-2019-ncov), and a non-searchable one (requires download) [here](https://pages.semanticscholar.org/coronavirus-research).
