@@ -9,23 +9,30 @@ import pandas as pd
 import argparse
 import shutil
 import os
+import errno
 
 # Selecting all combination of 'COVID-19' patients with 'PA' X-Ray view
-virus = "COVID-19" # Virus to look for
-x_ray_view = "PA" # View of X-Ray
+virus = "COVID-19"  # Virus to look for
+x_ray_view = "PA"  # View of X-Ray
 
-metadata = "./metadata.csv" # Meta info
-imageDir = "./images" # Directory of images
-outputDir = './ouptut' # Output directory to store selected images
+metadata = "./metadata.csv"  # Meta info
+imageDir = "./images"  # Directory of images
+outputDir = './output'  # Output directory to store selected images
 
 metadata_csv = pd.read_csv(metadata)
 
+if not os.path.exists(outputDir):
+    try:
+        os.makedirs(outputDir)
+    except OSError as exc:
+        if exc.errno != errno.EEXIST:
+            raise
+
 # loop over the rows of the COVID-19 data frame
 for (i, row) in metadata_csv.iterrows():
-	if row["finding"] != virus or row["view"] != x_ray_view:
-		continue
+    if row["finding"] != virus or row["view"] != x_ray_view:
+        continue
 
-	filename = row["filename"].split(os.path.sep)[-1]
-	outputPath = os.path.sep.join([outputDir, filename])
-	shutil.copy2(imageDir, outputPath)
-
+    filename = row["filename"]
+    filePath = os.path.sep.join([imageDir, filename])
+    shutil.copy2(filePath, outputDir)
