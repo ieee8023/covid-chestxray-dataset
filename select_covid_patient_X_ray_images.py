@@ -14,18 +14,16 @@ import os
 virus = "COVID-19" # Virus to look for
 x_ray_view = "PA" # View of X-Ray
 
-metadata = "./metadata.csv" # Meta info
-imageDir = "./images" # Directory of images
-outputDir = './ouptut' # Output directory to store selected images
+metadata = "./dataset/metadata/metadata.csv" # Meta info
+imageDir = "./dataset/images" # Directory of images
+outputDir = './dataset/normal-images' # Output directory to store selected images
 
 metadata_csv = pd.read_csv(metadata)
 
 # loop over the rows of the COVID-19 data frame
 for (i, row) in metadata_csv.iterrows():
-	if row["finding"] != virus or row["view"] != x_ray_view:
-		continue
-
-	filename = row["filename"].split(os.path.sep)[-1]
-	outputPath = os.path.sep.join([outputDir, filename])
-	shutil.copy2(imageDir, outputPath)
-
+	if row["finding"] != virus:
+		filename = row["filename"].split(os.path.sep)[-1]
+		outputPath = os.path.sep.join([outputDir, filename])
+		sourcePath = os.path.sep.join([imageDir, filename])
+		shutil.copy2(sourcePath, outputPath)
