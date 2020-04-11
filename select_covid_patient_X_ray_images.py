@@ -14,9 +14,9 @@ import os
 virus = "COVID-19" # Virus to look for
 x_ray_view = "PA" # View of X-Ray
 
-metadata = "./dataset/metadata/metadata.csv" # Meta info
-imageDir = "./dataset/images" # Directory of images
-outputDir = './dataset/normal-images' # Output directory to store selected images
+metadata = "./metadata.csv" # Meta info
+imageDir = "./images" # Directory of images
+outputDir = './ouptut' # Output directory to store selected images
 
 metadata_csv = pd.read_csv(metadata)
 
