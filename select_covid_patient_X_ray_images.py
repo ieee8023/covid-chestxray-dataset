@@ -27,5 +27,7 @@ for (i, row) in metadata_csv.iterrows():
 
 	filename = row["filename"].split(os.path.sep)[-1]
 	outputPath = os.path.sep.join([outputDir, filename])
-	shutil.copy2(imageDir, outputPath)
+	imagePath = os.path.sep.join([imageDir, filename])
+	shutil.copy2(imagePath, outputPath)
+
 
