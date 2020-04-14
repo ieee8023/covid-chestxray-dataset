@@ -1,2 +1,3 @@
 .DS_Store
 volumes
+scripts/.ipynb_checkpoints/*
