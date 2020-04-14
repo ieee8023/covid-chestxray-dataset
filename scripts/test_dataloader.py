@@ -5,8 +5,8 @@ from tqdm import tqdm
 import sys
 
 d_covid19 = xrv.datasets.COVID19_Dataset(views=["PA", "AP", "AP Supine"],
-                                         imgpath="./images",
-                                         csvpath="./metadata.csv")
+                                         imgpath="../images",
+                                         csvpath="../metadata.csv")
 print(d_covid19)
 
 for i in tqdm(range(len(d_covid19))):
