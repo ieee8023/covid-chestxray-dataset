@@ -56,6 +56,7 @@ COVID19_Dataset num_samples=28 views=['AP Supine']
     - https://radiopaedia.org/ (license CC BY-NC-SA)
     - https://www.sirm.org/category/senza-categoria/covid-19/ 
     - https://www.eurorad.org/ (license CC BY-NC-SA)
+    - https://coronacases.org/ (preferred for CT scans, license Apache 2.0)
  
  - Provide bounding box/masks for the detection of problematic regions in images already collected.
 
