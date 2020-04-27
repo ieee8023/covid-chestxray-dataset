@@ -6,7 +6,6 @@ Code can be modified for any combination of selection of images
 '''
 
 import pandas as pd
-import argparse
 import shutil
 import os
 
@@ -14,9 +13,9 @@ import os
 virus = "COVID-19" # Virus to look for
 x_ray_view = "PA" # View of X-Ray
 
-metadata = "./metadata.csv" # Meta info
-imageDir = "./images" # Directory of images
-outputDir = './ouptut' # Output directory to store selected images
+metadata = "../metadata.csv" # Meta info
+imageDir = "../images" # Directory of images
+outputDir = '../output' # Output directory to store selected images
 
 metadata_csv = pd.read_csv(metadata)
 
@@ -26,6 +25,5 @@ for (i, row) in metadata_csv.iterrows():
 		continue
 
 	filename = row["filename"].split(os.path.sep)[-1]
-	outputPath = os.path.sep.join([outputDir, filename])
-	shutil.copy2(imageDir, outputPath)
-
+	filePath = os.path.sep.join([imageDir, filename])
+	shutil.copy2(filePath, outputDir)
