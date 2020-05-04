@@ -18,7 +18,7 @@ imageDir = "../images" # Directory of images
 outputDir = '../output' # Output directory to store selected images
 
 metadata_csv = pd.read_csv(metadata)
-
+os.mkdir("../output")
 # loop over the rows of the COVID-19 data frame
 for (i, row) in metadata_csv.iterrows():
 	if row["finding"] != virus or row["view"] != x_ray_view:
