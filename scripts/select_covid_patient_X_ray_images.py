@@ -18,12 +18,11 @@ metadata = "../metadata.csv" # Meta info
 imageDir = "../images" # Directory of images
 outputDir = '../output' # Output directory to store selected images
 
-metadata_csv = pd.read_csv(metadata)
-
 
 #If outdir does not exist create it
 if not os.path.exists("../output"):
 	os.mkdir("../output")	
+
 
 # loop over the rows of the COVID-19 data frame
 for (i, row) in metadata_csv.iterrows():
