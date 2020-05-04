@@ -8,6 +8,7 @@ Code can be modified for any combination of selection of images
 import pandas as pd
 import shutil
 import os
+import os.path
 
 # Selecting all combination of 'COVID-19' patients with 'PA' X-Ray view
 virus = "COVID-19" # Virus to look for
@@ -18,6 +19,11 @@ imageDir = "../images" # Directory of images
 outputDir = '../output' # Output directory to store selected images
 
 metadata_csv = pd.read_csv(metadata)
+
+
+#If outdir does not exist create it
+if not os.path.exists("../output"):
+	os.mkdir("../output")	
 
 # loop over the rows of the COVID-19 data frame
 for (i, row) in metadata_csv.iterrows():
