@@ -114,11 +114,9 @@ def metadata_from_result_page(browser):
 
     if debug:
 
-        print("images")
         for image in images:
             pdb.set_trace()
 
-        print("image descriptions")
         for description in image_descriptions:
             pdb.set_trace()
 
@@ -128,11 +126,6 @@ def metadata_from_result_page(browser):
     figure_labels = browser.find_elements_by_xpath(figure_label_xpath)
 
     image_descriptions_text = []
-
-    print("figure_labels")
-    print(figure_labels)
-    print("image_descriptions")
-    print(image_descriptions)
 
     for image_description in image_descriptions:
         print("printing", image_description)
@@ -188,8 +181,6 @@ def eurorad_to_standard(eurorad_data):
         descriptions = eurorad_record["image_descriptions"]
         standard_images = []
         for image, description in zip(images, descriptions):
-            print(description)
-            print("CT" if "CT" in description else "X-ray")
             standard_images.append({
                 "url":image,
                 "image_description":description,
@@ -284,7 +275,7 @@ def output_candidate_entries(standard, columns, out_name, img_dir):
         os.mkdir(img_dir)
         for patient in standard:
             for image in patient["images"]:
-                print(image)
+                print("retrieving", image)
                 urllib.request.urlretrieve(
                     image["url"],
                     os.path.join(
