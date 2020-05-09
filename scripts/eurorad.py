@@ -9,14 +9,20 @@ import sys
 import time
 import pdb
 import pandas as pd
+import numpy as np
+from PIL import Image
+import urllib.request
+import matplotlib.pyplot as plt
 
+#Maximum number of results (reduce during development)
 max_results = 10000000000
 
 def wait():
+    "Wait a period of time. TODO: Random period of time"
     time.sleep(1)
 
 def get_browser():
-
+    "Return an instance of a Selenium browser."
     browser_downloads = os.path.join(os.path.dirname(__file__),"downloads")
 
     options = webdriver.ChromeOptions()
@@ -39,15 +45,18 @@ def get_browser():
 browser = get_browser()
 
 def format_search_url(search_terms):
+    "Format a URL for searching the given terms in Eurorad."
     return "https://www.eurorad.org/advanced-search?search=" + "+".join(search_terms)
 
 def extract_results_from_search_page(browser):
+    "Return all case URLs in the search page browser is currently on."
     out = []
     for a in browser.find_elements_by_xpath("//a[contains(@href,'/case/')]"):
         out.append(a.get_attribute("href"))
     return list(set(out))
 
 def get_next_search_page(browser):
+    "Get a link to the search page next in sequence after the search page browser is on."
     try:
         next_ref = browser.find_element_by_xpath(
             "//div[@class='pagination']/a[@title='Go to next page']"
@@ -57,6 +66,7 @@ def get_next_search_page(browser):
         return None
 
 def get_search_results(search_terms, browser):
+    "Use browser to get all case URLs matching the given search terms"
     next_search_page = format_search_url(search_terms)
     out = []
     n_results = 0;
@@ -74,6 +84,7 @@ def get_search_results(search_terms, browser):
         next_search_page = get_next_search_page(browser)
 
 def metadata_from_result_page(browser):
+    "Return the metadata from the Eurorad case the browser is currently on."
 
     title = browser.find_element_by_xpath("//title").text
 
@@ -159,6 +170,7 @@ def metadata_from_result_page(browser):
     return out
 
 def eurorad_to_standard(eurorad_data):
+    "Convert the Eurorad metadata to a more interoperable format."
     standard_data = []
     for eurorad_record in eurorad_data:
         standard_patient = {
@@ -191,6 +203,7 @@ def eurorad_to_standard(eurorad_data):
     return deepcopy(standard_data)
 
 def standard_to_metadata_format(standard_data):
+    "Convert data in an interoperable format to the format in metadata.csv"
     metadata = []
     for standard_record in standard_data:
         images = standard_record["images"]
@@ -216,6 +229,7 @@ def standard_to_metadata_format(standard_data):
     return deepcopy(metadata)
 
 def metadata_from_search_terms(search_terms, browser):
+    "Use browser to find the metadata from all search terms"
     result_pages = list(get_search_results(search_terms, browser))
     print(result_pages)
     for result_page in result_pages:
@@ -223,15 +237,8 @@ def metadata_from_search_terms(search_terms, browser):
         wait()
         yield metadata_from_result_page(browser)
 
-def metadata_from_search_terms(search_terms, browser):
-    result_pages = list(get_search_results(search_terms))
-    print(result_pages)
-    for result_page in result_pages:
-        browser.get(result_page)
-        wait()
-        yield metadata_from_result_page()
-
 class EuroRadCase():
+    "An object representing an Eurorad case."
     def __init__(self, url):
         self.url = url
         self.data = None
@@ -249,9 +256,11 @@ class EuroRadCase():
         return self.data
 
 def filename_from_url(url):
+    "Determine the filename that the given url should be downloaded to."
     return os.path.basename(urlparse(url).path)
 
 def find_new_eurorad_entries(old_data, new_cases):
+    "Iterate through the URLs in new_cases and return metadata from the ones that are not already in old_data."
     new_data = []
     for new_case in new_cases:
         if not new_case._in(old_data):
@@ -260,8 +269,9 @@ def find_new_eurorad_entries(old_data, new_cases):
     return new_data
 
 def output_candidate_entries(standard, columns, out_name, img_dir):
+    "Save the candidate entries to a file."
     for record in standard:
-        record["images"] = [i for i in record["images"] if i["modality"] == "X-ray"]            
+        record["images"] = [i for i in record["images"] if i["modality"] == "X-ray"]
     out_data = pd.DataFrame(standard_to_metadata_format(standard))
     for column in columns:
         if not column in out_data:
@@ -287,108 +297,8 @@ def output_candidate_entries(standard, columns, out_name, img_dir):
 def append_metadata(out, *to_append):
     pd.concat(to_append).to_csv(out)
 
-import numpy as np
-from PIL import Image
-import urllib.request
-import matplotlib.pyplot as plt
-
-def split_image(img, horiz=None, vert=None):
-    img = np.array(img)
-    #1. Find borders
-    if horiz and vert:
-        vert_borders = (img.shape[0] * np.array(range(vert+1))/vert).astype(int)
-        horiz_borders = (img.shape[1] * np.array(range(horiz+1))/horiz).astype(int)
-    else:
-    #2. Split images
-        horiz_borders, vert_borders = find_borders(img,
-                                                   threshold=.9,
-                                                   blur_range=10)
-        horiz_borders = [0] + list(horiz_borders) + [img.shape[0]]
-        vert_borders = [0] + list(vert_borders) + [img.shape[0]]
-    print(horiz_borders)
-    print(vert_borders)
-    for vert_idx in range(len(vert_borders)-1):
-        for horiz_idx in range(len(horiz_borders)-1):
-            x_start = vert_borders[vert_idx]
-            x_end = vert_borders[vert_idx+1]
-            y_start = horiz_borders[horiz_idx]
-            y_end = horiz_borders[horiz_idx+1]
-            print(x_start, x_end, y_start, y_end)
-            yield img[x_start:x_end, y_start:y_end]
-
-def blur_boolean(array, b, operation="or"):
-    l = array.shape[0]
-    out_array = array[:l-b]
-    print(array.shape)
-    print(out_array.shape)
-    for i in range(1, b + 1):
-        print(i)
-        if operation == "or":
-            out_array = out_array | array[i:l-b+i]
-        elif operation == "and":
-            out_array = out_array & array[i:l-b+i]
-    return out_array
-
-def find_maximi(horiz_contrast, threshold = .9, blur_range=None):
-    if blur_range is None:
-        blur_range = 10
-    over = horiz_contrast > threshold
-    over = blur_boolean(over, blur_range)
-    start = np.where(over[1:] & ~over[:-1])[0]
-    stop = np.where(~over[1:] & over[:-1])[0]
-    return np.mean([start, stop],axis=0).astype(int)
-
-def find_borders(img, threshold = .9, blur_range=10):
-    horiz_contrast = np.mean(np.abs((lambda img, n: np.array(img)[:,n:] - np.array(img)[:,:-n])(img, 3)),axis=0)
-    vert_contrast = np.mean(np.abs((lambda img, n: np.array(img)[n:] - np.array(img)[:-n])(img, 3)),axis=0)
-    mx = max(horiz_contrast.max(), vert_contrast.max())
-    print("max",mx)
-    horiz_borders = find_maximi(horiz_contrast/mx, threshold, blur_range)
-    vert_borders = find_maximi(vert_contrast/mx, threshold, blur_range)
-    return horiz_borders, vert_borders
-
-def crop(img, thresh=.05):
-    def crop_downwards(img, thresh):
-        cropped = False
-        while variance(img[0]) < thresh:
-            img = img[1:]
-            cropped = True
-        return img, cropped
-    def crop_upwards(img, thresh):
-        cropped = False
-        while variance(img[-1]) < thresh:
-            img = img[:-1]
-            cropped = True
-        return img, cropped
-    def crop_horizontal(img, thresh):
-        cropped = False
-        while variance(img[:,0]) < thresh:
-            img = img[:,1:]
-            cropped = True
-        return img, cropped
-    def crop_vertical(img, thresh):
-        cropped = False
-        while variance(img[:,-1]) < thresh:
-            img = img[:,:-1]
-            cropped = True
-        return img, cropped
-    any_cropped = False
-    total_variation_in_image = variance(img)
-    thresh = thresh * total_variation_in_image
-    for crop_func in [crop_horizontal,
-                      crop_vertical,
-                      crop_upwards,
-                      crop_downwards]:
-        img, cropped = crop_func(img, thresh)
-        any_cropped |= cropped
-    if any_cropped:
-        return crop_border(img, thresh)
-    return img
-
-def variance(arr):
-    return np.abs(arr - arr.mean()).mean()
-
 def clean_standard_data(standard_data):
+    "Sanitize data already in an interoperable format."
     standard_data = deepcopy(standard_data)
     def sanitize_sex(sex):
         sex = sex.lower()
@@ -423,12 +333,17 @@ def clean_standard_data(standard_data):
     return standard_data
 
 
+
+#Read in current metadata
 old_data = pd.read_table("../metadata.csv",sep=",")
 
+#Build a generator of new case URLs
 new_cases = get_search_results(["COVID"],browser)
 
+#Record metadata from the cases not already recorded
 found = find_new_eurorad_entries(old_data, new_cases)
 
+#Save new data to disk for examination.
 output_candidate_entries(
     clean_standard_data(eurorad_to_standard(found)),
     old_data.columns,
