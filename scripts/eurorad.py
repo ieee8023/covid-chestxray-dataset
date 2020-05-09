@@ -110,16 +110,6 @@ def metadata_from_result_page(browser):
     images = browser.find_elements_by_xpath(image_xpath)
     image_descriptions = browser.find_elements_by_xpath(description_xpath)
 
-    debug = False
-
-    if debug:
-
-        for image in images:
-            pdb.set_trace()
-
-        for description in image_descriptions:
-            pdb.set_trace()
-
     time.sleep(5)
 
     figure_label_xpath = "//li[@class='list-inline-item' and ./a[contains(@class, figure-gallery-paginator__link) and @href='#']]"
