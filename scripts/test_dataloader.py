@@ -4,6 +4,12 @@ import torchxrayvision as xrv
 from tqdm import tqdm
 import sys
 
+# print stats
+for views in [["PA","AP"],["AP Supine"]]:
+    print(xrv.datasets.COVID19_Dataset(views=views,
+                                         imgpath="../images",
+                                         csvpath="../metadata.csv"))
+
 d_covid19 = xrv.datasets.COVID19_Dataset(views=["PA", "AP", "AP Supine"],
                                          imgpath="../images",
                                          csvpath="../metadata.csv")
