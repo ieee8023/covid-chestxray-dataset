@@ -3,46 +3,65 @@ from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.action_chains import ActionChains
+from urllib.request import urlretrieve
 from copy import deepcopy
 from urllib.parse import urlparse
+from scipy.stats import truncnorm
 import sys
 import time
 import pdb
 import pandas as pd
+import pickle
 import numpy as np
+import argparse
 from PIL import Image
 import urllib.request
 import matplotlib.pyplot as plt
+import argparse
+
+"""
+
+Usage:
+
+First download the correct chromedriver for your operating system from here:
+https://sites.google.com/a/chromium.org/chromedriver/
+
+Make sure it is for the same version as your Chrome installation.
+
+Extract it and put it in the same directory as this file.
+
+Then, run from the console as eurorad.py, ideally in the same directory.
+
+"""
 
 #Maximum number of results (reduce during development)
 max_results = 10000000000
 
-def wait():
-    "Wait a period of time. TODO: Random period of time"
-    time.sleep(1)
+chromedriver_path = os.path.abspath(
+    os.path.join(
+        os.path.dirname(__file__),
+        "chromedriver"
+    )
+)
+
+def wait(n):
+    """Wait a random period of time"""
+    time.sleep(truncnorm.rvs(0, n*2, loc=n, scale=n/4))
 
 def get_browser():
     "Return an instance of a Selenium browser."
-    browser_downloads = os.path.join(os.path.dirname(__file__),"downloads")
 
     options = webdriver.ChromeOptions()
     options.gpu = False
     options.headless = False
-    options.add_experimental_option("prefs", {
-        "download.default_directory" : browser_downloads,
-        'profile.default_content_setting_values.automatic_downloads': 2,
-    })
 
-    chrome_path = os.path.join(os.path.abspath(os.path.dirname(__file__)),"../chromedriver")
-    print(chrome_path)
+    print(chromedriver_path)
 
     desired = options.to_capabilities()
     desired['loggingPrefs'] = { 'performance': 'ALL'}
     browser = webdriver.Chrome(desired_capabilities=desired,
-                               executable_path=chrome_path)
+                               executable_path=chromedriver_path)
     return browser
-
-browser = get_browser()
 
 def format_search_url(search_terms):
     "Format a URL for searching the given terms in Eurorad."
@@ -71,15 +90,20 @@ def get_search_results(search_terms, browser):
     out = []
     n_results = 0;
     while next_search_page:
-        print("using search page", next_search_page)
+        #print("using search page", next_search_page)
         browser.get(next_search_page)
-        wait()
+        wait(10)
         results = list(extract_results_from_search_page(browser))
+        if not results:
+            print("Please resolve the captcha.")
+            input()
+            results = list(extract_results_from_search_page(browser))
         n_results += len(results)
         for result in results:
             yield EuroRadCase(result)
         if n_results > max_results:
-            print("Exiting due to overload")
+            pass
+            #print("Exiting due to overload")
             break
         next_search_page = get_next_search_page(browser)
 
@@ -100,9 +124,9 @@ def metadata_from_result_page(browser):
     ]
 
     #Must visit element to retrieve text
-    time.sleep(.25)
+    wait(1)
     browser.execute_script("window.scrollTo(0, document.body.scrollHeight)")
-    time.sleep(5)
+    wait(5)
 
     image_xpath = "//div[contains(@class,'figure-gallery__item')]/*/img[@typeof='foaf:Image']"
     description_xpath = "//div[contains(@class,'figure-gallery__item')]/div[@class='figure-gallery__item__label']/span[@class='mb-1 d-block']"
@@ -110,7 +134,7 @@ def metadata_from_result_page(browser):
     images = browser.find_elements_by_xpath(image_xpath)
     image_descriptions = browser.find_elements_by_xpath(description_xpath)
 
-    time.sleep(5)
+    wait(5)
 
     figure_label_xpath = "//li[@class='list-inline-item' and ./a[contains(@class, figure-gallery-paginator__link) and @href='#']]"
     figure_labels = browser.find_elements_by_xpath(figure_label_xpath)
@@ -118,11 +142,12 @@ def metadata_from_result_page(browser):
     image_descriptions_text = []
 
     for image_description in image_descriptions:
-        print("printing", image_description)
+        #print("printing", image_description)
         try:
             browser.execute_script("arguments[0].scrollIntoView()", image_description)
         except:
-            print("didn't work")
+            pass
+            #print("didn't work")
         image_descriptions_text.append(image_description.get_attribute("innerHTML"))
 
     images_src = []
@@ -131,8 +156,8 @@ def metadata_from_result_page(browser):
         browser.execute_script("arguments[0].scrollIntoView()", image)
         while image.get_attribute("src").startswith("data"):
             pass
-        time.sleep(.1)
-        print("image", image.get_attribute("innerHTML"))
+        wait(1)
+        #print("image", image.get_attribute("innerHTML"))
         images_src.append(image.get_attribute("src").replace("_teaser_large",""))
 
     out = {}
@@ -152,71 +177,70 @@ def metadata_from_result_page(browser):
             out[key] = value.split("\n")
     return out
 
-def eurorad_to_standard(eurorad_data):
+def eurorad_to_standard(eurorad_record):
     "Convert the Eurorad metadata to a more interoperable format."
-    standard_data = []
-    for eurorad_record in eurorad_data:
-        standard_patient = {
-            "sex":eurorad_record["sex"],
-            "age":eurorad_record["age"],
-            "clinical_history":eurorad_record["CLINICAL HISTORY"],
-            "finding":eurorad_record["FINAL DIAGNOSIS"]
-        }
-        standard_document = {
-            "doi":None,
-            "url":eurorad_record["url"],
-            "license":"CC BY-NC-SA 4.0"
-        }
-        images = eurorad_record["images"]
-        descriptions = eurorad_record["image_descriptions"]
-        standard_images = []
-        for image, description in zip(images, descriptions):
-            standard_images.append({
-                "url":image,
-                "image_description":description,
-                "modality":"CT" if "CT" in description else "X-ray" #currently only supports X-rays
-            })
-        standard_data.append({
+    standard_patient = {
+        "sex":eurorad_record["sex"],
+        "age":eurorad_record["age"],
+        "clinical_history":eurorad_record["CLINICAL HISTORY"],
+        "finding":eurorad_record["FINAL DIAGNOSIS"]
+    }
+    standard_document = {
+        "doi":None,
+        "url":eurorad_record["url"],
+        "license":"CC BY-NC-SA 4.0"
+    }
+    images = eurorad_record["images"]
+    descriptions = eurorad_record["image_descriptions"]
+    standard_images = []
+    for image, description in zip(images, descriptions):
+        standard_images.append({
+            "url":image,
+            "image_description":description,
+            "modality":"CT" if "CT" in description else "X-ray" #currently only supports X-rays
+        })
+    return {
             "patient":standard_patient,
             "images":standard_images,
             "document":standard_document
-        })
-    return deepcopy(standard_data)
+        }
 
-def standard_to_metadata_format(standard_data):
+def standard_to_metadata_format(standard_record):
     "Convert data in an interoperable format to the format in metadata.csv"
-    metadata = []
-    for standard_record in standard_data:
-        images = standard_record["images"]
-        standard_patient = standard_record["patient"]
-        for image in images:
-            patient_row = {}
-            patient_row.update(standard_record["patient"])
-            patient_row["clinical_notes"] = (
-                patient_row.pop("clinical_history") + " " + image["image_description"]
-            )
-            patient_row.update(standard_record["document"])
-            modality = image["modality"]
-            if modality == "X-ray":
-                folder = "images"
-            elif modality == "CT":
-                folder = "volumes"
-            else:
-                raise ValueError
-            patient_row["modality"] = modality
-            patient_row["folder"] = folder
-            patient_row["filename"] = filename_from_url(image["url"])
-            metadata.append(patient_row)
-    return deepcopy(metadata)
+    all_rows = []
+    images = standard_record["images"]
+    standard_patient = standard_record["patient"]
+    for image in images:
+        patient_row = {}
+        patient_row.update(standard_record["patient"])
+        patient_row["clinical_notes"] = (
+            patient_row.pop("clinical_history") + " " + image["image_description"]
+        )
+        patient_row.update(standard_record["document"])
+        modality = image["modality"]
+        if modality == "X-ray":
+            folder = "images"
+        elif modality == "CT":
+            folder = "volumes"
+        else:
+            raise ValueError
+        patient_row["modality"] = modality
+        patient_row["folder"] = folder
+        patient_row["filename"] = filename_from_url(image["url"])
+        all_rows.append(patient_row)
+    return all_rows
 
 def metadata_from_search_terms(search_terms, browser):
     "Use browser to find the metadata from all search terms"
     result_pages = list(get_search_results(search_terms, browser))
-    print(result_pages)
+    #print(result_pages)
     for result_page in result_pages:
-        browser.get(result_page)
-        wait()
-        yield metadata_from_result_page(browser)
+        try:
+            browser.get(result_page)
+            wait()
+            yield metadata_from_result_page(browser)
+        except:
+            print("Failed for", result_page)
 
 class EuroRadCase():
     "An object representing an Eurorad case."
@@ -245,42 +269,43 @@ def find_new_eurorad_entries(old_data, new_cases):
     new_data = []
     for new_case in new_cases:
         if not new_case._in(old_data):
-            data = new_case.get_data()
-            new_data.append(data)
-    return new_data
+            try:
+                data = new_case.get_data()
+                new_data.append(data)
+                yield data
+            except:
+                print("failed")
 
 def output_candidate_entries(standard, columns, out_name, img_dir):
     "Save the candidate entries to a file."
-    for record in standard:
-        record["images"] = [i for i in record["images"] if i["modality"] == "X-ray"]
-    out_data = pd.DataFrame(standard_to_metadata_format(standard))
-    for column in columns:
-        if not column in out_data:
-            out_data[column] = pd.NA
-    out_data = out_data[out_data["modality"] == "X-ray"]
-    out_data = out_data.reindex(columns, axis=1)
-    out_data.to_csv(out_name)
-
+    pickle_name = out_name + "_pickled_data"
+    out_df = pd.DataFrame(columns=columns)
     if not os.path.exists(img_dir):
         os.mkdir(img_dir)
-        for patient in standard:
-            for image in patient["images"]:
-                print("retrieving", image)
-                urllib.request.urlretrieve(
-                    image["url"],
-                    os.path.join(
-                        img_dir,
-                        filename_from_url(image["url"])
-                    )
+    all_records = []
+    for record in standard:
+        all_records.append(record)
+        record = eurorad_to_standard(record)
+        with open(pickle_name, "wb") as handle:
+            pickle.dump(all_records, handle)
+        patient = clean_standard_data(record)
+        for image in patient["images"]:
+            urllib.request.urlretrieve(
+                image["url"],
+                os.path.join(
+                    img_dir,
+                    filename_from_url(image["url"])
                 )
-                time.sleep(2)
+            )
+        out_df = out_df.append(standard_to_metadata_format(patient),
+                               ignore_index=True)
+        out_df.to_csv(out_name)
 
 def append_metadata(out, *to_append):
     pd.concat(to_append).to_csv(out)
 
-def clean_standard_data(standard_data):
+def clean_standard_data(standard_record):
     "Sanitize data already in an interoperable format."
-    standard_data = deepcopy(standard_data)
     def sanitize_sex(sex):
         sex = sex.lower()
         if "f" in sex or "w" in sex:
@@ -299,34 +324,61 @@ def clean_standard_data(standard_data):
             return "COVID-19"
         else:
             return finding
-    for standard_record in standard_data:
-        sex = standard_record["patient"]["sex"]
-        if not sex in ["M", "F"]:
-            standard_record["patient"]["sex"] = sanitize_sex(sex)
+    sex = standard_record["patient"]["sex"]
+    if not sex in ["M", "F"]:
+        standard_record["patient"]["sex"] = sanitize_sex(sex)
 
-        standard_record["patient"]["age"] = sanitize_age(
-            standard_record["patient"]["age"]
-        )
+    standard_record["patient"]["age"] = sanitize_age(
+        standard_record["patient"]["age"]
+    )
 
-        standard_record["patient"]["finding"] = sanitize_finding(
-            standard_record["patient"]["finding"]
-        )
-    return standard_data
-
+    standard_record["patient"]["finding"] = sanitize_finding(
+        standard_record["patient"]["finding"]
+    )
+    return standard_record
 
 
-#Read in current metadata
-old_data = pd.read_table("../metadata.csv",sep=",")
 
-#Build a generator of new case URLs
-new_cases = get_search_results(["COVID"],browser)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "search",
+        help="The search terms used to identify images"
+    )
+    parser.add_argument(
+        "newimg",
+        help="Folder to use when storing images. Should be empty or not exist yet.",
+        default="../candidate_images"
+    )
+    parser.add_argument(
+        "newcsv",
+         help="File to output candidate metadata.",
+         default="../candidate_metadata.csv"
+    )
+    parser.add_argument(
+        "csv",
+        help="Location of old metadata.",
+        default="../metadata.csv"
+    )
 
-#Record metadata from the cases not already recorded
-found = find_new_eurorad_entries(old_data, new_cases)
+    args = parser.parse_args()
 
-#Save new data to disk for examination.
-output_candidate_entries(
-    clean_standard_data(eurorad_to_standard(found)),
-    old_data.columns,
-    "../candidate_metadata.csv",
-    "../candidate_images")
+    browser = get_browser()
+
+    #Read in current metadata
+    old_data = pd.read_table(args.csv, sep=",")
+
+    #Build a generator of new case URLs
+    new_cases = get_search_results(args.search.split(" "),
+                                   browser)
+
+    #Record metadata from the cases not already recorded
+    found = find_new_eurorad_entries(old_data, new_cases)
+
+    #Save new data to disk for examination.
+    output_candidate_entries(
+        found,
+        old_data.columns,
+        args.newcsv,
+        args.newimg
+    )
