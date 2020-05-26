@@ -16,11 +16,12 @@ d_covid19 = xrv.datasets.COVID19_Dataset(views=["PA", "AP", "AP Supine"],
 print(d_covid19)
 
 for i in tqdm(range(len(d_covid19))):
+    idx = len(d_covid19)-i-1
     try:
         # start from the most recent
-        a = d_covid19[len(d_covid19)-i-1]
+        a = d_covid19[idx]
     except KeyboardInterrupt:
         break;
     except:
-        print("Error with {}".format(i) + d_covid19.csv.iloc[i].filename)
+        print("Error with {}".format(i) + d_covid19.csv.iloc[idx].filename)
         print(sys.exc_info()[1])
