@@ -1,8 +1,8 @@
-## COVID-19 Pneumonia Severity Scores (Mean of 3 expert raters)
-## License: CC BY-SA Creative Commons Attribution-ShareAlike
-## Citation: Joseph Paul Cohen et al. Predicting COVID-19 Pneumonia Severity on Chest X-Ray with Deep Learning. May 2020 http://arxiv.org/abs/2005.11856.
-## geographic_extent_mean: The extent of lung involvement by ground glass opacity or consolidation for each lung. The total extent score ranged from 0 to 8.
-## opacity_mean: The degree of opacity. The total opacity score ranged from 0 to 6.
+## COVID-19 Pneumonia Severity Scores (Mean of 3 expert raters),,
+## License: CC BY-SA Creative Commons Attribution-ShareAlike,,
+## Citation: Joseph Paul Cohen et al. Predicting COVID-19 Pneumonia Severity on Chest X-Ray with Deep Learning. May 2020 http://arxiv.org/abs/2005.11856.,,
+## geographic_extent_mean: The extent of lung involvement by ground glass opacity or consolidation for each lung. The total extent score ranged from 0 to 8.,,
+## opacity_mean: The degree of opacity. The total opacity score ranged from 0 to 6.,,
 filename,geographic_mean,opacity_mean
 01E392EE-69F9-4E33-BFCE-E5C968654078.jpeg,6.0,4.0
 03BF7561-A9BA-4C3C-B8A0-D3E585F73F3C.jpeg,2.7,2.0
