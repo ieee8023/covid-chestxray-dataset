@@ -12,21 +12,21 @@ This project is approved by the University of Montreal's Ethics Committee #CERSE
 
 Current stats of PA, AP, and AP Supine views. Labels 0=No or 1=Yes. Data loader is [here](https://github.com/mlmed/torchxrayvision/blob/master/torchxrayvision/datasets.py#L867)
 ``` 
-COVID19_Dataset num_samples=263 views=['PA', 'AP']
-{'ARDS': {0.0: 248, 1.0: 15},
- 'Bacterial Pneumonia': {0.0: 246, 1.0: 17},
- 'COVID-19': {0.0: 54, 1.0: 209},
- 'Chlamydophila': {0.0: 262, 1.0: 1},
- 'Fungal Pneumonia': {0.0: 251, 1.0: 12},
- 'Klebsiella': {0.0: 262, 1.0: 1},
- 'Legionella': {0.0: 261, 1.0: 2},
- 'MERS': {0.0: 263},
- 'No Finding': {0.0: 258, 1.0: 5},
- 'Pneumocystis': {0.0: 251, 1.0: 12},
- 'Pneumonia': {0.0: 5, 1.0: 258},
- 'SARS': {0.0: 247, 1.0: 16},
- 'Streptococcus': {0.0: 250, 1.0: 13},
- 'Viral Pneumonia': {0.0: 38, 1.0: 225}}
+COVID19_Dataset num_samples=435 views=['PA', 'AP']
+{'ARDS': {0.0: 420, 1.0: 15},
+ 'Bacterial Pneumonia': {0.0: 418, 1.0: 17},
+ 'COVID-19': {0.0: 62, 1.0: 373},
+ 'Chlamydophila': {0.0: 434, 1.0: 1},
+ 'Fungal Pneumonia': {0.0: 423, 1.0: 12},
+ 'Klebsiella': {0.0: 434, 1.0: 1},
+ 'Legionella': {0.0: 433, 1.0: 2},
+ 'MERS': {0.0: 435},
+ 'No Finding': {0.0: 422, 1.0: 13},
+ 'Pneumocystis': {0.0: 423, 1.0: 12},
+ 'Pneumonia': {0.0: 13, 1.0: 422},
+ 'SARS': {0.0: 419, 1.0: 16},
+ 'Streptococcus': {0.0: 422, 1.0: 13},
+ 'Viral Pneumonia': {0.0: 46, 1.0: 389}}
 
 COVID19_Dataset num_samples=45 views=['AP Supine']
 {'ARDS': {0.0: 44, 1.0: 1},
