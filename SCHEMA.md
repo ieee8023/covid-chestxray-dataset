@@ -19,7 +19,7 @@ Here is a list of each metadata field, with explanations where relevant
 | wbc count | white blood cell count in units of 10^3/uL at the time of the image |
 | neutrophil count | neutrophil cell count in units of 10^3/uL at the time of the image |
 | lymphocyte count | lymphocyte cell count in units of 10^3/uL at the time of the image |
-| view | Posteroanterior (PA), Anteroposterior (AP), AP Supine (APS), or Lateral (L) for X-rays; Axial or Coronal for CT scans |
+| view | Posteroanterior (PA), Anteroposterior (AP), AP Supine (APS), or Lateral (L) for X-rays; Axial or Coronal for CT scans. Translations: Bettaufnahme->Supine, Liegend->Supine|
 | modality | CT, X-ray, or something else |
 | date | Date on which the image was acquired |
 | location | Hospital name, city, state, country |
