@@ -53,7 +53,7 @@ COVID19_Dataset num_samples=45 views=['AP Supine']
 
 ## Contribute
 
- - Submit data directly to the project (coming soon!)
+ - Submit data directly to the project. View our [research protocol](https://docs.google.com/document/d/14b7cou98YhYcJ2jwOKznChtn5y6-mi9bgjeFv2DxOt0/edit). Contact us to start the process.
  - We can extract images from publications. Help identify publications which are not already included using a GitHub issue (DOIs we have are listed in the metadata file). There is a searchable database of COVID-19 papers [here](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/global-research-on-novel-coronavirus-2019-ncov), and a non-searchable one (requires download) [here](https://pages.semanticscholar.org/coronavirus-research).
  
  - Submit data to these sites (we can scrape the data from them):
