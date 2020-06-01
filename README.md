@@ -51,6 +51,8 @@ COVID19_Dataset num_samples=90 views=['AP Supine']
 [Pneumonia severity scores](annotations/covid-severity-scores.csv) from the paper [Predicting COVID-19 Pneumonia Severity on Chest X-ray with Deep Learning
 ](http://arxiv.org/abs/2005.11856)
 
+[Generated Lung Segmentations](annotations/lungVAE-masks) from the paper [Lung Segmentation from Chest X-rays using Variational Data Imputation](https://arxiv.org/abs/2005.10052)
+
 ## Contribute
 
  - Submit data directly to the project. View our [research protocol](https://docs.google.com/document/d/14b7cou98YhYcJ2jwOKznChtn5y6-mi9bgjeFv2DxOt0/edit). Contact us to start the process.
