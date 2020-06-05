@@ -126,3 +126,9 @@ https://github.com/ieee8023/covid-chestxray-dataset
 <meta name="citation_title" content="COVID-19 image data collection" />
 <meta name="citation_publication_date" content="2020" />
 <meta name="citation_author" content="Joseph Paul Cohen and Paul Morrison and Lan Dao" />
+
+## License
+
+Each image has license specified in the metadata.csv file. Including Apache 2.0, CC BY-NC-SA 4.0, CC BY 4.0.
+
+The metadata.csv, scripts, and other documents are released under a CC BY-NC-SA 4.0 license. Companies are free to perform research. Beyond that contact us.
