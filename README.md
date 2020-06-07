@@ -46,7 +46,7 @@ COVID19_Dataset num_samples=90 views=['AP Supine']
 
  ```
 
-[Lung Bounding Boxes](annotations/imageannotation_ai_lung_bounding_boxes.json) contributed by Andrew Gough at [ImageAnnotation.AI, Inc.](https://www.imageannotation.ai/covid-19)
+[Lung Bounding Boxes](annotations/imageannotation_ai_lung_bounding_boxes.json) contributed by Andrew Gough at [General Blockchain, Inc.](https://www.generalblockchain.com)
 
 [Pneumonia severity scores](annotations/covid-severity-scores.csv) from the paper [Predicting COVID-19 Pneumonia Severity on Chest X-ray with Deep Learning
 ](http://arxiv.org/abs/2005.11856)
