@@ -672,187 +672,187 @@ patientid,offset,sex,age,finding,survival,intubated,intubation_present,went_icu,
 347,13,F,39,COVID-19,Y,N,N,N,N,N,,,,,,,L,X-ray,2020,Italy,images,covid-19-caso-95-4-12.png,,https://www.sirm.org/2020/05/20/covid-19-caso-95/,,"Plenty of nuanced shaded glass areola are appreciated in the dorsal areas of both lower lung lobes, without parenchymal consolidation. In the lung segments not affected by the findings just described, there are no widespread alterations of the interstitium. No pleural effusion.  The case presented confirms the limited sensitivity of the X-ray examination and the usefulness of CT in case of discrepancy with clinical data.","Credit to Davide Stoppa, Federico Paltenghi, Lucia Volpato, Michele di Nunno",
 348,3,M,75,COVID-19,Y,,,Y,,,,,,,,,AP Supine,X-ray,2020,Italy,images,covid-19-caso-99-1-19.png,,https://www.sirm.org/2020/05/20/covid-19-caso-99/,,Blocks of parenchymal thickening in bilateral mid-basal region compatible with interstitial pneumonia.,"Credit to Longo Chiara, Tomaiuolo Luisa, Beleù Alessandro, De Robertis Riccardo, D'Onofrio Mirko",
 349,7,M,57,COVID-19,Y,N,N,Y,N,Y,,38.5,85,,,,AP Supine,X-ray,2020,Italy,images,covid-19-caso-111-1-21.png,,https://www.sirm.org/2020/05/31/covid-19-caso-111/,,"Presence of nuanced parenchymal thickenings, partly with pseudo-nodular appearance, in both hemithorax, with greater evidence in bi-basal site. Reinforcement of the interstitial texture and peri-bronchial thickening, bilaterally. Thickened them. Veiling (pleurogenic) of both SCFs.","Credit to Francesco MESSINA, Grazia CALABRESE, Carmela TEBALA, Lorena TURANO, Antonio ARMENTANO, Nicola ARCADI",
-,,M,30,COVID-19,,,,,,,,,,,,,,X-ray,,,images,08ed451c576ee00935ee178ec85c57_jumbo-1.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-92?lang=us,CC BY-NC-SA,"Presentation
+350,?,M,30,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,08ed451c576ee00935ee178ec85c57_jumbo-1.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-92?lang=us,CC BY-NC-SA,"Presentation
 Young patient presents with high grade fever, chills and short of breath Patchy air space opacities are seen in both lung mid lower zones. Diffuse ground glass opacities are also noted bilaterally. ",,
-,,M,30,COVID-19,,,,,,,,,,,,,,X-ray,,,images,e73d6e89fcd781b8afd159cf533358_jumbo-1.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-92?lang=us,CC BY-NC-SA,"Presentation
+350,?,M,30,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,e73d6e89fcd781b8afd159cf533358_jumbo-1.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-92?lang=us,CC BY-NC-SA,"Presentation
 Young patient presents with high grade fever, chills and short of breath Regression of disease process after 06 days. Eventually patient became RT-PCR -ve and discharge home in stable condition",,
-,,M,30,COVID-19,,,,,,,,,,,,,,X-ray,,,images,1141cc2b8b9cc394becce5d978b5a7_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-18?lang=us,CC BY-NC-SA,"Presentation
+350,?,M,30,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,1141cc2b8b9cc394becce5d978b5a7_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-18?lang=us,CC BY-NC-SA,"Presentation
 Four days history of fever Bilateral patchy areas of peripheral consolidation. Right perihilar consolidation.
 No pleural effusion.
 The mediastinum is unremarkable.",,
-,,M,30,COVID-19,,,,,,,,,,,,,,X-ray,,,images,6770dac454c45c86bc6c2d6193b177_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-97?lang=us,CC BY-NC-SA,"Presentation
+350,?,M,30,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,6770dac454c45c86bc6c2d6193b177_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-97?lang=us,CC BY-NC-SA,"Presentation
 Young diabetic patient presented with cough, shortness of breath and fever Bilateral patchy areas of air space consolidation with a lower zone predominance.",,
-,,M,65,COVID-19,,,,,,,,,,,,,,X-ray,,,images,665f7ed5dcf52f235d8abed8cc200c_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-95?lang=us,CC BY-NC-SA,"Presentation
+351,?,M,65,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,665f7ed5dcf52f235d8abed8cc200c_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-95?lang=us,CC BY-NC-SA,"Presentation
 SOB and myalgia. Heart size normal.  Lungs clear.",,
-,,M,65,COVID-19,,,,,,,,,,,,,,X-ray,,,images,071d06607edf81d70c940e043bce34_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-95?lang=us,CC BY-NC-SA,"Presentation
+351,?,M,65,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,071d06607edf81d70c940e043bce34_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-95?lang=us,CC BY-NC-SA,"Presentation
 SOB and myalgia. Diffuse bilateral ill defined peripheral airspace opacification in both lungs with sparing of the apices.
 Heart size normal.  Normal mediastinal contours.
 No pleural effusions.  ",,
-,,F,80,COVID-19,,,,,,,,,,,,,,X-ray,,,images,0a6c60063b4bae4de001caaba306d1_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-46?lang=us,CC BY-NC-SA,"Presentation
+352,?,F,80,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,0a6c60063b4bae4de001caaba306d1_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-46?lang=us,CC BY-NC-SA,"Presentation
 High grade fever Sternotomy wire sutures are seen with aortic valve prosthesis.
 Increased cardiothoracic ratio
 Congested central vessels.
 Faint left basal infiltrate with blunting of the left costophrenic angle.",,
-,,M,40,COVID-19,,,,,,,,,,,,,,X-ray,,,images,5ed7d0109672bdd3d58a7db7841f6a_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-82?lang=us,CC BY-NC-SA,"Presentation
+353,?,M,40,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,5ed7d0109672bdd3d58a7db7841f6a_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-82?lang=us,CC BY-NC-SA,"Presentation
 Cough, shortness of breath and fever Bilateral ground glass haze with peripheral patchy areas of air space opacification along with lower zone preponderance.",,
-,,M,25,COVID-19,,,,,,,,,,,,,,X-ray,,,images,fedd6c94d5dbd12d88c81a1020a3e4_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-131?lang=us,CC BY-NC-SA,"Presentation
+354,?,M,25,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,fedd6c94d5dbd12d88c81a1020a3e4_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-131?lang=us,CC BY-NC-SA,"Presentation
 Patient arrived to ER with fever, dry cough and severe shortness of breath. Subtle, peripheral ground-glass opacities seen in the upper and mid zones of the right lung, as well as superimposed to the left hilum.",,
-,,M,40,COVID-19,,,,,,,,,,,,,,X-ray,,,images,14d81f378173b86cc53f21d2d67040_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-80?lang=us,CC BY-NC-SA,"Presentation
+355,?,M,40,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,14d81f378173b86cc53f21d2d67040_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-80?lang=us,CC BY-NC-SA,"Presentation
 Three days of high-grade fever with dry cough. Bilateral air space patchy consolidations, mainly distributed in the right lung and left lower lung zone.
 No pleural effusion.
 No pneumothorax.
 Cardiac size appears normal.",,
-,,M,55,COVID-19,,,,,,,,,,,,,,X-ray,,,images,3eaf15de91d4ff55e6fb0e04cadb81_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-130?lang=us,CC BY-NC-SA,"Presentation
+356,?,M,55,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,3eaf15de91d4ff55e6fb0e04cadb81_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-130?lang=us,CC BY-NC-SA,"Presentation
 Fever, anosmia and shortness of breath, starting 7 days ago. Bilateral peripheral patchy air space opacitites, more prominent in the left lower lobe, associated with broncovascular thickening.",,
-,,M,80,COVID-19,,,,,,,,,,,,,,X-ray,,,images,a1fec23b293dfe7876660cb7acce43_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-rapidly-progressive-2?lang=us,CC BY-NC-SA,"Presentation
+357,?,M,80,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,a1fec23b293dfe7876660cb7acce43_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-rapidly-progressive-2?lang=us,CC BY-NC-SA,"Presentation
 Brought to the ER due to general discomfort, dysthermic sensation although without fever, dizziness for 1 week, and associating bilious vomiting today. No cough, although he complained of dyspnea. No contact with positive COVID-19 patients or recent trips outside Spain. Previously in the same month, he attended the ER concerning a foot ulcer. No significant findings.",,
-,,M,80,COVID-19,,,,,,,,,,,,,,X-ray,,,images,78b60346d1b3bce85353b6dc462d75_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-rapidly-progressive-2?lang=us,CC BY-NC-SA,"Presentation
+357,?,M,80,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,78b60346d1b3bce85353b6dc462d75_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-rapidly-progressive-2?lang=us,CC BY-NC-SA,"Presentation
 Brought to the ER due to general discomfort, dysthermic sensation although without fever, dizziness for 1 week, and associating bilious vomiting today. No cough, although he complained of dyspnea. No contact with positive COVID-19 patients or recent trips outside Spain. Previously in the same month, he attended the ER concerning a foot ulcer. Poorly defined opacities in both lungs, predominantly in the lower lobes, peripherally located and some of them coming together to form consolidations.",,
-,,M,80,COVID-19,,,,,,,,,,,,,,X-ray,,,images,c17cdd3972b233b97770bb57f7bba6_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-rapidly-progressive-2?lang=us,CC BY-NC-SA,"Presentation
+357,?,M,80,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,c17cdd3972b233b97770bb57f7bba6_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-rapidly-progressive-2?lang=us,CC BY-NC-SA,"Presentation
 Brought to the ER due to general discomfort, dysthermic sensation although without fever, dizziness for 1 week, and associating bilious vomiting today. No cough, although he complained of dyspnea. No contact with positive COVID-19 patients or recent trips outside Spain. Previously in the same month, he attended the ER concerning a foot ulcer. Radiological worsening due to greater density and extension of the ground glass opacities with a prominent peripheral and basal distribution within a multilobar involvement.",,
-,,M,80,COVID-19,,,,,,,,,,,,,,X-ray,,,images,f44373474437c99b2740062c914438_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-rapidly-progressive-2?lang=us,CC BY-NC-SA,"Presentation
+357,?,M,80,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,f44373474437c99b2740062c914438_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-rapidly-progressive-2?lang=us,CC BY-NC-SA,"Presentation
 Brought to the ER due to general discomfort, dysthermic sensation although without fever, dizziness for 1 week, and associating bilious vomiting today. No cough, although he complained of dyspnea. No contact with positive COVID-19 patients or recent trips outside Spain. Previously in the same month, he attended the ER concerning a foot ulcer. Bilateral alveolar consolidation with panlobar changes, with typical radiological findings of ARDS. ",,
-,,M,25,COVID-19,,,,,,,,,,,,,,X-ray,,,images,a8ef731d274b273f1526d8d0ffbe3b_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-86?lang=us,CC BY-NC-SA,"Presentation
+358,?,M,25,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,a8ef731d274b273f1526d8d0ffbe3b_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-86?lang=us,CC BY-NC-SA,"Presentation
 A young female with fever and also her brother and parents were proved cases of COVID-19 and stayed at home. No consolidation or collapse.
 No effusion or pneumothorax.
 Normal cardiomediastinal contour and pulmonary vasculature.",,
-,,M,25,COVID-19,,,,,,,,,,,,,,X-ray,,,images,b0f1684d1ee90dc09deef015e29dae_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-86?lang=us,CC BY-NC-SA,"Presentation
+358,?,M,25,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,b0f1684d1ee90dc09deef015e29dae_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-86?lang=us,CC BY-NC-SA,"Presentation
 A young female with fever and also her brother and parents were proved cases of COVID-19 and stayed at home. No consolidation or collapse.
 No effusion or pneumothorax.
 Normal cardiomediastinal contour and pulmonary vasculature.",,
-,,M,50,COVID-19,,,,,,,,,,,,,,X-ray,,,images,3b66f98f30636b2e1fb42c1d0f18a8_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-serial-radiographs-1?lang=us,CC BY-NC-SA,"Presentation
+359,?,M,50,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,3b66f98f30636b2e1fb42c1d0f18a8_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-serial-radiographs-1?lang=us,CC BY-NC-SA,"Presentation
 Short of breath. No history of respiratory disease. Minor bilateral mid zone airspace opacification in a peripheral distribution.",,
-,,M,50,COVID-19,,,,,,,,,,,,,,X-ray,,,images,50e51fcefaa760d0757eeae6eb0858_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-serial-radiographs-1?lang=us,CC BY-NC-SA,"Presentation
+359,?,M,50,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,50e51fcefaa760d0757eeae6eb0858_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-serial-radiographs-1?lang=us,CC BY-NC-SA,"Presentation
 Short of breath. No history of respiratory disease. Endotracheal tube and right internal jugular lines.
 Unchanged airspace opacification in the lungs.",,
-,,M,50,COVID-19,,,,,,,,,,,,,,X-ray,,,images,8eda8be6369c87e0899f6d1642e97b_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-serial-radiographs-1?lang=us,CC BY-NC-SA,"Presentation
+359,?,M,50,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,8eda8be6369c87e0899f6d1642e97b_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-serial-radiographs-1?lang=us,CC BY-NC-SA,"Presentation
 Short of breath. No history of respiratory disease. Endotracheal tube, right internal jugular line and nasogastric tubes suitably sited.
 Bilateral peripheral airspace opacification which has progressed since the prior radiograph.
 No pleural effusions.",,
-,,M,50,COVID-19,,,,,,,,,,,,,,X-ray,,,images,2d8a60a26381b256a5a6373708950e_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-serial-radiographs-1?lang=us,CC BY-NC-SA,"Presentation
+359,?,M,50,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,2d8a60a26381b256a5a6373708950e_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-serial-radiographs-1?lang=us,CC BY-NC-SA,"Presentation
 Short of breath. No history of respiratory disease. ET tube and bilateral internal jugular lines.
 Further progression in the bilateral airspace opacification with a more peripheral distribution than on the prior radiograph.",,
-,,M,50,COVID-19,,,,,,,,,,,,,,X-ray,,,images,2eadbbb367a0366d8c34350d083a83_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-pneumonia-serial-radiographs-1?lang=us,CC BY-NC-SA,"Presentation
+359,?,M,50,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,2eadbbb367a0366d8c34350d083a83_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-pneumonia-serial-radiographs-1?lang=us,CC BY-NC-SA,"Presentation
 Short of breath. No history of respiratory disease. Tracheostomy and left internal jugular line.
 Minor regression of the left sided airspace opacification.",,
-,,F,80,COVID-19,,,,,,,,,,,,,,X-ray,,,images,7867b1aa2d1241045c917f07a9e683_jumbo.jpeg,,https://radiopaedia.org/cases/covid-19-advanced?lang=us,CC BY-NC-SA,"Presentation
+360,?,F,80,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,7867b1aa2d1241045c917f07a9e683_jumbo.jpeg,?,https://radiopaedia.org/cases/covid-19-advanced?lang=us,CC BY-NC-SA,"Presentation
 Shortness of breath and cough. Widespread bilateral airspace consolidation in both lungs with sparing of a large part of the left upper lobe.  The distribution has a peripheral predominance. 
 No pleural effusion.",,
-,,F,45,Flitting pneumonia,,,,,,,,,,,,,,X-ray,,,images,5f8aaa4e85af075412849ebf8ebb54_jumbo-1.jpg,,https://radiopaedia.org/cases/flitting-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+360,?,F,45,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,5f8aaa4e85af075412849ebf8ebb54_jumbo-1.jpg,?,https://radiopaedia.org/cases/flitting-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 This non-smoker has been presenting and re-presenting to respiratory clinics with non-productive cough for several months. Over the months, the apperances are that of migrating/(""flitting"") infiltrates. Prior sympathectomy for Raynaud disease noted.
 A prior CT chest (not available for review) did not show any mass lesion, and no structurally abnormal lung.",,
-,,F,45,Flitting pneumonia,,,,,,,,,,,,,,X-ray,,,images,13cd850b02d1afe48c113a73eed882_jumbo-1.jpg,,https://radiopaedia.org/cases/flitting-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+360,?,F,45,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,13cd850b02d1afe48c113a73eed882_jumbo-1.jpg,?,https://radiopaedia.org/cases/flitting-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 This non-smoker has been presenting and re-presenting to respiratory clinics with non-productive cough for several months. Over the months, the apperances are that of migrating/(""flitting"") infiltrates. Prior sympathectomy for Raynaud disease noted.
 A prior CT chest (not available for review) did not show any mass lesion, and no structurally abnormal lung.",,
-,,F,45,Flitting pneumonia,,,,,,,,,,,,,,X-ray,,,images,b50c02b92f2b98f5e1477ff759ce94_jumbo-1.jpg,,https://radiopaedia.org/cases/flitting-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+360,?,F,45,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,b50c02b92f2b98f5e1477ff759ce94_jumbo-1.jpg,?,https://radiopaedia.org/cases/flitting-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 This non-smoker has been presenting and re-presenting to respiratory clinics with non-productive cough for several months. Over the months, the apperances are that of migrating/(""flitting"") infiltrates. Prior sympathectomy for Raynaud disease noted.
 A prior CT chest (not available for review) did not show any mass lesion, and no structurally abnormal lung.",,
-,,F,45,Flitting pneumonia,,,,,,,,,,,,,,X-ray,,,images,94c6945194a265ae1301bec234a7e0_jumbo-1.jpg,,https://radiopaedia.org/cases/flitting-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+360,?,F,45,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,94c6945194a265ae1301bec234a7e0_jumbo-1.jpg,?,https://radiopaedia.org/cases/flitting-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 This non-smoker has been presenting and re-presenting to respiratory clinics with non-productive cough for several months. Over the months, the apperances are that of migrating/(""flitting"") infiltrates. Prior sympathectomy for Raynaud disease noted.
 A prior CT chest (not available for review) did not show any mass lesion, and no structurally abnormal lung.",,
-,,F,45,Flitting pneumonia,,,,,,,,,,,,,,X-ray,,,images,52a8b6bf730b648d37b37d2aa51fd3_jumbo-1.jpg,,https://radiopaedia.org/cases/flitting-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+360,?,F,45,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,52a8b6bf730b648d37b37d2aa51fd3_jumbo-1.jpg,?,https://radiopaedia.org/cases/flitting-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 This non-smoker has been presenting and re-presenting to respiratory clinics with non-productive cough for several months. Over the months, the apperances are that of migrating/(""flitting"") infiltrates. Prior sympathectomy for Raynaud disease noted.
 A prior CT chest (not available for review) did not show any mass lesion, and no structurally abnormal lung.",,
-,,M,65,Lobar pneumonia,,,,,,,,,,,,,,X-ray,,,images,4e1dc09c3abe03a3efb72d494ddb6f_jumbo-2.jpeg,,https://radiopaedia.org/cases/lobar-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+361a,?,M,65,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,4e1dc09c3abe03a3efb72d494ddb6f_jumbo-2.jpeg,?,https://radiopaedia.org/cases/lobar-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 Cough, high fever and chills. Also, left side pleurisy. Homogeneous opacification of the left middle lung zone with partly ill defined left cardiac border.
 A few air bronchograms are also seen.
 Reticular pattern at the left upper lung zone.
 Obliterated left costophrenic angle.",,
-,,M,60,Multilobar pneumonia,,,,,,,,,,,,,,X-ray,,,images,9a4e0141fd7681c4026b55b4e13914_jumbo-2.jpeg,,https://radiopaedia.org/cases/multilobar-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+361b,?,M,60,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,9a4e0141fd7681c4026b55b4e13914_jumbo-2.jpeg,?,https://radiopaedia.org/cases/multilobar-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 Fever and cough. Complete airspace consolidation with air bronchograms of the right upper lobe, with further consolidation within the medial right middle lobe. Small right parapneumonic effusion.
 Left lung and pleural space are clear. Cardiomediastinal contour is unremarkable.",,
-,,M,60,Multilobar pneumonia,,,,,,,,,,,,,,X-ray,,,images,959dea122c905d6581f71b4a000bbb_jumbo-2.jpeg,,https://radiopaedia.org/cases/multilobar-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+361b,?,M,60,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,959dea122c905d6581f71b4a000bbb_jumbo-2.jpeg,?,https://radiopaedia.org/cases/multilobar-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 Fever and cough. Complete airspace consolidation with air bronchograms of the right upper lobe, with further consolidation within the medial right middle lobe. Small right parapneumonic effusion.
 Left lung and pleural space are clear. Cardiomediastinal contour is unremarkable.",,
-,,F,40,Multilobar pneumonia,,,,,,,,,,,,,,X-ray,,,images,e9cc806fc1c90195d999dc8d022d28_jumbo-2.jpeg,,https://radiopaedia.org/cases/multilobar-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
+362,?,F,40,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,e9cc806fc1c90195d999dc8d022d28_jumbo-2.jpeg,?,https://radiopaedia.org/cases/multilobar-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
 Known SLE presented to ER with a history of a productive cough and fever. Frontal chest radiograph upon admission shows large area of opacity involving the right lower lung zone. There is loss of clarity of the right cardiac border. The right hemidiaphragm is also slightly indistinct. These findings indicate consolidation in the middle and right lower lobes. ",,
-,,F,40,Multilobar pneumonia,,,,,,,,,,,,,,X-ray,,,images,bb25b35e1cc5cb0984ead37363db0e_jumbo-2.jpeg,,https://radiopaedia.org/cases/multilobar-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
+362,?,F,40,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,bb25b35e1cc5cb0984ead37363db0e_jumbo-2.jpeg,?,https://radiopaedia.org/cases/multilobar-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
 Known SLE presented to ER with a history of a productive cough and fever. Frontal chest radiograph obtained 8 days later, shows marked resolution of the opacity, with only minimal residual air space opacification.",,
-,,F,55,Legionella pneumonia,,,,,,,,,,,,,,X-ray,,,images,f6ece95b172eadba762bf3daef7441_jumbo-1.jpeg,,https://radiopaedia.org/cases/legionella-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+363,?,F,55,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,f6ece95b172eadba762bf3daef7441_jumbo-1.jpeg,?,https://radiopaedia.org/cases/legionella-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 Fevers, cough. Predominantly mid to lower zone airspace opacity. No large pleural effusion. ",,
-,,M,50,Lipoid pneumonia,,,,,,,,,,,,,,X-ray,,,images,582f068ae16494e015cf2b2ed90388_jumbo-1.jpeg,,https://radiopaedia.org/cases/lipoid-pneumonia-2?lang=us,CC BY-NC-SA,"Presentation
+364,?,M,50,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,582f068ae16494e015cf2b2ed90388_jumbo-1.jpeg,?,https://radiopaedia.org/cases/lipoid-pneumonia-2?lang=us,CC BY-NC-SA,"Presentation
 Increasing shortness of breath. Background history of colon adenocarcinoma. Frontal semierect chest radiograph demonstrating ill-defined opacities in the left hilum. 
 Bibasal atelectasis. 
 No pleural effusions. 
 Repeat radiographs 7 and 14 days post treatment demonstrated no resolution of left hilar changes. ",,
-,,M,50,Organizing pneumonia,,,,,,,,,,,,,,X-ray,,,images,81ba2932af55c7663e9d87016776a6_jumbo-1.jpeg,,https://radiopaedia.org/cases/organising-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
+364,?,M,50,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,81ba2932af55c7663e9d87016776a6_jumbo-1.jpeg,?,https://radiopaedia.org/cases/organising-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
 Left sided chest pain. Presented with dizziness and chest pain. Due for CT Chest as outpatient given nodules on CXR and need to rule out tuberculosis prior to starting on Crohn disease medication. Multiple lobulated opacities are seen bilaterally, most easily appreciated in the left apex and along the left side of the chest, but also projecting through the liver shadow. Further assessed with CT is recommended as the differential includes multifocal infection, malignancy, and even pulmonary embolism.",,
-,,M,50,Organizing pneumonia,,,,,,,,,,,,,,X-ray,,,images,3d4364c0e44859e86017ee1660112e_jumbo-1.jpeg,,https://radiopaedia.org/cases/organising-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
+364,?,M,50,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,3d4364c0e44859e86017ee1660112e_jumbo-1.jpeg,?,https://radiopaedia.org/cases/organising-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
 Left sided chest pain. Presented with dizziness and chest pain. Due for CT Chest as outpatient given nodules on CXR and need to rule out tuberculosis prior to starting on Crohn disease medication. Multiple lobulated opacities are seen bilaterally, most easily appreciated in the left apex and along the left side of the chest, but also projecting through the liver shadow. Further assessed with CT is recommended as the differential includes multifocal infection, malignancy, and even pulmonary embolism.",,
-,,M,50,Organizing pneumonia,,,,,,,,,,,,,,X-ray,,,images,f7ea5303f5e3ea16bdd4fd93df84fb_jumbo-1.jpeg,,https://radiopaedia.org/cases/organising-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
+364,?,M,50,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,f7ea5303f5e3ea16bdd4fd93df84fb_jumbo-1.jpeg,?,https://radiopaedia.org/cases/organising-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
 Left sided chest pain. Presented with dizziness and chest pain. Due for CT Chest as outpatient given nodules on CXR and need to rule out tuberculosis prior to starting on Crohn disease medication. Multiple lobulated opacities are seen bilaterally, most easily appreciated in the left apex and along the left side of the chest, but also projecting through the liver shadow. Further assessed with CT is recommended as the differential includes multifocal infection, malignancy, and even pulmonary embolism.",,
-,,M,35,Pneumocystis pneumonia,,,,,,,,,,,,,,X-ray,,,images,487354e56da5b0363458d0297446f0_jumbo-1.jpeg,,https://radiopaedia.org/cases/pneumocystis-pneumonia-6?lang=us,CC BY-NC-SA,"Presentation
+365,?,M,35,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,487354e56da5b0363458d0297446f0_jumbo-1.jpeg,?,https://radiopaedia.org/cases/pneumocystis-pneumonia-6?lang=us,CC BY-NC-SA,"Presentation
 Short of breath. Unwell. Known HIV not on treatment. Diffuse bilateral pulmonary airspace opacities",,
-,,M,35,Pneumocystis pneumonia,,,,,,,,,,,,,,X-ray,,,images,946b48f8564d681eb8950ea8a659e0_jumbo-1.jpeg,,https://radiopaedia.org/cases/pneumocystis-pneumonia-6?lang=us,CC BY-NC-SA,"Presentation
+365,?,M,35,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,946b48f8564d681eb8950ea8a659e0_jumbo-1.jpeg,?,https://radiopaedia.org/cases/pneumocystis-pneumonia-6?lang=us,CC BY-NC-SA,"Presentation
 Short of breath. Unwell. Known HIV not on treatment. Mild improvement after treatment",,
-,,F,75,Lipoid pneumonia,,,,,,,,,,,,,,X-ray,,,images,f410057190635755d60158d1595d67_jumbo-1.jpeg,,https://radiopaedia.org/cases/lipoid-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
+366,?,F,75,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,f410057190635755d60158d1595d67_jumbo-1.jpeg,?,https://radiopaedia.org/cases/lipoid-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
 History of pharyngeal neoplasm treated with radiotherapy, has persistent pulmonary consolidation that does not improve with antibiotics. Areas of consolidation remain in the middle lobe, with atelectasic component.
 Diffuse low-density, poorly defined opacities persist in the lower right lobe, especially on the lateral projection, with no sign of significant regression over prior exams.
 Ill-definition of the bronchovascular bundles in the lower left lung.
 Subpleural opacities remain unaltered near the pulmonary apices, which may be related to previous radiotherapy procedure.",,
-,,F,75,Lipoid pneumonia,,,,,,,,,,,,,,X-ray,,,images,ab63c1bdd7b06525e3537fa83e2a70_jumbo-1.jpeg,,https://radiopaedia.org/cases/lipoid-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
+366,?,F,75,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,ab63c1bdd7b06525e3537fa83e2a70_jumbo-1.jpeg,?,https://radiopaedia.org/cases/lipoid-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
 History of pharyngeal neoplasm treated with radiotherapy, has persistent pulmonary consolidation that does not improve with antibiotics. Areas of consolidation remain in the middle lobe, with atelectasic component.
 Diffuse low-density, poorly defined opacities persist in the lower right lobe, especially on the lateral projection, with no sign of significant regression over prior exams.
 Ill-definition of the bronchovascular bundles in the lower left lung.
 Subpleural opacities remain unaltered near the pulmonary apices, which may be related to previous radiotherapy procedure.",,
-,,F,35,Varicella pneumonia,,,,,,,,,,,,,,X-ray,,,images,56bc74129531580d3c40b1f8ae77ab_jumbo.jpeg,,https://radiopaedia.org/cases/varicella-pneumonia-3?lang=us,CC BY-NC-SA,"Presentation
+367,?,F,35,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,56bc74129531580d3c40b1f8ae77ab_jumbo.jpeg,?,https://radiopaedia.org/cases/varicella-pneumonia-3?lang=us,CC BY-NC-SA,"Presentation
 Chest pain. Otherwise well with no past medical history of significance. Multiple small high density nodules throughout both lungs.
 Heart size normal.
 No mediastinal lymphadenopathy of calcification.",,
-,,M,60,Cryptogenic organizing pneumonia,,,,,,,,,,,,,,X-ray,,,images,d84789f9ece74ea65e7ec2c4faaaf3_jumbo.jpeg,,https://radiopaedia.org/cases/cryptogenic-organising-pneumonia-27?lang=us,CC BY-NC-SA,"Presentation
+368,?,M,60,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,d84789f9ece74ea65e7ec2c4faaaf3_jumbo.jpeg,?,https://radiopaedia.org/cases/cryptogenic-organising-pneumonia-27?lang=us,CC BY-NC-SA,"Presentation
 Diagnosed with pneumonia 2 weeks ago. Increasing shortness of breath despite oral antibiotics. Bilateral airspace opacity affecting both lungs, this has progressed markedly from previous chest x-ray (not shown). ",,
-,,M,60,Cryptogenic organizing pneumonia,,,,,,,,,,,,,,X-ray,,,images,981f82325fcc645a78a1732ab783f1_jumbo.jpeg,,https://radiopaedia.org/cases/cryptogenic-organising-pneumonia-27?lang=us,CC BY-NC-SA,"Presentation
+368,?,M,60,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,981f82325fcc645a78a1732ab783f1_jumbo.jpeg,?,https://radiopaedia.org/cases/cryptogenic-organising-pneumonia-27?lang=us,CC BY-NC-SA,"Presentation
 Diagnosed with pneumonia 2 weeks ago. Increasing shortness of breath despite oral antibiotics. Lungs and pleural spaces are clear with the previously demonstrated consolidation resolved. Normal cardiomediastinal contours.",,
-,,M,30,Pneumocystis pneumonia,,,,,,,,,,,,,,X-ray,,,images,26eecee1e498237cc3ea3274b79ff0_jumbo.jpg,,https://radiopaedia.org/cases/pneumocystis-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+369,?,M,30,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,26eecee1e498237cc3ea3274b79ff0_jumbo.jpg,?,https://radiopaedia.org/cases/pneumocystis-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 Recently diagnosed HIV presented with shortness of breath. CT obtained 5 days later demonstrates widepread ground glass attenuation, with a predeliction for the dependent portions of the lungs. Small bilateral pleural effusions are present. ",,
-,,M,30,Pneumocystis pneumonia,,,,,,,,,,,,,,X-ray,,,images,21f0cfca1c3d5d11e9eb8f6c670f73_jumbo.jpg,,https://radiopaedia.org/cases/pneumocystis-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+370,?,M,30,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,21f0cfca1c3d5d11e9eb8f6c670f73_jumbo.jpg,?,https://radiopaedia.org/cases/pneumocystis-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 Recently diagnosed HIV presented with shortness of breath. The patient continued to deteriorate and necessitated intubation. Consolidation is progressive. ",,
-,,F,40,Cryptogenic organizing pneumonia,,,,,,,,,,,,,,X-ray,,,images,f72b17e863d0f958b65379b3669238_jumbo.jpg,,https://radiopaedia.org/cases/cryptogenic-organising-pneumonia-2?lang=us,CC BY-NC-SA,"Presentation
+370,?,F,40,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,f72b17e863d0f958b65379b3669238_jumbo.jpg,?,https://radiopaedia.org/cases/cryptogenic-organising-pneumonia-2?lang=us,CC BY-NC-SA,"Presentation
 Presented to the GP with chronic cough. Patient had an incidental eosinophilia a year ago. Patchy air space opacities in bilateral upper zones.",,
-,,F,45,Eosinophilic pneumonia,,,,,,,,,,,,,,X-ray,,,images,19876b357ac5c998a06d9614b6148a_jumbo.jpeg,,https://radiopaedia.org/cases/eosinophilic-pneumonia-2?lang=us,CC BY-NC-SA,"Presentation
+371,?,F,45,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,19876b357ac5c998a06d9614b6148a_jumbo.jpeg,?,https://radiopaedia.org/cases/eosinophilic-pneumonia-2?lang=us,CC BY-NC-SA,"Presentation
 Increased shortnes of breath. Cough. Increased inflamatory makers. Lower respiratory tract infection? The heart is not enlarged and mediastinal contours are normal.
 Within both upper zones there is patchy consolidation consistent with infectious or inflammatory change. ",,
-,,M,40,Chronic eosinophilic pneumonia,,,,,,,,,,,,,,X-ray,,,images,22ebbc464e16ea1217228e3c9f4935_jumbo.jpeg,,https://radiopaedia.org/cases/chronic-eosinophilic-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+372,?,M,40,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,22ebbc464e16ea1217228e3c9f4935_jumbo.jpeg,?,https://radiopaedia.org/cases/chronic-eosinophilic-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 2-3 months of shortness of breath, fever, and cough. No hemoptysis. Multiple regions of airspace opacification are present throughout both lungs, most severe in the left upper lobe. No pleural effusion. Normal cardiomediastinal contour. No bone lesion. ",,
-,,M,40,Chronic eosinophilic pneumonia,,,,,,,,,,,,,,X-ray,,,images,b3bf8a2639dc735c8b5c9d75be18a7_jumbo.jpeg,,https://radiopaedia.org/cases/chronic-eosinophilic-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+372,?,M,40,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,b3bf8a2639dc735c8b5c9d75be18a7_jumbo.jpeg,?,https://radiopaedia.org/cases/chronic-eosinophilic-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 2-3 months of shortness of breath, fever, and cough. No hemoptysis. Multiple regions of airspace opacification are present throughout both lungs, most severe in the left upper lobe. No pleural effusion. Normal cardiomediastinal contour. No bone lesion. ",,
-,,F,28,Atypical pneumonia: mycoplasma,,,,,,,,,,,,,,X-ray,,,images,cdf5605e45874c28262c81b7ab80b3_jumbo.jpeg,,https://radiopaedia.org/cases/atypical-pneumonia-mycoplasma?lang=us,CC BY-NC-SA,"Presentation
+373,?,F,28,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,cdf5605e45874c28262c81b7ab80b3_jumbo.jpeg,?,https://radiopaedia.org/cases/atypical-pneumonia-mycoplasma?lang=us,CC BY-NC-SA,"Presentation
 History of dry cough for 2 weeks in a non smoker patient. Pulmonary aeration is significantly increased bilaterally. There is marked bronchial wall thickening on the right and left in the peri-hilar zone extending to the lung base in keeping with inflammatory lower airways disease.There are non- segmental patchy lung opacities in the lower lobes bilaterally (right lower lobe posterior basal segment; left lower lobe anterior basal segment; right middle lobe medial segment). There is also increased interstitial markings with lower zone predominance.",,
-,,F,28,Atypical pneumonia: mycoplasma,,,,,,,,,,,,,,X-ray,,,images,f5c69a3d9dcf2d5d4e54d0d080b666_jumbo.jpeg,,https://radiopaedia.org/cases/atypical-pneumonia-mycoplasma?lang=us,CC BY-NC-SA,"Presentation
+373,?,F,28,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,f5c69a3d9dcf2d5d4e54d0d080b666_jumbo.jpeg,?,https://radiopaedia.org/cases/atypical-pneumonia-mycoplasma?lang=us,CC BY-NC-SA,"Presentation
 History of dry cough for 2 weeks in a non smoker patient. Pulmonary aeration is significantly increased bilaterally. There is marked bronchial wall thickening on the right and left in the peri-hilar zone extending to the lung base in keeping with inflammatory lower airways disease.There are non- segmental patchy lung opacities in the lower lobes bilaterally (right lower lobe posterior basal segment; left lower lobe anterior basal segment; right middle lobe medial segment). There is also increased interstitial markings with lower zone predominance.",,
-,,M,70,Usual interstitial pneumonia,,,,,,,,,,,,,,X-ray,,,images,82cb30b7678c6da229c6dc222c39c9_jumbo.jpeg,,https://radiopaedia.org/cases/usual-interstitial-pneumonia-16?lang=us,CC BY-NC-SA,"Presentation
+374,?,M,70,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,82cb30b7678c6da229c6dc222c39c9_jumbo.jpeg,?,https://radiopaedia.org/cases/usual-interstitial-pneumonia-16?lang=us,CC BY-NC-SA,"Presentation
 Shortness of breath. Radiologic work up advised to rule out lung neoplasm. Decreased lung volumes are noted with coarse reticulation appears more pronounced peripherally and caudally.",,
-,,F,60,Influenza A pneumonia,,,,,,,,,,,,,,X-ray,,,images,84da526d0453b9b9e7896631e6b366_jumbo.jpeg,,https://radiopaedia.org/cases/influenza-a-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+375,?,F,60,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,84da526d0453b9b9e7896631e6b366_jumbo.jpeg,?,https://radiopaedia.org/cases/influenza-a-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 Admitted early March 2020, somewhere in the middle of nowhere in Germany with fever, dry cough and pleuritic pain, hypoxia and hypocapnia. Mildly increased cardiothoracic ratio (CTR): 52%.
 Patchy, bilateral infiltrates and airspace opacification predominantly in the mid and lower lung zones.
 No visible pleural effusions.
  ",,
-,,F,60,Influenza A pneumonia,,,,,,,,,,,,,,X-ray,,,images,defc5c87e473bdaf4f57e4c4c22e3b_jumbo.jpeg,,https://radiopaedia.org/cases/influenza-a-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+375,?,F,60,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,defc5c87e473bdaf4f57e4c4c22e3b_jumbo.jpeg,?,https://radiopaedia.org/cases/influenza-a-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 Admitted early March 2020, somewhere in the middle of nowhere in Germany with fever, dry cough and pleuritic pain, hypoxia and hypocapnia. Mildly increased cardiothoracic ratio (CTR): 52%.
 Patchy, bilateral infiltrates and airspace opacification predominantly in the mid and lower lung zones.
 No visible pleural effusions.
  ",,
-,,M,55,Lipoid pneumonia,,,,,,,,,,,,,,X-ray,,,images,503d2fbe68cd143b0f15749b4f816b_jumbo.jpeg,,https://radiopaedia.org/cases/lipoid-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+376,?,M,55,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,503d2fbe68cd143b0f15749b4f816b_jumbo.jpeg,?,https://radiopaedia.org/cases/lipoid-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 Chronic cough. There are bibasilar infiltrates greater on left. Blunting of the left costophrenic angle suggest a small left pleural effusion. ",,
-,,M,50,Cryptogenic organizing pneumonia,,,,,,,,,,,,,,X-ray,,,images,a24181c437aca166f7aeccc62ba28a_jumbo.jpg,,https://radiopaedia.org/cases/cryptogenic-organising-pneumonia-6?lang=us,CC BY-NC-SA,"Presentation
+377,?,M,50,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,a24181c437aca166f7aeccc62ba28a_jumbo.jpg,?,https://radiopaedia.org/cases/cryptogenic-organising-pneumonia-6?lang=us,CC BY-NC-SA,"Presentation
 Dyspnea, cough and fevers. Post bone marrow transplant for mantle cell lymphoma. Previous cryptogenic organizing pneumonia. Bilateral ill-defined nodular opacities throughout both lungs with more confluent consolidation in the left upper lobe. Several of the nodules have apparent central lucency which is suspicious for cavitation. The lung volumes are reduced. There is no pleural fluid and the cardiac and mediastinal contours are normal.
 COP may explain the reduced lung volumes and more peripheral confluent areas of consolidation, particularly in the left upper lobe. The possibility of cavitating nodules is however not easily explained and in the immunocompromised patient consideration to invasive aspergillosis or other atypical infections should be given.",,
-,,M,50,Cryptogenic organizing pneumonia,,,,,,,,,,,,,,X-ray,,,images,0b1cb8905fd8839a001d7a707f0c3f_jumbo.jpg,,https://radiopaedia.org/cases/cryptogenic-organising-pneumonia-6?lang=us,CC BY-NC-SA,"Presentation
+377,?,M,50,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,0b1cb8905fd8839a001d7a707f0c3f_jumbo.jpg,?,https://radiopaedia.org/cases/cryptogenic-organising-pneumonia-6?lang=us,CC BY-NC-SA,"Presentation
 Dyspnea, cough and fevers. Post bone marrow transplant for mantle cell lymphoma. Previous cryptogenic organizing pneumonia. Bilateral ill-defined nodular opacities throughout both lungs with more confluent consolidation in the left upper lobe. Several of the nodules have apparent central lucency which is suspicious for cavitation. The lung volumes are reduced. There is no pleural fluid and the cardiac and mediastinal contours are normal.
 COP may explain the reduced lung volumes and more peripheral confluent areas of consolidation, particularly in the left upper lobe. The possibility of cavitating nodules is however not easily explained and in the immunocompromised patient consideration to invasive aspergillosis or other atypical infections should be given.",,
-,,F,45,Healed varicella pneumonia,,,,,,,,,,,,,,X-ray,,,images,2b327d8b7523701d3bfc55f6eaccbf_jumbo.jpeg,,https://radiopaedia.org/cases/healed-varicella-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
+378,?,F,45,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,2b327d8b7523701d3bfc55f6eaccbf_jumbo.jpeg,?,https://radiopaedia.org/cases/healed-varicella-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
 45 years old referred from rheumatologist with a history of RA. Miliary lung nodules consistent with prior and healed varicella pneumonia.
  ",,
-,,F,45,Healed varicella pneumonia,,,,,,,,,,,,,,X-ray,,,images,72295ba4e8269aabd634008082625e_jumbo.jpeg,,https://radiopaedia.org/cases/healed-varicella-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
+378,?,F,45,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,72295ba4e8269aabd634008082625e_jumbo.jpeg,?,https://radiopaedia.org/cases/healed-varicella-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
 45 years old referred from rheumatologist with a history of RA. Miliary lung nodules consistent with prior and healed varicella pneumonia.
  ",,
-,,F,45,Healed varicella pneumonia,,,,,,,,,,,,,,X-ray,,,images,6ed02c7c0f5f876f310e67e410e4fc_jumbo.jpeg,,https://radiopaedia.org/cases/healed-varicella-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
+378,?,F,45,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,6ed02c7c0f5f876f310e67e410e4fc_jumbo.jpeg,?,https://radiopaedia.org/cases/healed-varicella-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
 45 years old referred from rheumatologist with a history of RA. Miliary lung nodules consistent with prior and healed varicella pneumonia.
  ",,
-,,F,45,Healed varicella pneumonia,,,,,,,,,,,,,,X-ray,,,images,133da583a6452e2e6e09f86a5541eb_jumbo.jpeg,,https://radiopaedia.org/cases/healed-varicella-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
+378,?,F,45,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,133da583a6452e2e6e09f86a5541eb_jumbo.jpeg,?,https://radiopaedia.org/cases/healed-varicella-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
 45 years old referred from rheumatologist with a history of RA. Miliary lung nodules consistent with prior and healed varicella pneumonia.
  ",,
-,,F,50,Lymphocytic interstitial pneumonia,,,,,,,,,,,,,,X-ray,,,images,1e64990d1b40c1758a2aaa9c7f7a85_jumbo.jpeg,,https://radiopaedia.org/cases/lymphocytic-interstitial-pneumonia-4?lang=us,CC BY-NC-SA,"Presentation
+379,?,F,50,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,1e64990d1b40c1758a2aaa9c7f7a85_jumbo.jpeg,?,https://radiopaedia.org/cases/lymphocytic-interstitial-pneumonia-4?lang=us,CC BY-NC-SA,"Presentation
 Chronic cough with whitish sputum. Associated with loss of weight and appetite Multiple patches of alveolar opacities of varies sizes in both lung fields. Confluence of alveolar opacities noted at right lower zone forms a largest lung mass.
 No mediastinal widening.
 Heart is normal.
@@ -860,34 +860,34 @@ Both costophrenic angle are obliterates by the soft tissue shadows from outer pa
 No obvious bone lesions.
 Impression:
 Chest radiograph findings raises few possibilities, differential diagnosis are multiple pulmonary metastases (possible primary is lung and breast), lymphoma, bronchoalveolar carcinoma, Wegener's granulomatosis.",,
-,,F,50,Lymphocytic interstitial pneumonia,,,,,,,,,,,,,,X-ray,,,images,7223b8ad031187d9a142d7f7ca02c9_jumbo.jpeg,,https://radiopaedia.org/cases/lymphocytic-interstitial-pneumonia-4?lang=us,CC BY-NC-SA,"Presentation
+379,?,F,50,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,7223b8ad031187d9a142d7f7ca02c9_jumbo.jpeg,?,https://radiopaedia.org/cases/lymphocytic-interstitial-pneumonia-4?lang=us,CC BY-NC-SA,"Presentation
 Chronic cough with whitish sputum. Associated with loss of weight and appetite Marked improvement chest radiograph findings, previously seen multiple ill defined alveolar opacities are reducing in size.
 No pleural effusion.",,
-,,M,30,Desquamative interstitial pneumonia,,,,,,,,,,,,,,X-ray,,,images,3392dc7d262e28423caca517f98c2e_jumbo.jpeg,,https://radiopaedia.org/cases/desquamative-interstitial-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+380,?,M,30,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,3392dc7d262e28423caca517f98c2e_jumbo.jpeg,?,https://radiopaedia.org/cases/desquamative-interstitial-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 Male prisoner who abuses drugs, smokes cigarettes with cough. There is prominent bilateral interstitial markings with basilar predominance. The
 cardiomediastinal silhouette is normal in size and morphology.",,
-,,M,30,Desquamative interstitial pneumonia,,,,,,,,,,,,,,X-ray,,,images,83cfee622ebe92fd5c14ce5b4da35e_jumbo.jpeg,,https://radiopaedia.org/cases/desquamative-interstitial-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+380,?,M,30,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,83cfee622ebe92fd5c14ce5b4da35e_jumbo.jpeg,?,https://radiopaedia.org/cases/desquamative-interstitial-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 Male prisoner who abuses drugs, smokes cigarettes with cough. There is prominent bilateral interstitial markings with basilar predominance. The
 cardiomediastinal silhouette is normal in size and morphology.",,
-,,F,30,Hemithorax white-out (pneumonia),,,,,,,,,,,,,,X-ray,,,images,ec3a480c0926ded74429df416cfb05_jumbo.jpeg,,https://radiopaedia.org/cases/hemithorax-white-out-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
+380,?,F,30,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,ec3a480c0926ded74429df416cfb05_jumbo.jpeg,?,https://radiopaedia.org/cases/hemithorax-white-out-pneumonia-1?lang=us,CC BY-NC-SA,"Presentation
 Three-day history of productive cough, chills, and nausea/vomiting Complete white-out of left lung with air bronchogram sign consistent with total consolidation. Patchy areas of ground glass opacities in right lung. There is silhouetting of the left heart border and left hemi-diaphragm. There is no rib crowding to suggest atelectasis. ",,
-,,M,35,Pneumocystis jirovecii pneumonia,,,,,,,,,,,,,,X-ray,,,images,076d9f1ab85d17bcf0f4f207891974_jumbo.jpg,,https://radiopaedia.org/cases/pneumocystis-jirovecii-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+381,?,M,35,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,076d9f1ab85d17bcf0f4f207891974_jumbo.jpg,?,https://radiopaedia.org/cases/pneumocystis-jirovecii-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 Known HIV, recently off retroviral medication with a 3 week history of SOB. Diffuse or perihilar fine reticular and ill-defined ground glass opacities. ",,
-,,F,30,Left upper lobe consolidation due to pneumonia,,,,,,,,,,,,,,X-ray,,,images,a72aeb349a63c79ed24e473c434efe_jumbo.jpg,,https://radiopaedia.org/cases/left-upper-lobe-consolidation-due-to-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+382,?,F,30,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,a72aeb349a63c79ed24e473c434efe_jumbo.jpg,?,https://radiopaedia.org/cases/left-upper-lobe-consolidation-due-to-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 Fever and shortness of breath On the PA radiograph there is opacity with air bronchograms in the left midzone with loss of visualization of the left heart border. The appearance is consistent with consolidation within the left upper lobe. This is confirmed on the lateral image.",,
-,,F,30,Left upper lobe consolidation due to pneumonia,,,,,,,,,,,,,,X-ray,,,images,c98c6fce880dbec0d1eb3045cec103_jumbo.jpg,,https://radiopaedia.org/cases/left-upper-lobe-consolidation-due-to-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+382,?,F,30,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,c98c6fce880dbec0d1eb3045cec103_jumbo.jpg,?,https://radiopaedia.org/cases/left-upper-lobe-consolidation-due-to-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 Fever and shortness of breath On the PA radiograph there is opacity with air bronchograms in the left midzone with loss of visualization of the left heart border. The appearance is consistent with consolidation within the left upper lobe. This is confirmed on the lateral image.",,
-,,F,30,Left upper lobe consolidation due to pneumonia,,,,,,,,,,,,,,X-ray,,,images,ba45a47c3ef5060ec39891046be7ca_jumbo.jpg,,https://radiopaedia.org/cases/left-upper-lobe-consolidation-due-to-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+382,?,F,30,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,ba45a47c3ef5060ec39891046be7ca_jumbo.jpg,?,https://radiopaedia.org/cases/left-upper-lobe-consolidation-due-to-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 Fever and shortness of breath Chest radiograph 3 months later shows resolution of the consolidation with re-appearance of the left heart border. ",,
-,,F,30,Left upper lobe consolidation due to pneumonia,,,,,,,,,,,,,,X-ray,,,images,65a95c1d86c9a79e3bf88d654c517c_jumbo.jpg,,https://radiopaedia.org/cases/left-upper-lobe-consolidation-due-to-pneumonia?lang=us,CC BY-NC-SA,"Presentation
+382,?,F,30,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,65a95c1d86c9a79e3bf88d654c517c_jumbo.jpg,?,https://radiopaedia.org/cases/left-upper-lobe-consolidation-due-to-pneumonia?lang=us,CC BY-NC-SA,"Presentation
 Fever and shortness of breath Chest radiograph 3 months later shows resolution of the consolidation with re-appearance of the left heart border. ",,
-,,F,35,Left upper lobe pneumonia and pectus excavatum,,,,,,,,,,,,,,X-ray,,,images,6f36c4ad54047bc52b38fd8c9d1e22_jumbo.jpg,,https://radiopaedia.org/cases/left-upper-lobe-pneumonia-and-pectus-excavatum?lang=us,CC BY-NC-SA,"Presentation
+383,?,F,35,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,6f36c4ad54047bc52b38fd8c9d1e22_jumbo.jpg,?,https://radiopaedia.org/cases/left-upper-lobe-pneumonia-and-pectus-excavatum?lang=us,CC BY-NC-SA,"Presentation
 Cough and fever. PA film demonstrates opacification within the left mid to upper zones which partially obscures the left heart border consistent with left upper lobe consolidation, particularly involving the lingular segments. There is hazy opacity in the right lower zone medially and the right heart border is not visualized.  This could be misinterpreted as an additional right middle lobe consolidation, however this is in fact due to a pectus excavatum deformity, which is suggested by the orientation of the ribs and is confirmed on the lateral film. ",,
-,,F,35,Left upper lobe pneumonia and pectus excavatum,,,,,,,,,,,,,,X-ray,,,images,a459fb990719792f31ae2ece5665e6_jumbo.jpg,,https://radiopaedia.org/cases/left-upper-lobe-pneumonia-and-pectus-excavatum?lang=us,CC BY-NC-SA,"Presentation
+383,?,F,35,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,a459fb990719792f31ae2ece5665e6_jumbo.jpg,?,https://radiopaedia.org/cases/left-upper-lobe-pneumonia-and-pectus-excavatum?lang=us,CC BY-NC-SA,"Presentation
 Cough and fever. PA film demonstrates opacification within the left mid to upper zones which partially obscures the left heart border consistent with left upper lobe consolidation, particularly involving the lingular segments. There is hazy opacity in the right lower zone medially and the right heart border is not visualized.  This could be misinterpreted as an additional right middle lobe consolidation, however this is in fact due to a pectus excavatum deformity, which is suggested by the orientation of the ribs and is confirmed on the lateral film. ",,
-,,F,35,Left upper lobe pneumonia and pectus excavatum,,,,,,,,,,,,,,X-ray,,,images,621f53af15cf08e6e13cb6812eead9_jumbo.jpg,,https://radiopaedia.org/cases/left-upper-lobe-pneumonia-and-pectus-excavatum?lang=us,CC BY-NC-SA,"Presentation
+383,?,F,35,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,621f53af15cf08e6e13cb6812eead9_jumbo.jpg,?,https://radiopaedia.org/cases/left-upper-lobe-pneumonia-and-pectus-excavatum?lang=us,CC BY-NC-SA,"Presentation
 Cough and fever. Two weeks later
 Follow-up imaging two weeks later shows resolution of the left upper lobe pneumonia, but persistence of the hazy opacity in the right lower zone medially which is related to pectus excavatum deformity.  ",,
-,,F,35,Left upper lobe pneumonia and pectus excavatum,,,,,,,,,,,,,,X-ray,,,images,facc859f173d0ae052a1a52997c6b5_jumbo.jpg,,https://radiopaedia.org/cases/left-upper-lobe-pneumonia-and-pectus-excavatum?lang=us,CC BY-NC-SA,"Presentation
+383,?,F,35,todo,?,?,?,?,?,?,?,?,?,?,?,?,?,X-ray,?,?,images,facc859f173d0ae052a1a52997c6b5_jumbo.jpg,?,https://radiopaedia.org/cases/left-upper-lobe-pneumonia-and-pectus-excavatum?lang=us,CC BY-NC-SA,"Presentation
 Cough and fever. Two weeks later
 Follow-up imaging two weeks later shows resolution of the left upper lobe pneumonia, but persistence of the hazy opacity in the right lower zone medially which is related to pectus excavatum deformity.  ",,
