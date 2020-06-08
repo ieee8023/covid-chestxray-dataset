@@ -1,4 +1,36 @@
+"""
+
+Scrape radiographs from Eurorad, together with related metadata.
+
+The scraper uses Selenium to enter terms on Eurorad's site search and
+click through the results. It downloads the highest-resolution versions of
+images available and places them in the same directory, under the same filename
+they have on Eurorad (with the possible addition of -1, -2 etc. if multiple
+images have the same name).
+
+It also extracts metadata from these pages and saves them to a csv file compatible
+with metadata.csv. Internally, it converts this metadata to an interoperable
+format that is easy to work with (referred to as "standard"), so if you wish
+you can write a function to convert the metadata to an output format suitable
+for your own applications.
+
+Usage:
+
+First download the correct chromedriver for your operating system from here:
+https://sites.google.com/a/chromium.org/chromedriver/
+
+Make sure it is for the same version as your Chrome installation.
+
+Extract it and put it in the same directory as this file.
+
+Then, run from the console as eurorad.py, ideally in the same directory.
+
+Tested with Chrome 80.0.3987.87
+
+"""
+
 import os
+import base64
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.common.exceptions import NoSuchElementException
@@ -6,6 +38,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from urllib.request import urlretrieve
 from copy import deepcopy
 from urllib.parse import urlparse
+from urllib.error import HTTPError
 from scipy.stats import truncnorm
 import sys
 import time
@@ -19,20 +52,6 @@ import urllib.request
 import matplotlib.pyplot as plt
 import argparse
 
-"""
-
-Usage:
-
-First download the correct chromedriver for your operating system from here:
-https://sites.google.com/a/chromium.org/chromedriver/
-
-Make sure it is for the same version as your Chrome installation.
-
-Extract it and put it in the same directory as this file.
-
-Then, run from the console as eurorad.py, ideally in the same directory.
-
-"""
 
 #Maximum number of results (reduce during development)
 max_results = 10000000000
@@ -102,8 +121,6 @@ def get_search_results(search_terms, browser):
         for result in results:
             yield EuroRadCase(result)
         if n_results > max_results:
-            pass
-            #print("Exiting due to overload")
             break
         next_search_page = get_next_search_page(browser)
 
@@ -158,7 +175,10 @@ def metadata_from_result_page(browser):
             pass
         wait(1)
         #print("image", image.get_attribute("innerHTML"))
-        images_src.append(image.get_attribute("src").replace("_teaser_large",""))
+        low_res = image.get_attribute("src")
+        high_res = low_res.replace("_teaser_large","")
+        all_resolutions = [high_res, low_res]
+        images_src.append(all_resolutions)
 
     out = {}
     out["images"] = images_src
@@ -200,17 +220,17 @@ def eurorad_to_standard(eurorad_record):
             "modality":"CT" if "CT" in description else "X-ray" #currently only supports X-rays
         })
     return {
-            "patient":standard_patient,
-            "images":standard_images,
-            "document":standard_document
-        }
+        "patient":standard_patient,
+        "images":standard_images,
+        "document":standard_document
+    }
 
-def standard_to_metadata_format(standard_record):
+def standard_to_metadata_format(standard_record, filenames):
     "Convert data in an interoperable format to the format in metadata.csv"
     all_rows = []
     images = standard_record["images"]
     standard_patient = standard_record["patient"]
-    for image in images:
+    for image, filename in zip(images, filenames):
         patient_row = {}
         patient_row.update(standard_record["patient"])
         patient_row["clinical_notes"] = (
@@ -226,7 +246,7 @@ def standard_to_metadata_format(standard_record):
             raise ValueError
         patient_row["modality"] = modality
         patient_row["folder"] = folder
-        patient_row["filename"] = filename_from_url(image["url"])
+        patient_row["filename"] = filename
         all_rows.append(patient_row)
     return all_rows
 
@@ -276,6 +296,16 @@ def find_new_eurorad_entries(old_data, new_cases):
             except:
                 print("failed")
 
+def deduplicate_filename(retrieve_filename, img_dir):
+    files = os.listdir(img_dir)
+    test_filename = retrieve_filename
+    name, ext = os.path.splitext(retrieve_filename)
+    i = 1
+    while test_filename in files:
+        test_filename = name + "-" + str(i) + ext
+        i += 1
+    return test_filename
+
 def output_candidate_entries(standard, columns, out_name, img_dir):
     "Save the candidate entries to a file."
     pickle_name = out_name + "_pickled_data"
@@ -289,16 +319,35 @@ def output_candidate_entries(standard, columns, out_name, img_dir):
         with open(pickle_name, "wb") as handle:
             pickle.dump(all_records, handle)
         patient = clean_standard_data(record)
+        all_filenames = []
         for image in patient["images"]:
-            urllib.request.urlretrieve(
-                image["url"],
-                os.path.join(
-                    img_dir,
-                    filename_from_url(image["url"])
+            for url in image["url"]:
+                retrieve_filename = deduplicate_filename(
+                    filename_from_url(url),
+                    img_dir
                 )
-            )
-        out_df = out_df.append(standard_to_metadata_format(patient),
-                               ignore_index=True)
+                try:
+                    urllib.request.urlretrieve(
+                        url,
+                        os.path.join(
+                            img_dir,
+                            retrieve_filename
+                        )
+                    )
+                except HTTPError:
+                    print("failed")
+                else:
+                    all_filenames.append(retrieve_filename)
+                    break
+            else:
+                all_filenames.append("")
+        out_df = out_df.append(
+            standard_to_metadata_format(
+                patient,
+                all_filenames
+            ),
+            ignore_index=True
+        )
         out_df.to_csv(out_name)
 
 def append_metadata(out, *to_append):
@@ -365,20 +414,31 @@ if __name__ == "__main__":
 
     browser = get_browser()
 
-    #Read in current metadata
-    old_data = pd.read_table(args.csv, sep=",")
+    try:
 
-    #Build a generator of new case URLs
-    new_cases = get_search_results(args.search.split(" "),
-                                   browser)
+        if os.path.exists(args.newimg):
+            raise ValueError("Image folder already contains images.")
 
-    #Record metadata from the cases not already recorded
-    found = find_new_eurorad_entries(old_data, new_cases)
+        #Read in current metadata
+        old_data = pd.read_table(args.csv, sep=",")
 
-    #Save new data to disk for examination.
-    output_candidate_entries(
-        found,
-        old_data.columns,
-        args.newcsv,
-        args.newimg
-    )
+        #Build a generator of new case URLs
+        new_cases = get_search_results(args.search.split(" "),
+                                       browser)
+
+        #Record metadata from the cases not already recorded
+        found = find_new_eurorad_entries(old_data, new_cases)
+
+        #Save new data to disk for examination.
+        output_candidate_entries(
+            found,
+            old_data.columns,
+            args.newcsv,
+            args.newimg
+        )
+
+        browser.close()
+
+    except:
+        browser.close()
+        raise
