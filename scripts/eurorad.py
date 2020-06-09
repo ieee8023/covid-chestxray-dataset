@@ -9,10 +9,12 @@ they have on Eurorad (with the possible addition of -1, -2 etc. if multiple
 images have the same name).
 
 It also extracts metadata from these pages and saves them to a csv file compatible
-with metadata.csv. Internally, it converts this metadata to an interoperable
-format that is easy to work with (referred to as "standard"), so if you wish
-you can write a function to convert the metadata to an output format suitable
-for your own applications.
+with metadata.csv. Internally, it starts by converting this metadata to an
+interoperable format that is easy to work with (referred to as "standard"), so
+if you wish you can write a function to convert the metadata to an output format
+suitable for your own applications.
+
+There is also a scraper for Radiopaedia (see radiopaedia.py).
 
 Usage:
 
@@ -21,7 +23,7 @@ https://sites.google.com/a/chromium.org/chromedriver/
 
 Make sure it is for the same version as your Chrome installation.
 
-Extract it and put it in the same directory as this file.
+Extract it and put it in the parent directory of this file.
 
 Then, run from the console as eurorad.py, ideally in the same directory.
 
