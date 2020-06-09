@@ -450,14 +450,14 @@ def output_candidate_entries(standard, columns, out_name, img_dir):
                     img_dir
                 )
                 try:
-                    urllib.request.urlretrieve(
+                    wget(
                         url,
                         os.path.join(
                             img_dir,
                             retrieve_filename
                         )
                     )
-                except HTTPError:
+                except ValueError:
                     print("failed")
                 else:
                     all_filenames.append(retrieve_filename)
