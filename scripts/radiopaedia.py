@@ -9,10 +9,10 @@ they have on Radiopaedia (with the possible addition of -1, -2 etc. if multiple
 images have the same name).
 
 It also extracts metadata from these pages and saves them to a csv file compatible
-with metadata.csv. Internally, it converts this metadata to an interoperable
-format that is easy to work with (referred to as "standard"), so if you wish
-you can write a function to convert the metadata to an output format suitable
-for your own applications.
+with metadata.csv. Internally, it starts by converting this metadata to an
+interoperable format that is easy to work with (referred to as "standard"), so
+if you wish you can write a function to convert the metadata to an output format
+suitable for your own applications.
 
 There is also a scraper for Eurorad (see eurorad.py).
 
@@ -332,7 +332,7 @@ def url_no_query(url_string):
     return parsed.netloc + parsed.path
 
 class RadiopaediaCase():
-    "An object representing an Eurorad case."
+    "An object representing a Radiopaedia case."
     def __init__(self, url):
         self.url = url
         self.data = None
