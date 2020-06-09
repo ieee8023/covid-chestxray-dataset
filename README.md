@@ -45,6 +45,8 @@ COVID19_Dataset num_samples=90 views=['AP Supine']
  'Viral Pneumonia': {0.0: 9, 1.0: 81}}
 
  ```
+ 
+## Annotations
 
 [Lung Bounding Boxes](annotations/imageannotation_ai_lung_bounding_boxes.json) contributed by Andrew Gough at [General Blockchain, Inc.](https://www.generalblockchain.com)
 
