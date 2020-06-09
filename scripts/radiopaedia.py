@@ -27,6 +27,8 @@ Extract it and put it in the parent directory of this file.
 
 Then, run from the console as radiopaedia.py, ideally in the same directory.
 
+python radiopaedia.py "search terms" image_output_folder/ new_metadata_filename.csv old_metadata_filename.csv
+
 Tested with Chrome 80.0.3987.87
 
 """
