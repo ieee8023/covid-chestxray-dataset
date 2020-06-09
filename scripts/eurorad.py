@@ -14,7 +14,7 @@ interoperable format that is easy to work with (referred to as "standard"), so
 if you wish you can write a function to convert the metadata to an output format
 suitable for your own applications.
 
-There is also a scraper for Radiopaedia (see radiopaedia.py).
+There is also a scraper for Radiopaedia. See radiopaedia.py (X-rays) and radiopaedia.ipynb (CTs).
 
 Usage:
 
@@ -26,6 +26,8 @@ Make sure it is for the same version as your Chrome installation.
 Extract it and put it in the parent directory of this file.
 
 Then, run from the console as eurorad.py, ideally in the same directory.
+
+python eurorad.py "search terms" image_output_folder/ new_metadata_filename.csv old_metadata_filename.csv'
 
 Tested with Chrome 80.0.3987.87
 
