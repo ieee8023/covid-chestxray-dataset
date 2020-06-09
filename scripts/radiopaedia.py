@@ -1,3 +1,36 @@
+"""
+
+Scrape radiographs from Radiopaedia, together with related metadata.
+
+The scraper uses Selenium to enter terms on Radiopaedia's site search and
+click through the results. It downloads the highest-resolution versions of
+images available and places them in the same directory, under the same filename
+they have on Radiopaedia (with the possible addition of -1, -2 etc. if multiple
+images have the same name).
+
+It also extracts metadata from these pages and saves them to a csv file compatible
+with metadata.csv. Internally, it converts this metadata to an interoperable
+format that is easy to work with (referred to as "standard"), so if you wish
+you can write a function to convert the metadata to an output format suitable
+for your own applications.
+
+There is also a scraper for Eurorad (see eurorad.py).
+
+Usage:
+
+First download the correct chromedriver for your operating system from here:
+https://sites.google.com/a/chromium.org/chromedriver/
+
+Make sure it is for the same version as your Chrome installation.
+
+Extract it and put it in the parent directory of this file.
+
+Then, run from the console as radiopaedia.py, ideally in the same directory.
+
+Tested with Chrome 80.0.3987.87
+
+"""
+
 import os
 import pickle
 from selenium import webdriver
