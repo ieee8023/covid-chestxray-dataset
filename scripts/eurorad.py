@@ -61,7 +61,7 @@ max_results = 10000000000
 chromedriver_path = os.path.abspath(
     os.path.join(
         os.path.dirname(__file__),
-        "chromedriver"
+        "../chromedriver"
     )
 )
 
