@@ -464,18 +464,101 @@ def output_candidate_entries(standard, columns, out_name, img_dir):
         except Exception as e:
             print("Exception: ", e)
 
-browser = get_browser()
+def output_candidate_entries(standard, columns, out_name, img_dir):
+    "Save the candidate entries to a file."
+    pickle_name = out_name + "_pickled_data"
+    out_df = pd.DataFrame(columns=columns)
+    if not os.path.exists(img_dir):
+        os.mkdir(img_dir)
+    all_records = []
+    for record in standard:
+        all_records.append(record)
+        record = radiopaedia_to_standard(record)
+        with open(pickle_name, "wb") as handle:
+            pickle.dump(all_records, handle)
+        patient = clean_standard_data(record)
+        all_filenames = []
+        for image in patient["images"]:
+            for url in image["url"]:
+                retrieve_filename = deduplicate_filename(
+                    filename_from_url(url),
+                    img_dir
+                )
+                try:
+                    wget(
+                        url,
+                        os.path.join(
+                            img_dir,
+                            retrieve_filename
+                        )
+                    )
+                except ValueError:
+                    print("failed")
+                else:
+                    all_filenames.append(retrieve_filename)
+                    break
+            else:
+                all_filenames.append("")
+        out_df = out_df.append(
+            standard_to_metadata_format(
+                patient,
+                all_filenames
+            ),
+            ignore_index=True
+        )
+        out_df.to_csv(out_name)
 
-search_results = get_search_results("pneumonia".split(" "),
-                                    browser)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "search",
+        help="The search terms used to identify images"
+    )
+    parser.add_argument(
+        "newimg",
+        help="Folder to use when storing images. Should be empty or not exist yet.",
+        default="../candidate_images"
+    )
+    parser.add_argument(
+        "newcsv",
+         help="File to output candidate metadata.",
+         default="../candidate_metadata.csv"
+    )
+    parser.add_argument(
+        "csv",
+        help="Location of old metadata.",
+        default="../metadata.csv"
+    )
 
-old_data = pd.read_table("../metadata.csv", sep=",")
+    args = parser.parse_args()
 
-found = find_new_entries(old_data, search_results)
+    browser = get_browser()
 
-output_candidate_entries(
-    found,
-    old_data.columns,
-    "radiopaedia_pneumonia.csv",
-    "radiopaedia_pneumonia"
-)
+    try:
+
+        if os.path.exists(args.newimg):
+            raise ValueError("Image folder already contains images.")
+
+        #Read in current metadata
+        old_data = pd.read_table(args.csv, sep=",")
+
+        #Build a generator of new case URLs
+        new_cases = get_search_results(args.search.split(" "),
+                                       browser)
+
+        #Record metadata from the cases not already recorded
+        found = find_new_entries(old_data, new_cases)
+
+        #Save new data to disk for examination.
+        output_candidate_entries(
+            found,
+            old_data.columns,
+            args.newcsv,
+            args.newimg
+        )
+
+        browser.close()
+
+    except:
+        browser.close()
+        raise
