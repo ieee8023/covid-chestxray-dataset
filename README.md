@@ -48,12 +48,13 @@ COVID19_Dataset num_samples=90 views=['AP Supine']
  
 ## Annotations
 
-[Lung Bounding Boxes](annotations/imageannotation_ai_lung_bounding_boxes.json) contributed by Andrew Gough at [General Blockchain, Inc.](https://www.generalblockchain.com)
+[Lung Bounding Boxes](annotations/imageannotation_ai_lung_bounding_boxes.json) (license: CC BY-SA) contributed by Andrew Gough at [General Blockchain, Inc.](https://www.generalblockchain.com) 
 
-[Pneumonia severity scores](annotations/covid-severity-scores.csv) from the paper [Predicting COVID-19 Pneumonia Severity on Chest X-ray with Deep Learning
-](http://arxiv.org/abs/2005.11856)
+[Pneumonia severity scores for 94 images](annotations/covid-severity-scores.csv) (license: CC BY-SA) from the paper [Predicting COVID-19 Pneumonia Severity on Chest X-ray with Deep Learning](http://arxiv.org/abs/2005.11856)
 
-[Generated Lung Segmentations](annotations/lungVAE-masks) from the paper [Lung Segmentation from Chest X-rays using Variational Data Imputation](https://arxiv.org/abs/2005.10052)
+[Generated Lung Segmentations](annotations/lungVAE-masks) (license: CC BY-SA) from the paper [Lung Segmentation from Chest X-rays using Variational Data Imputation](https://arxiv.org/abs/2005.10052)
+
+[Brixia score for 192 images](https://github.com/BrixIA/Brixia-score-COVID-19) (license: CC BY-NC-SA) from the paper [End-to-end learning for semiquantitative rating of COVID-19 severity on Chest X-rays](https://arxiv.org/abs/2006.04603)
 
 ## Contribute
 
