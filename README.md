@@ -12,37 +12,45 @@ This project is approved by the University of Montreal's Ethics Committee #CERSE
 
 Current stats of PA, AP, and AP Supine views. Labels 0=No or 1=Yes. Data loader is [here](https://github.com/mlmed/torchxrayvision/blob/master/torchxrayvision/datasets.py#L867)
 ``` 
-COVID19_Dataset num_samples=328 views=['PA', 'AP']
-{'ARDS': {0.0: 313, 1.0: 15},
- 'Bacterial Pneumonia': {0.0: 304, 1.0: 24},
- 'COVID-19': {0.0: 78, 1.0: 250},
- 'Chlamydophila': {0.0: 327, 1.0: 1},
- 'Fungal Pneumonia': {0.0: 316, 1.0: 12},
- 'Klebsiella': {0.0: 321, 1.0: 7},
- 'Legionella': {0.0: 325, 1.0: 3},
- 'MERS': {0.0: 328},
- 'No Finding': {0.0: 316, 1.0: 12},
- 'Pneumocystis': {0.0: 316, 1.0: 12},
- 'Pneumonia': {0.0: 19, 1.0: 309},
- 'SARS': {0.0: 312, 1.0: 16},
- 'Streptococcus': {0.0: 315, 1.0: 13},
- 'Viral Pneumonia': {0.0: 62, 1.0: 266}}
+COVID19_Dataset num_samples=408 views=['PA', 'AP']
+{'ARDS': {0.0: 393, 1.0: 15},
+ 'Bacterial Pneumonia': {0.0: 379, 1.0: 29},
+ 'COVID-19': {0.0: 96, 1.0: 312},
+ 'Chlamydophila': {0.0: 407, 1.0: 1},
+ 'Fungal Pneumonia': {0.0: 395, 1.0: 13},
+ 'Influenza': {0.0: 407, 1.0: 1},
+ 'Klebsiella': {0.0: 401, 1.0: 7},
+ 'Legionella': {0.0: 404, 1.0: 4},
+ 'Lipoid': {0.0: 405, 1.0: 3},
+ 'MERS': {0.0: 408},
+ 'Mycoplasma': {0.0: 404, 1.0: 4},
+ 'No Finding': {0.0: 393, 1.0: 15},
+ 'Pneumocystis': {0.0: 395, 1.0: 13},
+ 'Pneumonia': {0.0: 17, 1.0: 391},
+ 'SARS': {0.0: 392, 1.0: 16},
+ 'Streptococcus': {0.0: 395, 1.0: 13},
+ 'Varicella': {0.0: 404, 1.0: 4},
+ 'Viral Pneumonia': {0.0: 75, 1.0: 333}}
 
-COVID19_Dataset num_samples=90 views=['AP Supine']
-{'ARDS': {0.0: 89, 1.0: 1},
- 'Bacterial Pneumonia': {0.0: 90},
- 'COVID-19': {0.0: 9, 1.0: 81},
- 'Chlamydophila': {0.0: 90},
- 'Fungal Pneumonia': {0.0: 90},
- 'Klebsiella': {0.0: 90},
- 'Legionella': {0.0: 90},
- 'MERS': {0.0: 90},
- 'No Finding': {0.0: 89, 1.0: 1},
- 'Pneumocystis': {0.0: 90},
- 'Pneumonia': {0.0: 5, 1.0: 85},
- 'SARS': {0.0: 90},
- 'Streptococcus': {0.0: 90},
- 'Viral Pneumonia': {0.0: 9, 1.0: 81}}
+COVID19_Dataset num_samples=134 views=['AP Supine']
+{'ARDS': {0.0: 133, 1.0: 1},
+ 'Bacterial Pneumonia': {0.0: 134},
+ 'COVID-19': {0.0: 12, 1.0: 122},
+ 'Chlamydophila': {0.0: 134},
+ 'Fungal Pneumonia': {0.0: 134},
+ 'Influenza': {0.0: 134},
+ 'Klebsiella': {0.0: 134},
+ 'Legionella': {0.0: 134},
+ 'Lipoid': {0.0: 134},
+ 'MERS': {0.0: 134},
+ 'Mycoplasma': {0.0: 134},
+ 'No Finding': {0.0: 130, 1.0: 4},
+ 'Pneumocystis': {0.0: 134},
+ 'Pneumonia': {0.0: 8, 1.0: 126},
+ 'SARS': {0.0: 134},
+ 'Streptococcus': {0.0: 134},
+ 'Varicella': {0.0: 134},
+ 'Viral Pneumonia': {0.0: 12, 1.0: 122}}
 
  ```
  
