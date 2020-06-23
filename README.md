@@ -112,7 +112,7 @@ PI: [Joseph Paul Cohen. Postdoctoral Fellow, Mila, University of Montreal](https
 
 ## Citations
 
-Second Paper availabe [here](http://arxiv.org/abs/2006.11988) and [source code for baselines](https://github.com/mlmed/torchxrayvision/tree/master/scripts/covid-baselines)
+Second Paper available [here](http://arxiv.org/abs/2006.11988) and [source code for baselines](https://github.com/mlmed/torchxrayvision/tree/master/scripts/covid-baselines)
 
 ```
 COVID-19 Image Data Collection: Prospective Predictions Are the Future, arXiv:2006.11988, 2020
