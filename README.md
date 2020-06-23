@@ -110,17 +110,31 @@ Data impact: Image data linked with clinically relevant attributes in a public d
 ## Contact
 PI: [Joseph Paul Cohen. Postdoctoral Fellow, Mila, University of Montreal](https://josephpcohen.com/) 
 
-## Initial results
+## Citations
 
-![](docs/covid-xray-umap.png)
+Second Paper availabe [here](http://arxiv.org/abs/2006.11988) and [source code for baselines](https://github.com/mlmed/torchxrayvision/tree/master/scripts/covid-baselines)
 
-## Citation
+```
+COVID-19 Image Data Collection: Prospective Predictions Are the Future, arXiv:2006.11988, 2020
+Joseph Paul Cohen and Paul Morrison and Lan Dao and Karsten Roth and Tim Q Duong and Marzyeh Ghassemi
+https://github.com/ieee8023/covid-chestxray-dataset
+```
+
+```
+@article{cohen2020covidProspective,
+  title={COVID-19 Image Data Collection: Prospective Predictions Are the Future},
+  author={Joseph Paul Cohen and Paul Morrison and Lan Dao and Karsten Roth and Tim Q Duong and Marzyeh Ghassemi},
+  journal={arXiv 2006.11988},
+  url={https://github.com/ieee8023/covid-chestxray-dataset},
+  year={2020}
+}
+```
 
 Paper availabe [here](https://arxiv.org/abs/2003.11597)
 
 ```
-Joseph Paul Cohen and Paul Morrison and Lan Dao
 COVID-19 image data collection, arXiv:2003.11597, 2020
+Joseph Paul Cohen and Paul Morrison and Lan Dao
 https://github.com/ieee8023/covid-chestxray-dataset
 ```
 
