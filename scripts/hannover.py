@@ -192,6 +192,7 @@ def remove_deleted_hannover_entries(metadata, hannover_data, mila_repo, ask_to_d
         if not old_hannover_id in current_hannover_ids:
             to_remove.append(old_hannover_id)
     print("Removed:", ", ".join(to_remove))
+    #Delete them
     if input("Press y to delete these images") == "y" or not ask_to_delete_images:
         for id in to_remove:
             try:
@@ -200,7 +201,6 @@ def remove_deleted_hannover_entries(metadata, hannover_data, mila_repo, ask_to_d
                 pass
     else:
         print("Not deleting images")
-    #Delete them
     delete_mask = metadata["filename"].map(fname_minus_extension).apply(lambda i: i in to_remove)
     return to_remove, metadata[~delete_mask].reset_index(drop=True)
 
@@ -209,7 +209,7 @@ def select_hannover_from_metadata(metadata):
     return metadata.query('doi == "10.6084/m9.figshare.12275009"')
 
 def check_hannover(merged_data, hannover_data):
-    """Check whether any inaccuracy has been introduced into the the
+    """Check whether any inaccuracies have been introduced into the the
     Hannover data during the merging process"""
     merged_data = merged_data.copy()
     hannover_data = hannover_data.copy()
