@@ -64,6 +64,8 @@ COVID19_Dataset num_samples=134 views=['AP Supine']
 
 [Brixia score for 192 images](https://github.com/BrixIA/Brixia-score-COVID-19) (license: CC BY-NC-SA) from the paper [End-to-end learning for semiquantitative rating of COVID-19 severity on Chest X-rays](https://arxiv.org/abs/2006.04603)
 
+[Lung and other segmentations for 517 images](https://github.com/v7labs/covid-19-xray-dataset/tree/master/annotations) (license: CC BY) in COCO and raster formats by [v7labs](https://github.com/v7labs/covid-19-xray-dataset
+
 ## Contribute
 
  - Submit data directly to the project. View our [research protocol](https://docs.google.com/document/d/14b7cou98YhYcJ2jwOKznChtn5y6-mi9bgjeFv2DxOt0/edit). Contact us to start the process.
