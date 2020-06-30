@@ -132,7 +132,7 @@ https://github.com/ieee8023/covid-chestxray-dataset
 }
 ```
 
-Paper availabe [here](https://arxiv.org/abs/2003.11597)
+Paper available [here](https://arxiv.org/abs/2003.11597)
 
 ```
 COVID-19 image data collection, arXiv:2003.11597, 2020
