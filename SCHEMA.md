@@ -9,6 +9,7 @@ Here is a list of each metadata field, with explanations where relevant
 | sex | Male (M), Female (F), or blank |
 | age | Age of the patient in years |
 | finding | Type of pneumonia |
+| RT_PCR_positive | Yes (Y) or no (N) or blank if not reported/taken |
 | survival | Yes (Y) or no (N) or blank if unknown|
 | intubated | Yes (Y) if the patient was intubated (or ventilated) at any point during this illness or No (N) or blank if unknown. |
 | went_icu | Yes (Y) if the patient was in the ICU (intensive care unit) or CCU (critical care unit) at any point during this illness or No (N) or blank if unknown.|
