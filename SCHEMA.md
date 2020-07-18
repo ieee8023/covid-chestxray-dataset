@@ -30,3 +30,38 @@ Here is a list of each metadata field, with explanations where relevant
 | license | License of the image such as CC BY-NC-SA. Blank if unknown |
 | clinical notes | Clinical notes about the image and/or the patient |
 | other notes | e.g. credit |
+
+Within the finding field, the following mappings have been used to simplify the findings in the source:
+
+|       Original Finding        |       Simplified Finding      |
+|       ------------------      |       -------------------     |
+| Tuberculous spondylodiscitis | Spinal Tuberculosis |
+| No Finding | No Finding |
+| COVID-19 | COVID-19 |
+| Swine-Origin Influenza A (H1N1) Viral Pneumonia | Swine-Origin Influenza A (H1N1) Viral Pneumonia |
+| Complicated Legionnaires' disease. | Legionella |
+| No Finding | No Finding |
+| Disseminated "miliary" tuberculosis during biologic (adalimumab) treatment for Crohn's disease | Tuberculosis |
+| Invasive Aspergillosis and Aspergilloma causing Pneumopericardium. | Invasive Aspergillosis |
+| Herpes pneumonia and ARDS | "Herpes pneumonia" or "Herpes pneumonia, ARDS" based on sequence
+| Acute Respiratory Distress Syndrome: a Sequela of Asphyxiation Injury | ARDS |
+| ARDS secondary to fat embolism | ARDS |
+| Accelerated Phase Usual Interstitial Pneumonia | Accelerated Phase Usual Interstitial Pneumonia |
+| Cystic form of pneumocystis jirovecii pneumonia. | Pneumocystis |
+| Round pneumonia | Round pneumonia |
+| Pneumocytis jiroveci pneumonia | Pneumocystis |
+| Lymphocytic interstitial pneumonia | Lymphocytic interstitial pneumonia |
+| Idiopathic cryptogenic organizing pneumonia (COP) | Cryptogenic Organizing Pneumonia |
+| Streptococcus pneumonia and multiple pulmonary emboli | Streptococcus |
+| Fire-eater's pneumonia. | Lipoid |
+| Allergic bronchopulmonary aspergillosis | Allergic bronchopulmonary aspergillosis |
+| Cryptogenic organising pneumonia | Cryptogenic organising pneumonia |
+| Chronic eosinophilic pneumonia | Chronic eosinophilic pneumonia |
+| Aspiration pneumonia | Aspiration pneumonia |
+| Pneumocystis Jirovecci Infection in an HIV patient. | Pneumocystis |
+| Endobronchial tuberculosis (EBTB). | Tuberculosis |
+| Endobronchial spread of tuberculosis. | Tuberculosis |
+| Hydropneumothorax as the initial manifestation of postprimary tuberculosis. | Tuberculosis |
+| Pulmonary nocardia infection in HIV | Nocardia |
+| Empyema necessitans as manifestation of tuberculosis | Tuberculosis |
+
