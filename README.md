@@ -119,9 +119,9 @@ PI: [Joseph Paul Cohen. Postdoctoral Fellow, Mila, University of Montreal](https
 Second Paper available [here](http://arxiv.org/abs/2006.11988) and [source code for baselines](https://github.com/mlmed/torchxrayvision/tree/master/scripts/covid-baselines)
 
 ```
-COVID-19 Image Data Collection: Prospective Predictions Are the Future, arXiv:2006.11988, 2020
+COVID-19 Image Data Collection: Prospective Predictions Are the Future
 Joseph Paul Cohen and Paul Morrison and Lan Dao and Karsten Roth and Tim Q Duong and Marzyeh Ghassemi
-https://github.com/ieee8023/covid-chestxray-dataset
+arXiv:2006.11988, https://github.com/ieee8023/covid-chestxray-dataset, 2020
 ```
 
 ```
