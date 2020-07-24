@@ -31,12 +31,6 @@ function sleep(ms) {
 
 //chrome.tabs.onUpdated.addListener()
 
-//console.log("chrome")
-//console.log(chrome)
-//console.log("chrome.commands")
-//console.log(chrome.commands)
-//console.log("chrome.commands.onCommand")
-//console.log(chrome.commands.onCommand)
 chrome.commands.onCommand.addListener(function (command) {
     console.log("key");
     if (command == "save_page_as_mhtml") {
