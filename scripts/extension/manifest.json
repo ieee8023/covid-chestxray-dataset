@@ -1,0 +1,26 @@
+{
+  // Required
+  "manifest_version": 2,
+  "name": "My Extension",
+  "version": "2",
+  "description": "Save the pages!",
+  "permissions": ["tabs","pageCapture", "activeTab", "file:///", "storage", "downloads"],
+  "background": {
+    "scripts": ["script.js"],
+    "persistent": false
+  },
+  "content_scripts":[
+    {
+      "matches":["<all_urls>"],
+      "js":["content.js"]
+    }
+  ],
+  "commands":{
+    "save_page_as_mhtml": {
+      "suggested_key": {
+        "default":"Ctrl+Shift+K"
+      },
+      "description":"Trigger browser to save page as MHTML"
+    }
+  }
+}
