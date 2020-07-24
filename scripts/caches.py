@@ -7,7 +7,6 @@ import tempfile
 import email
 from PIL import Image
 
-#from caches import *
 import pickle
 from browser import Browser
 from utils import deduplicate_filename, wget, wait
@@ -55,10 +54,6 @@ class Cache:
             cls.data = {}
             if not os.path.exists(cls.folder):
                 os.mkdir(cls.folder)
-        #self.highest_filename_number = cls._get_highest_filename_number()
-    #@classmethod
-    #def get_backup_name(cls):
-    #    return deduplicate_filename(cls.index_filename, cls.folder)
     @classmethod
     def save(cls):
         path = os.path.join(cls.folder, "".join(cls.index_filename))
@@ -118,17 +113,9 @@ class ResourceCache(Cache):
         wait(10)
         return filename
 
-    #@classmethod
-    #def add(cls, id, val):
-        #filename = cls._get_filename()
-        #with open(filename,"w") as handle:
-        #    handle.write(val)
-        #return filename
-
 class MHTMLCache(Cache):
     folder="rad_mhtml_cache"
     base_filename=("saved-", ".mhtml")
-#    def source(cls, id): Never sourced directly, because the page is not useful until it has been interacted with
     @classmethod
     def post(cls, filename):
         return os.path.join(cls.folder, filename)
@@ -139,25 +126,11 @@ class MHTMLCache(Cache):
         browser.save_mhtml(os.path.join(cls.folder,
                                         filename))
         super().add(id, filename)
-        #print("mhtml", id, cls.data)
         with open(cls.get(id)) as handle:
             message = email.message_from_file(handle)
-#            for idx, item in enumerate(message.walk()):
-#                if idx > 0: #First is just the whole mhtml
-#                    attrs = dict(item.items())
-#                    #print("attrs", attrs)
-#                    location = attrs.get("Content-Location") or attrs.get("Snapshot-Content-Location")
-#                    filename=cls._get_filename()
-#                    with open(filename,"w") as handle:
-#                        handle.write(item.get_payload())
-#                    ResourceCache.add(
-#                        location,
-#                        filename
-#                    )
             for idx, item in enumerate(message.walk()):
                 if idx > 0: #First is just the whole mhtml
                     attrs = dict(item.items())
-                    #print("attrs", attrs)
                     location = attrs.get("Content-Location") or attrs.get("Snapshot-Content-Location")
                     with tempfile.NamedTemporaryFile() as temp:
                         filename=temp.name
@@ -197,11 +170,6 @@ class MetadataCache(Cache):
 
 class Scraper:
     def __init__(self, mhtml_folder, resource_folder):
-        #self.mhtml_cache = MHTMLCache(html_folder) #probably a better way to do this
-        #self.resource_cache = ResourceCache(resource_folder)
-        #self.metadata_cache = MetadataCache(mhtml_cache=self.mhtml_cache)
-        #self.mhtml_cache.load()
-        #self.resource_folder.load()
         pass
     def get_mhtml_filename(self):
         return deduplicate_filename("saved.mhtml", self.folder)
