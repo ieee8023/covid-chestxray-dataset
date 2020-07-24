@@ -332,6 +332,7 @@ def search_bing(search_terms, max_results):
 class Repository:
     "Base class for a repository of radiographs. Contains methods for searching using various backends"
     case_class = None
+    cache_class = None
     @classmethod
     def sanitize_search_terms(cls, search_terms):
         "Ensure search terms are a list"
@@ -375,9 +376,9 @@ class Repository:
         for url in search_bing(" ".join(search_terms) + " " + cls.external_search_limiter, max_results):
             yield cls.case_class(url)
     @classmethod
-    def search_all(cls, url):
+    def search_all(cls):
         "Dump all cached entries"
-        return (cls.case_class(url) for url in self.data)
+        return (cls.case_class(url) for url in cls.cache_class.data)
 
 class Case():
     "Base class for cases"
@@ -476,6 +477,7 @@ class EuroRadCase(Case):
 class Eurorad(Repository):
     "Class for interfacing programmatically with Eurorad."
     case_class = EuroRadCase
+    cache_class = EuroradMetadataCache
     external_search_limiter = "site:eurorad.org/case"
     @classmethod
     def is_end_of_results(cls, browser):
@@ -509,6 +511,7 @@ class Eurorad(Repository):
 class Radiopaedia(Repository):
     "Class for interfacing programmatically with Radiopaedia"
     case_class = RadiopaediaCase
+    cache_class = RadiopaediaMetadataCache
     external_search_limiter = "site:radiopaedia.org/cases/"
     @classmethod
     def is_end_of_results(cls, browser):
@@ -553,6 +556,7 @@ class AllRadiographs(Repository):
     def search_internal(cls, search_terms, max_results):
         "Search all repositories using their internal search features"
         yield from cls.search_with("search_internal", search_terms, max_results)
+    @classmethod
     def search_all(cls):
         "Dump all records from all repositories."
         yield from cls.search_with("search_all")
