@@ -2,6 +2,7 @@ import os
 import shutil
 from selenium import webdriver
 import time
+import tempfile
 
 chromedriver_path = os.path.abspath(
     os.path.join(
@@ -11,7 +12,12 @@ chromedriver_path = os.path.abspath(
 )
 
 class Browser(webdriver.Chrome):
-    def __init__(self, downloads_dir):
+    def __init__(self, downloads_dir=None):
+        self.tempdir = None
+        if downloads_dir is None:
+            self.tempdir = tempfile.TemporaryDirectory()
+            self.downloads_dir = self.tempdir.name
+            print("Using temporary directory", self.downloads_dir)
         self.downloads_dir = downloads_dir
 
         options = webdriver.ChromeOptions()
@@ -32,13 +38,6 @@ class Browser(webdriver.Chrome):
             executable_path = chromedriver_path
         )
 
-    #def get_most_recent_download(self):
-    #    #https://stackoverflow.com/questions/39327032/how-to-get-the-latest-file-in-a-folder-using-python
-    #    #print(self.downloads_dir)
-    #    list_of_files = glob.glob(os.path.join(self.downloads_dir,"*"))
-    #    #print(list_of_files)
-    #    latest_file = max(list_of_files, key=os.path.getctime)
-    #    return latest_file
     def get_local(self, path):
         self.get("file://"+ os.path.abspath(path))
     def save_mhtml(self, filename):
@@ -76,16 +75,7 @@ class Browser(webdriver.Chrome):
                     #Start over
                     return self.save_mhtml(filename)
 
-    #def save_mhtml(self, filename):
-    #    #Assume nothing else gets downloaded in the middle!
-    #    self.execute_script("""
-    #        var data = { type: "FROM_PAGE", text: "page.mhtml" };
-    #        window.postMessage(data, "*");
-    #    """)
-    #    most_recent_download = os.path.join(
-    #        self.downloads_dir,
-    #        self.get_most_recent_download()
-    #    )
-    #    shutil.move(most_recent_download, filename)
-
-#eurorad_scraper = EuroradScraper("eurorad_scraped")
+    def close(self):
+        super().close()
+        if self.tempdir is not None:
+            self.tempdir.close()
