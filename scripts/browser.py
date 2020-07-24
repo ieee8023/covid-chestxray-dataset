@@ -18,7 +18,8 @@ class Browser(webdriver.Chrome):
             self.tempdir = tempfile.TemporaryDirectory()
             self.downloads_dir = self.tempdir.name
             print("Using temporary directory", self.downloads_dir)
-        self.downloads_dir = downloads_dir
+        else:
+            self.downloads_dir = downloads_dir
 
         options = webdriver.ChromeOptions()
         if self.downloads_dir is not None:
@@ -78,4 +79,4 @@ class Browser(webdriver.Chrome):
     def close(self):
         super().close()
         if self.tempdir is not None:
-            self.tempdir.close()
+            self.tempdir.cleanup()
