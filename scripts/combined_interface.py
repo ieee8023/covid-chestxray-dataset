@@ -24,11 +24,13 @@ Extract it and put it in the parent directory of this file.
 
 Then, run from the console as combined_interface.py, ideally in the same directory.
 
-Arguments:
+Usage example:
 
-python combined_interface.py "search terms" image_output_folder/ new_metadata_filename.csv old_metadata_filename.csv' internal
+python combined_interface.py "search terms" image_output_folder/ new_metadata_filename.csv old_metadata_filename.csv' internal retry
 
-The last argument, which describes the search method, can be either "internal" or "bing". If you are using "bing", you should create a file called "subscription_key.txt" in the same directory as this code, with the key on the first line.
+The second-to-last argument, which describes the search method, can be either "internal" or "bing". If you are using "bing", you should create a file called "subscription_key.txt" in the same directory as this code, with the key on the first line.
+
+The final argument indicates whether to retry 
 
 Portability:
 
