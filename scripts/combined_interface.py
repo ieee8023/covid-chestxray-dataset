@@ -122,7 +122,7 @@ class MetadataCache(Cache):
     def source(cls, url):
         print("Getting metadata from source")
         print(url)
-        browser = Browser(os.path.join(os.path.abspath(os.path.dirname(__file__)),"random_downloads"))
+        browser = Browser()
         browser.get(url)
         metadata = cls.metadata_from_result_page(browser)
         MHTMLCache.add_from_browser(url, browser)
@@ -228,14 +228,13 @@ class RadiopaediaMetadataCache(MetadataCache):
             for study_id in study_ids:
                 print(study_id)
                 stacks_url = "https://radiopaedia.org/studies/{}/stacks?lang=us".format(study_id)
-                with tempfile.TemporaryDirectory() as tmp:
-                    stacks_browser = Browser(tmp)
-                    stacks_browser.get_local(SimpleMHTMLCache.get(stacks_url))
-                    json_text = stacks_browser.find_element_by_xpath("/*").text
-                    json_obj = json.loads(json_text)
-                    json_objs.append(json_obj)
-                    stacks_browser.close()
-                    wait(4)
+                stacks_browser = Browser()
+                stacks_browser.get_local(SimpleMHTMLCache.get(stacks_url))
+                json_text = stacks_browser.find_element_by_xpath("/*").text
+                json_obj = json.loads(json_text)
+                json_objs.append(json_obj)
+                stacks_browser.close()
+                wait(4)
 
             viewers = []
             for viewer, study_id in zip(json_objs, study_ids):
@@ -346,7 +345,7 @@ class Repository:
     def search_internal(cls, search_terms, max_results):
         "Use browser to get all case URLs matching the given search terms"
         search_terms = cls.sanitize_search_terms(search_terms)
-        browser = Browser(None)
+        browser = Browser()
         next_search_page = cls.format_internal_search_url(search_terms)
         out = []
         n_results = 0
