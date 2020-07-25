@@ -6,7 +6,6 @@ metadata = pd.read_csv("metadata.csv")
 
 def test_no_duplicate_images():
     filenames = metadata["filename"]
-    print(filenames.value_counts())
     assert len(set(filenames)) == len(filenames)
 
 def test_no_unlinked_images():
@@ -15,5 +14,4 @@ def test_no_unlinked_images():
     assert set(all_images).difference(set(linked_images)) == set()
 
 def test_no_pediatric():
-    print(list(metadata["age"].unique()))
     assert min(metadata["age"]) >= 18
