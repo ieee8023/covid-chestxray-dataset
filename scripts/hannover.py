@@ -146,8 +146,8 @@ def update_data(metadata, hannover_data):
     hannover_data = hannover_data.copy()
 
     #Temporarily index by filename (without extension(
-    metadata.index = metadata["filename"].apply(fname_minus_extension)
-    hannover_data.index = hannover_data["filename"].apply(fname_minus_extension)
+    metadata.index = metadata["filename"]
+    hannover_data.index = hannover_data["filename"]
 
     #Default to existing ptids if available
     hannover_data = hannover_data.rename(columns={"patientid":"original_ptid"})
