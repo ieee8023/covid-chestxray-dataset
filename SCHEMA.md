@@ -67,6 +67,7 @@ Within the finding field, the following mappings have been used to simplify the 
 
 Within the view field, the following mappings have been used:
 
+| Original view | Simplified view
 | Sitting | AP
 | Seduto | AP
 | Setuto a letto | AP
