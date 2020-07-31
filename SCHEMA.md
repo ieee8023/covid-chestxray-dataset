@@ -65,3 +65,13 @@ Within the finding field, the following mappings have been used to simplify the 
 | Pulmonary nocardia infection in HIV | Nocardia |
 | Empyema necessitans as manifestation of tuberculosis | Tuberculosis |
 
+Within the view field, the following mappings have been used:
+
+| Sitting | AP
+| Seduto | AP
+| Setuto a letto | AP
+| AP Semi-Erect | AP
+| Semi-Erect | AP
+| Semiseduto | AP
+| Supine | AP Supine
+| Supino | AP Supine
