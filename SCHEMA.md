@@ -78,3 +78,4 @@ When the view field is provided in the text/image, but is not explicit, the foll
 | (AP) (Mobile) Supine | AP Supine |
 | (AP) Supino | AP Supine |
 | SUP | AP Supine |
+| Semi-Supine | AP Supine |
