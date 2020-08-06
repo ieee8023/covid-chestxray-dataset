@@ -58,7 +58,7 @@ COVID19_Dataset num_samples=173 views=['AP Supine']
  
 ## Annotations
 
-[Lung Bounding Boxes](annotations/imageannotation_ai_lung_bounding_boxes.json) (license: CC BY-SA) contributed by Andrew Gough at [General Blockchain, Inc.](https://www.generalblockchain.com) 
+[Lung Bounding Boxes](https://github.com/GeneralBlockchain/covid-19-chest-xray-lung-bounding-boxes-dataset) and [Chest X-ray Segmentation](https://github.com/GeneralBlockchain/covid-19-chest-xray-segmentations-dataset) (license: CC BY 4.0) contributed by [General Blockchain, Inc.](https://github.com/GeneralBlockchain)
 
 [Pneumonia severity scores for 94 images](annotations/covid-severity-scores.csv) (license: CC BY-SA) from the paper [Predicting COVID-19 Pneumonia Severity on Chest X-ray with Deep Learning](http://arxiv.org/abs/2005.11856)
 
