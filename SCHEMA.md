@@ -65,6 +65,11 @@ Within the finding field, the following mappings have been used to simplify the 
 | Pulmonary nocardia infection in HIV | Nocardia |
 | Empyema necessitans as manifestation of tuberculosis | Tuberculosis |
 | MERS-CoV | MERS |
+| Tuberculosis with consolidation | Tuberculosis |
+| Klebsiella pneumonia | Klebsiella |
+| Acute eosinophilic pneumonia | Eosinophilic pneumonia |
+| Miliary tuberculosis | Tuberculosis |
+| Bilateral pulmonary nodules - tuberculous granulomas | Tuberculosis |
 
 When the view field is provided in the text/image, but is not explicit, the following mappings have been used:
 
