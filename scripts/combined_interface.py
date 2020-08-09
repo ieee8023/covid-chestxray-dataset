@@ -98,13 +98,13 @@ if os.path.exists(subscription_key_path):
         subscription_key = next(handle).strip()
         print("Using subscription key", subscription_key)
 
-endpoint="https://api.cognitive.microsoft.com" #/bing/v7.0/search/"
+    endpoint="https://api.cognitive.microsoft.com" #/bing/v7.0/search/"
 
-#Instantiate the client and replace with your endpoint.
-client = WebSearchClient(
-    endpoint=endpoint,
-    credentials=CognitiveServicesCredentials(subscription_key)
-)
+    #Instantiate the client and replace with your endpoint.
+    client = WebSearchClient(
+        endpoint=endpoint,
+        credentials=CognitiveServicesCredentials(subscription_key)
+    )
 
 
 def wget(src, filename):
@@ -574,6 +574,12 @@ class AllRadiographs(Repository):
             if active == len(result_sources): #All raised StopIteration
                break
 
+ResourceCache.load()
+MHTMLCache.load()
+EuroradMetadataCache.load()
+RadiopaediaMetadataCache.load()
+StandardMetadataCache.load()
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -613,11 +619,6 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    ResourceCache.load()
-    MHTMLCache.load()
-    EuroradMetadataCache.load()
-    RadiopaediaMetadataCache.load()
-    StandardMetadataCache.load()
 
     #Read in current metadata
     old_data = pd.read_table(args.csv, sep=",")
