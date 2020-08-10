@@ -137,6 +137,13 @@ def clean_standard_data(standard_record):
     )
     return standard_record
 
+def dictionary_walk(dictionary):
+    for key, value in dictionary.items():
+        if isinstance(value, dict):
+            yield from dictionary_walk(value)
+        else:
+            yield (key, value)
+
 def standard_to_metadata_format(standard_record, filenames):
     "Convert data in an interoperable format to the format in metadata.csv"
     all_rows = []
@@ -144,7 +151,10 @@ def standard_to_metadata_format(standard_record, filenames):
     standard_patient = standard_record["patient"]
     for image, filename in zip(images, filenames):
         patient_row = {}
-        patient_row.update(standard_record["patient"])
+        #Update with all entries. 'misc' will be removed on conversion to dataframe.
+        for key, value in dictionary_walk(standard_patient):
+            print(key, value)
+            patient_row[key] = value
         patient_row["clinical_notes"] = (
             string_or_empty(patient_row.pop("clinical_history")) + " " + image["image_description"]
         )
@@ -159,5 +169,6 @@ def standard_to_metadata_format(standard_record, filenames):
         patient_row["modality"] = modality
         patient_row["folder"] = folder
         patient_row["filename"] = filename
+        print(patient_row)
         all_rows.append(patient_row)
     return all_rows
