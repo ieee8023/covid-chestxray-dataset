@@ -1,3 +1,15 @@
+"""
+
+This script can be used to view cached pages.
+
+Use from the scripts directory as follows:
+python browse_page_from_cache.py
+Enter URL: <chosen url here>
+
+If the entry is not present within the cache, it will be added.
+
+"""
+
 from browser import Browser
 import argparse
 from combined_interface import StandardMetadataCache
