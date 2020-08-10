@@ -98,13 +98,13 @@ if os.path.exists(subscription_key_path):
         subscription_key = next(handle).strip()
         print("Using subscription key", subscription_key)
 
-endpoint="https://api.cognitive.microsoft.com" #/bing/v7.0/search/"
+    endpoint="https://api.cognitive.microsoft.com" #/bing/v7.0/search/"
 
-#Instantiate the client and replace with your endpoint.
-client = WebSearchClient(
-    endpoint=endpoint,
-    credentials=CognitiveServicesCredentials(subscription_key)
-)
+    #Instantiate the client and replace with your endpoint.
+    client = WebSearchClient(
+        endpoint=endpoint,
+        credentials=CognitiveServicesCredentials(subscription_key)
+    )
 
 
 def wget(src, filename):
@@ -219,6 +219,21 @@ class RadiopaediaMetadataCache(MetadataCache):
     @classmethod
     def metadata_from_result_page(cls, browser):
         "Return metadata from the Radiopaedia result page"
+        def get_other_notes(browser):
+            element = browser.find_element_by_xpath("//div[@class='js-tooltip icon download']")
+            browser.execute_script("arguments[0].click()",element)
+            time.sleep(5)
+            other_notes = browser.find_element_by_xpath("//textarea[@class='select-all-js']").text
+            print("Other notes:", other_notes)
+            return other_notes
+        def get_location(browser):
+            author_link = browser.find_element_by_xpath("//div[@class='author-info']/a").get_attribute("href")
+            location_browser = Browser()
+            location_browser.get_local(SimpleMHTMLCache.get(author_link))
+            author_location = location_browser.find_element_by_xpath("//dd[@class='institution-and-location']").text
+            location_browser.close()
+            print("Author location:", author_location)
+            return author_location
         def get_image_urls_from_current_page(browser):
             "When on a Radiopaedia case, find and visit pages listing image URLs"
             case_name = filename_from_url(browser.current_url)
@@ -263,38 +278,20 @@ class RadiopaediaMetadataCache(MetadataCache):
 
         images = get_image_urls_from_current_page(browser)
 
+        location = try_or_nothing(lambda: get_location(browser))
+
+        other_notes = try_or_nothing(lambda: get_other_notes(browser))
+
         data = {"images":images,
                 "image_descriptions":image_text,
                 "clinical_history":presentation,
                 "demographic_information":characteristic_dict,
                 "title":title,
-                "url":browser.current_url
+                "url":browser.current_url,
+                "location":location,
+                "other_notes":other_notes
         }
         return data
-
-class StandardMetadataCache(MetadataCache):
-    "Retrieve metadata from a URL from any repository"
-    folder = "standard_metadata_cache"
-    repo_sources = {
-        ".*eurorad.*":EuroradMetadataCache,
-        ".*radiopaedia.*":RadiopaediaMetadataCache
-    }
-    @classmethod
-    def source(cls, url):
-        "Retrieve metadata from a URL from any repository"
-        for pattern, cache in cls.repo_sources.items():
-            if re.match(pattern, url):
-                return cache.get(url)
-    def to_standard(cls, entry):
-        "Entry is already in the standard format, so no change"
-        return entry
-
-def try_or_nothing(func):
-    "Call a function and return None if it raises an error."
-    try:
-        func()
-    except Exception as e:
-        print(e)
 
 def wait(n):
     """Wait a random period of time"""
@@ -329,6 +326,14 @@ def search_bing(search_terms, max_results):
             yield result["url"]
         time.sleep(1)
 
+def try_or_nothing(func):
+    "Call a function and return None if it raises an error."
+    try:
+        return func()
+    except Exception as e:
+        print(type(Exception))
+        print(e)
+
 class Repository:
     "Base class for a repository of radiographs. Contains methods for searching using various backends"
     case_class = None
@@ -342,6 +347,9 @@ class Repository:
             return search_terms
         else:
             raise ValueError("Invalid search terms: " + str(search_terms))
+    @classmethod
+    def get(cls, item):
+        return cls.case_class(item, cls.cache_class.get(item))
     @classmethod
     def search_internal(cls, search_terms, max_results):
         "Use browser to get all case URLs matching the given search terms"
@@ -364,7 +372,7 @@ class Repository:
                 results = list(cls.extract_results_from_search_page(browser))
             n_results += len(results)
             for result in results:
-                yield cls.case_class(result)
+                yield cls.get(result)
             if n_results > max_results:
                 print("Over max results")
                 break
@@ -382,9 +390,13 @@ class Repository:
 
 class Case():
     "Base class for cases"
+    def __init__(self, url, raw_data):
+        self.url = url
+        self.raw_data = raw_data
+        self.data = None
     def extract_data(self):
         "Retrieve data from the cache"
-        return self.to_standard(StandardMetadataCache.get(self.url))
+        return self.to_standard(self.raw_data)
     def get_data(self):
         "Return data to the user."
         if self.data is None:
@@ -393,9 +405,6 @@ class Case():
 
 class RadiopaediaCase(Case):
     "An object representing an Eurorad case."
-    def __init__(self, url):
-        self.url = url
-        self.data = None
     def _in(self, metadata):
         "Check whether the URL is in the provided metadata."
         metadata_sanitized_url = list(metadata["url"].map(sanitize_radiopaedia_url))
@@ -407,6 +416,10 @@ class RadiopaediaCase(Case):
             "age":radiopaedia_record["demographic_information"].get("AGE", ""),
             "clinical_history":radiopaedia_record["clinical_history"],
             "finding":radiopaedia_record["title"],
+            "misc":{
+                "location":radiopaedia_record["location"],
+                "other_notes":radiopaedia_record["other_notes"]
+            }
         }
         standard_document = {
             "doi":None,
@@ -440,9 +453,6 @@ class RadiopaediaCase(Case):
 
 class EuroRadCase(Case):
     "An object representing an Eurorad case."
-    def __init__(self, url):
-        self.url = url
-        self.data = None
     def _in(self, metadata):
         "Check whether the URL is in the metadata."
         return self.url in list(metadata["url"])
@@ -452,7 +462,8 @@ class EuroRadCase(Case):
             "sex":eurorad_record["sex"],
             "age":eurorad_record["age"],
             "clinical_history":eurorad_record.get("CLINICAL HISTORY"),
-            "finding":eurorad_record.get("FINAL DIAGNOSIS")
+            "finding":eurorad_record.get("FINAL DIAGNOSIS"),
+            "misc":{}
         }
         standard_document = {
             "doi":None,
@@ -546,6 +557,23 @@ class Radiopaedia(Repository):
         except:
             return None
 
+class StandardMetadataCache(MetadataCache):
+    "Retrieve metadata from a URL from any repository"
+    folder = "standard_metadata_cache"
+    repo_sources = {
+        ".*eurorad.*":Eurorad,
+        ".*radiopaedia.*":Radiopaedia
+    }
+    @classmethod
+    def source(cls, url):
+        "Retrieve metadata from a URL from any repository"
+        for pattern, repo in cls.repo_sources.items():
+            if re.match(pattern, url):
+                return repo.get(url).get_data()
+    def to_standard(cls, entry):
+        "Entry is already in the standard format, so no change"
+        return entry
+
 class AllRadiographs(Repository):
     repositories = [Radiopaedia, Eurorad]
     @classmethod
@@ -573,6 +601,45 @@ class AllRadiographs(Repository):
                     active += 1
             if active == len(result_sources): #All raised StopIteration
                break
+
+ResourceCache.load()
+MHTMLCache.load()
+EuroradMetadataCache.load()
+RadiopaediaMetadataCache.load()
+StandardMetadataCache.load()
+
+def run_scrapers(
+        csv,
+        max_results,
+        results_from,
+        newcsv,
+        newimg,
+        handle_failure):
+    #Read in current metadata
+    old_data = pd.read_table(csv, sep=",")
+
+    #Build a generator of new case URLs
+    if results_from == "bing":
+        new_cases = AllRadiographs.search_bing(args.search, max_results)
+    elif results_from == "internal":
+        new_cases = AllRadiographs.search_internal(args.search, max_results)
+    elif results_from == "all":
+        new_cases = AllRadiographs.search_all()
+    else:
+        raise ValueError("Invalid source")
+
+    #Record metadata from the cases not already recorded
+    found = find_new_entries(old_data, new_cases)
+
+    #Save new data to disk for examination.
+    output_candidate_entries(
+        found,
+        old_data.columns,
+        newcsv,
+        newimg,
+        ResourceCache,
+        handle_failure=="retry"
+    )
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -613,35 +680,11 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    ResourceCache.load()
-    MHTMLCache.load()
-    EuroradMetadataCache.load()
-    RadiopaediaMetadataCache.load()
-    StandardMetadataCache.load()
-
-    #Read in current metadata
-    old_data = pd.read_table(args.csv, sep=",")
-
-    #Build a generator of new case URLs
-    max_results = int(args.max_results)
-    if args.results_from == "bing":
-        new_cases = AllRadiographs.search_bing(args.search, max_results)
-    elif args.results_from == "internal":
-        new_cases = AllRadiographs.search_internal(args.search, max_results)
-    elif args.results_from == "all":
-        new_cases = AllRadiographs.search_all()
-    else:
-        raise ValueError("Invalid source")
-
-    #Record metadata from the cases not already recorded
-    found = find_new_entries(old_data, new_cases)
-
-    #Save new data to disk for examination.
-    output_candidate_entries(
-        found,
-        old_data.columns,
+    run_scrapers(
+        args.csv,
+        int(args.max_results),
+        args.results_from,
         args.newcsv,
         args.newimg,
-        ResourceCache,
         args.handle_failure=="retry"
     )
