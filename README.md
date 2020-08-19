@@ -10,6 +10,11 @@ This project is approved by the University of Montreal's Ethics Committee #CERSE
 
 ## View current [images](images) and [metadata](metadata.csv)
 
+The labels are arranged in a hierarchy:
+
+<img width=300 src="docs/hierarchy.jpg"/>
+
+
 Current stats of PA, AP, and AP Supine views. Labels 0=No or 1=Yes. Data loader is [here](https://github.com/mlmed/torchxrayvision/blob/master/torchxrayvision/datasets.py#L867)
 ``` 
 COVID19_Dataset num_samples=481 views=['PA', 'AP']
