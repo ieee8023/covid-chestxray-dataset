@@ -70,6 +70,17 @@ Within the finding field, the following mappings have been used to simplify the 
 | Acute eosinophilic pneumonia | Eosinophilic pneumonia |
 | Miliary tuberculosis | Tuberculosis |
 | Bilateral pulmonary nodules - tuberculous granulomas | Tuberculosis |
+| Pneumonia in transplant lungs (description mentions Mycoplasma) | Mycoplasma Bacterial Pneumonia |
+| Tuberculosis - left upper lobe | Tuberculosis |
+| Cavitating pneumonia - lingular segments | Pneumonia |
+| Community acquired methicillin resistant staphylococcus aureus pneumonia | MRSA |
+| Streptococcus | Pneumococcal pneumonia |
+| Klebsiella pneumonia causing a bulging fissure | Klebsiella |
+| Tree-in-bud caused by haemophilus influenzae | Influenza |
+| Right middle lobe pneumonia | Pneumonia |
+| Left lower lobe pneumonia | Pneumonia |
+| Silhouette sign of Felson: right middle lobe pneumonia | Pneumonia |
+| Left lower lobe pneumonia | Pneumonia |
 
 When the view field is provided in the text/image, but is not explicit, the following mappings have been used:
 
@@ -85,15 +96,3 @@ When the view field is provided in the text/image, but is not explicit, the foll
 | (AP) Supino | AP Supine |
 | SUP | AP Supine |
 | Semi-Supine | AP Supine |
-
-| Pneumonia in transplant lungs (description mentions Mycoplasma) | Mycoplasma Bacterial Pneumonia |
-| Tuberculosis - left upper lobe | Tuberculosis |
-| Cavitating pneumonia - lingular segments | Pneumonia |
-| Community acquired methicillin resistant staphylococcus aureus pneumonia | MRSA |
-| Streptococcus | Pneumococcal pneumonia |
-| Klebsiella pneumonia causing a bulging fissure | Klebsiella |
-| Tree-in-bud caused by haemophilus influenzae | Influenza |
-| Right middle lobe pneumonia | Pneumonia |
-| Left lower lobe pneumonia | Pneumonia |
-| Silhouette sign of Felson: right middle lobe pneumonia | Pneumonia |
-| Left lower lobe pneumonia | Pneumonia |
