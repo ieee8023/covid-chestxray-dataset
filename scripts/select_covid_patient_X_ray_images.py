@@ -17,7 +17,7 @@ metadata = "../metadata.csv" # Meta info
 imageDir = "../images" # Directory of images
 outputDir = '../output/' # Output directory to store selected images
 
-if os.path.isfile(outputDir):  # check if directory already exist, return True if not exist
+if not os.path.isfile(outputDir):  # check if directory already exist
     os.mkdir(outputDir)  # create a directory
 
 metadata_csv = pd.read_csv(metadata)
