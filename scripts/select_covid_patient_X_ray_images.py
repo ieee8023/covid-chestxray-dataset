@@ -10,12 +10,15 @@ import shutil
 import os
 
 # Selecting all combination of 'COVID-19' patients with 'PA' X-Ray view
-virus = "COVID-19" # Virus to look for
+virus = "Pneumonia/Viral/COVID-19" # Virus to look for
 x_ray_view = "PA" # View of X-Ray
 
 metadata = "../metadata.csv" # Meta info
 imageDir = "../images" # Directory of images
-outputDir = '../output' # Output directory to store selected images
+outputDir = '../output/' # Output directory to store selected images
+
+if os.path.isfile(outputDir):  # check if directory already exist, return True if not exist
+    os.mkdir(outputDir)  # create a directory
 
 metadata_csv = pd.read_csv(metadata)
 
