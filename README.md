@@ -8,7 +8,7 @@ Project Summary: To build a public open dataset of chest X-ray and CT images of 
 
 This project is approved by the University of Montreal's Ethics Committee #CERSES-20-058-D
 
-## View current [images](images) and [metadata](metadata.csv)
+## View current [images](images) and [metadata](metadata.csv) and [a dataloader example](https://colab.research.google.com/drive/1A-gIZ6Xp-eh2b4CGS6BHH7-OgZtyjeP2)
 
 The labels are arranged in a hierarchy:
 
