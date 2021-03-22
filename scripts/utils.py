@@ -119,10 +119,12 @@ def clean_standard_data(standard_record):
             except:
                 pass
     def sanitize_finding(finding):
-        if "covid19" in finding.lower().replace("-","").replace(" ",""):
-            return "COVID-19"
-        else:
-            return finding
+        if finding:
+            if "covid19" in finding.lower().replace("-","").replace(" ",""):
+                return "COVID-19"
+            else:
+                return finding
+        return finding
     print(standard_record)
     sex = standard_record["patient"]["sex"]
     if not sex in ["M", "F"]:
