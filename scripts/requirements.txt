@@ -1,6 +1,0 @@
-selenium
-pandas
-pillow
-scipy
-tqdm
-azure-cognitiveservices-search-websearch
